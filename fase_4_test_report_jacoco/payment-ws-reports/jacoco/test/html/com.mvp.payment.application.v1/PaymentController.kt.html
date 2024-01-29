@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PaymentController.kt</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">payment-ws</a> &gt; <a href="index.source.html" class="el_package">com.mvp.payment.application.v1</a> &gt; <span class="el_source">PaymentController.kt</span></div><h1>PaymentController.kt</h1><pre class="source lang-java linenums">package com.mvp.payment.application.v1
+
+
+import com.mvp.payment.domain.model.payment.OrderByIdResponseDTO
+import com.mvp.payment.domain.model.payment.OrderCheckoutDTO
+import com.mvp.payment.domain.model.payment.OrderFinishDTO
+import com.mvp.payment.domain.model.payment.RequestCheckoutDTO
+import com.mvp.payment.domain.model.payment.store.QrDataDTO
+import com.mvp.payment.domain.model.payment.store.webhook.MerchantOrderDTO
+import com.mvp.payment.domain.service.payment.MPOrderService
+import com.mvp.payment.domain.service.payment.PaymentService
+import io.swagger.v3.oas.annotations.Operation
+import org.springframework.http.HttpStatus
+import org.springframework.http.ResponseEntity
+import org.springframework.web.bind.annotation.*
+
+<span class="fc" id="L17">@RestController</span>
+@RequestMapping(&quot;/api/v1/payment&quot;)
+<span class="fc" id="L19">class PaymentController(</span>
+<span class="fc" id="L20">    private val paymentService: PaymentService,</span>
+<span class="fc" id="L21">    private val mpOrderService: MPOrderService</span>
+) {
+
+    @PostMapping(&quot;/qr-code-checkout&quot;)
+    @Operation(
+        summary = &quot;Efetua o pagamento atualizando os status&quot;,
+        description = &quot;Efetua o pagamento atualizando os status&quot;,
+        tags = [&quot;Pedidos&quot;]
+    )
+    @ResponseStatus(HttpStatus.ACCEPTED)
+    suspend fun checkoutOrder(@RequestBody requestCheckoutDTO: RequestCheckoutDTO): ResponseEntity&lt;QrDataDTO&gt; {
+<span class="fc" id="L32">        return ResponseEntity.ok(mpOrderService.checkoutOrder(requestCheckoutDTO.externalId))</span>
+    }
+
+    @PostMapping(&quot;/webhook&quot;)
+    @Operation(
+        summary = &quot;Recebe chamadas do Mercado Pago&quot;,
+        description = &quot;Efetua atualiza o status de pagamento&quot;,
+        tags = [&quot;Pedidos&quot;]
+    )
+    @ResponseStatus(HttpStatus.ACCEPTED)
+    suspend fun handlerWebHook(@RequestBody merchantOrderDTO: MerchantOrderDTO): ResponseEntity&lt;Any&gt; {
+<span class="nc" id="L43">        return ResponseEntity.ok(mpOrderService.saveCheckoutOrderExternalStoreID(merchantOrderDTO))</span>
+    }
+
+    @PutMapping(&quot;/fake-checkout&quot;)
+    @Operation(
+        summary = &quot;Efetua o pagamento atualizando os status&quot;,
+        description = &quot;Efetua o pagamento atualizando os status&quot;,
+        tags = [&quot;Pedidos&quot;]
+    )
+    @ResponseStatus(HttpStatus.ACCEPTED)
+    fun checkoutOrder(@RequestBody orderCheckoutDTO: OrderCheckoutDTO): ResponseEntity&lt;OrderByIdResponseDTO&gt; {
+<span class="fc" id="L54">        return ResponseEntity.ok(paymentService.fakeCheckoutOrder(orderCheckoutDTO))</span>
+    }
+
+    @PostMapping(&quot;/fake-finish-payment&quot;)
+    @Operation(
+        summary = &quot;Efetua o pagamento atualizando os status&quot;,
+        description = &quot;Efetua o pagamento atualizando os status&quot;,
+        tags = [&quot;Pedidos&quot;]
+    )
+    @ResponseStatus(HttpStatus.ACCEPTED)
+    fun finishedOrderWithPayment(@RequestBody orderCheckoutDTO: OrderCheckoutDTO): ResponseEntity&lt;OrderFinishDTO&gt; {
+<span class="fc" id="L65">        return ResponseEntity.ok(paymentService.finishedOrderWithPayment(orderCheckoutDTO))</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

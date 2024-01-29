@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - OrderServiceTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>OrderServiceTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.mvp.order.application.integration.order.service.html">com.mvp.order.application.integration.order.service</a> &gt; OrderServiceTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">11</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">1.853s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">createOrder creates and returns a valid order()</td>
+<td class="success">0.305s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">createOrder throws NotFoundException for invalid products()</td>
+<td class="success">0.006s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">deleteOrderById successfully deletes an order()</td>
+<td class="success">0.022s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">deleteOrderProductById successfully deletes specified products()</td>
+<td class="success">0.384s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">findAllByIdOrderInfo should return correct data()</td>
+<td class="success">0.044s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getAllOrderProductsByIdOrder returns products for existing order()</td>
+<td class="success">0.013s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getAllOrderProductsByIdOrder throws NotFoundException for non-existent order()</td>
+<td class="success">0.005s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getOrderByExternalId returns correct order data for valid UUID()</td>
+<td class="success">0.019s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getOrderById returns order when found()</td>
+<td class="success">0.022s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">saveAllOrderProduct saves and returns list of order products()</td>
+<td class="success">0.036s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">updateOrderProduct updates existing order()</td>
+<td class="success">0.997s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>2024-01-21T15:29:36.898-03:00  INFO 8210 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.mvp.order.application.integration.order.service.OrderServiceTest]: OrderServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-01-21T15:29:36.915-03:00  INFO 8210 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.mvp.order.OrderApplication for test class com.mvp.order.application.integration.order.service.OrderServiceTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.1)
+
+2024-01-21T15:29:36.956-03:00  INFO 8210 --- [    Test worker] c.m.o.a.i.o.service.OrderServiceTest     : Starting OrderServiceTest using Java 21.0.1 with PID 8210 (started by lfneves in /home/lfneves/0_projects/tech-challenge-order)
+2024-01-21T15:29:36.956-03:00  INFO 8210 --- [    Test worker] c.m.o.a.i.o.service.OrderServiceTest     : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2024-01-21T15:29:37.119-03:00  INFO 8210 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-21T15:29:37.128-03:00  INFO 8210 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 7 JPA repository interfaces.
+2024-01-21T15:29:37.284-03:00  INFO 8210 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2024-01-21T15:29:37.285-03:00  INFO 8210 --- [    Test worker] h2database                               : database connecting session #13 to mem:postgresdb
+2024-01-21T15:29:37.285-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */SET DB_CLOSE_DELAY -1;
+2024-01-21T15:29:37.286-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */SET MODE PostgreSQL;
+2024-01-21T15:29:37.286-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */SET TRACE_LEVEL_FILE 4;
+2024-01-21T15:29:37.286-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/**/Connection conn10 = DriverManager.getConnection(&quot;jdbc:h2:mem:postgresdb;MODE=PostgreSQL;DB_CLOSE_DELAY=-1;TRACE_LEVEL_FILE=4&quot;, &quot;POSTGRES&quot;, &quot;&quot;);
+2024-01-21T15:29:37.286-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL #:1*/CALL READONLY();
+2024-01-21T15:29:37.286-03:00  INFO 8210 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:postgresdb user=POSTGRES
+2024-01-21T15:29:37.287-03:00  INFO 8210 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2024-01-21T15:29:37.288-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */CREATE TABLE IF NOT EXISTS tb_address ( id SERIAL PRIMARY KEY, street VARCHAR(50) NULL, city VARCHAR(50) NULL, state VARCHAR(50) NULL, postal_code VARCHAR(50) NULL, dh_insert TIMESTAMP DEFAULT NOW() );
+2024-01-21T15:29:37.288-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */CREATE TABLE IF NOT EXISTS tb_client ( id SERIAL PRIMARY KEY, password VARCHAR(500) NOT NULL, email VARCHAR(50) NULL, cpf VARCHAR(50) NULL UNIQUE, name VARCHAR(50) NOT NULL, id_address INTEGER REFERENCES tb_address(id), dh_insert TIMESTAMP DEFAULT NOW() );
+2024-01-21T15:29:37.289-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */CREATE TABLE IF NOT EXISTS tb_category ( id SERIAL PRIMARY KEY, name VARCHAR(250) NOT NULL UNIQUE, description VARCHAR(250) NULL, dh_insert TIMESTAMP DEFAULT NOW() );
+2024-01-21T15:29:37.289-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */CREATE TABLE IF NOT EXISTS tb_product ( id SERIAL PRIMARY KEY, name VARCHAR NOT NULL, price NUMERIC NOT NULL, quantity INTEGER NULL, id_category INTEGER REFERENCES tb_category(id), dh_insert TIMESTAMP DEFAULT NOW() );
+2024-01-21T15:29:37.289-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */CREATE TABLE IF NOT EXISTS tb_order ( id SERIAL PRIMARY KEY, external_id VARCHAR NOT NULL, id_client INTEGER REFERENCES tb_client(id) NOT NULL, total_price NUMERIC NOT NULL, status VARCHAR(50) NULL, waiting_time TIMESTAMP NULL, is_finished BOOLEAN DEFAULT FALSE, dh_insert TIMESTAMP DEFAULT NOW() );
+2024-01-21T15:29:37.289-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */CREATE TABLE IF NOT EXISTS tb_order_product ( id SERIAL PRIMARY KEY, id_product INTEGER REFERENCES tb_product(id), id_order INTEGER REFERENCES tb_order(id) );
+2024-01-21T15:29:37.292-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL t:1*/INSERT INTO tb_category (name, description, dh_insert) VALUES ('Bebidas', 'Consum\u00edvel l\u00edquido que possa ser comprado para consumo, como \u00c1gua, Refrigerante, Cerveja entre outros.', now()) ON CONFLICT DO NOTHING;
+2024-01-21T15:29:37.293-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */INSERT INTO tb_category (name, description, dh_insert) VALUES ('Sobremesa', 'Algum doce, pode incluir bolos, tortas, sorvetes, pudins, entre outros.', now()) ON CONFLICT DO NOTHING;
+2024-01-21T15:29:37.293-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */INSERT INTO tb_category (name, description, dh_insert) VALUES ('Lanche', 'Refei\u00e7\u00e3o pronta para consumo que possa ser comprada como Hambuguer, Pizza, Sanduiche entre outros.', now()) ON CONFLICT DO NOTHING;
+2024-01-21T15:29:37.294-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */INSERT INTO tb_category (name, description, dh_insert) VALUES ('Acompanhamento', 'Todo e qualquer alimento de pequena m\u00e9dia propor\u00e7\u00e3o que possa ser consumido com outras refei\u00e7\u00f5es.', now()) ON CONFLICT DO NOTHING;
+2024-01-21T15:29:37.295-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */INSERT INTO tb_address (id, city, dh_insert, postal_code, state, street) VALUES ( 1, 'Springfield', now(), '12345', 'IL', '123 Main St') ON CONFLICT DO NOTHING;
+2024-01-21T15:29:37.295-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */INSERT INTO tb_client (cpf, dh_insert, email, id_address, name, password) VALUES ('99999999999', now(), 'client@example.com', 1, 'admin', 'c7ad44cbad762a5da0a452f9e854fdc1e0e7a52a38015f23f3eab1d80b931dd472634dfac71cd34ebc35d16ab7fb8a90c81f975113d6c7538dc69dd8de9077ec') ON CONFLICT DO NOTHING;
+2024-01-21T15:29:37.296-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */INSERT INTO tb_product (id, name, price, quantity, id_category) VALUES (1, 'Suco', 19.99, 10, 1), (2, 'Sorvete', 29.99, 5, 2), (3, 'Hamburguer', 39.99, 15, 3), (4, 'Batata Frita', 9.99, 15, 4) ON CONFLICT DO NOTHING;
+2024-01-21T15:29:37.297-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */insert into tb_order ( id, external_id, id_client, is_finished, status, total_price, waiting_time) values ( 1, 'cdfe4e61-ec36-4a7c-933e-d49d75af963e'::UUID, 1, false, 'Pendente', 19.99, now()) ON CONFLICT DO NOTHING;
+2024-01-21T15:29:37.297-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL #:1*/insert into tb_order_product ( id, id_order, id_product) values ( 1, 1, 1) ON CONFLICT DO NOTHING;
+2024-01-21T15:29:37.312-03:00  INFO 8210 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-21T15:29:37.314-03:00  INFO 8210 --- [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-01-21T15:29:37.317-03:00  INFO 8210 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-21T15:29:37.318-03:00  WARN 8210 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000511: The 2.2.0 version for [org.hibernate.dialect.PostgreSQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 12.0.0. Check the community dialects project for available legacy versions.
+2024-01-21T15:29:37.318-03:00  WARN 8210 --- [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-01-21T15:29:37.319-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL #:1*/CALL DATABASE();
+2024-01-21T15:29:37.366-03:00  INFO 8210 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-01-21T15:29:37.367-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */select * from information_schema.sequences;
+2024-01-21T15:29:37.369-03:00  INFO 8210 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-21T15:29:37.387-03:00  INFO 8210 --- [onnection adder] h2database                               : database connecting session #14 to mem:postgresdb
+2024-01-21T15:29:37.388-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[14] 
+/*SQL */SET DB_CLOSE_DELAY -1;
+2024-01-21T15:29:37.388-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[14] 
+/*SQL */SET MODE PostgreSQL;
+2024-01-21T15:29:37.388-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[14] 
+/*SQL */SET TRACE_LEVEL_FILE 4;
+2024-01-21T15:29:37.389-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[14] 
+/**/Connection conn11 = DriverManager.getConnection(&quot;jdbc:h2:mem:postgresdb;MODE=PostgreSQL;DB_CLOSE_DELAY=-1;TRACE_LEVEL_FILE=4&quot;, &quot;POSTGRES&quot;, &quot;&quot;);
+2024-01-21T15:29:37.389-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[14] 
+/*SQL #:1*/CALL READONLY();
+2024-01-21T15:29:37.399-03:00  INFO 8210 --- [onnection adder] h2database                               : database connecting session #15 to mem:postgresdb
+2024-01-21T15:29:37.400-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[15] 
+/*SQL */SET DB_CLOSE_DELAY -1;
+2024-01-21T15:29:37.400-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[15] 
+/*SQL */SET MODE PostgreSQL;
+2024-01-21T15:29:37.400-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[15] 
+/*SQL */SET TRACE_LEVEL_FILE 4;
+2024-01-21T15:29:37.400-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[15] 
+/**/Connection conn12 = DriverManager.getConnection(&quot;jdbc:h2:mem:postgresdb;MODE=PostgreSQL;DB_CLOSE_DELAY=-1;TRACE_LEVEL_FILE=4&quot;, &quot;POSTGRES&quot;, &quot;&quot;);
+2024-01-21T15:29:37.401-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[15] 
+/*SQL #:1*/CALL READONLY();
+2024-01-21T15:29:37.411-03:00  INFO 8210 --- [onnection adder] h2database                               : database connecting session #16 to mem:postgresdb
+2024-01-21T15:29:37.412-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[16] 
+/*SQL */SET DB_CLOSE_DELAY -1;
+2024-01-21T15:29:37.412-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[16] 
+/*SQL */SET MODE PostgreSQL;
+2024-01-21T15:29:37.412-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[16] 
+/*SQL */SET TRACE_LEVEL_FILE 4;
+2024-01-21T15:29:37.412-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[16] 
+/**/Connection conn13 = DriverManager.getConnection(&quot;jdbc:h2:mem:postgresdb;MODE=PostgreSQL;DB_CLOSE_DELAY=-1;TRACE_LEVEL_FILE=4&quot;, &quot;POSTGRES&quot;, &quot;&quot;);
+2024-01-21T15:29:37.412-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[16] 
+/*SQL #:1*/CALL READONLY();
+2024-01-21T15:29:37.423-03:00  INFO 8210 --- [onnection adder] h2database                               : database connecting session #17 to mem:postgresdb
+2024-01-21T15:29:37.423-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[17] 
+/*SQL */SET DB_CLOSE_DELAY -1;
+2024-01-21T15:29:37.424-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[17] 
+/*SQL */SET MODE PostgreSQL;
+2024-01-21T15:29:37.424-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[17] 
+/*SQL */SET TRACE_LEVEL_FILE 4;
+2024-01-21T15:29:37.424-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[17] 
+/**/Connection conn14 = DriverManager.getConnection(&quot;jdbc:h2:mem:postgresdb;MODE=PostgreSQL;DB_CLOSE_DELAY=-1;TRACE_LEVEL_FILE=4&quot;, &quot;POSTGRES&quot;, &quot;&quot;);
+2024-01-21T15:29:37.424-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[17] 
+/*SQL #:1*/CALL READONLY();
+2024-01-21T15:29:37.435-03:00  INFO 8210 --- [onnection adder] h2database                               : database connecting session #18 to mem:postgresdb
+2024-01-21T15:29:37.435-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[18] 
+/*SQL */SET DB_CLOSE_DELAY -1;
+2024-01-21T15:29:37.436-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[18] 
+/*SQL */SET MODE PostgreSQL;
+2024-01-21T15:29:37.436-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[18] 
+/*SQL */SET TRACE_LEVEL_FILE 4;
+2024-01-21T15:29:37.436-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[18] 
+/**/Connection conn15 = DriverManager.getConnection(&quot;jdbc:h2:mem:postgresdb;MODE=PostgreSQL;DB_CLOSE_DELAY=-1;TRACE_LEVEL_FILE=4&quot;, &quot;POSTGRES&quot;, &quot;&quot;);
+2024-01-21T15:29:37.436-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[18] 
+/*SQL #:1*/CALL READONLY();
+2024-01-21T15:29:37.447-03:00  INFO 8210 --- [onnection adder] h2database                               : database connecting session #19 to mem:postgresdb
+2024-01-21T15:29:37.447-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[19] 
+/*SQL */SET DB_CLOSE_DELAY -1;
+2024-01-21T15:29:37.447-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[19] 
+/*SQL */SET MODE PostgreSQL;
+2024-01-21T15:29:37.447-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[19] 
+/*SQL */SET TRACE_LEVEL_FILE 4;
+2024-01-21T15:29:37.448-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[19] 
+/**/Connection conn16 = DriverManager.getConnection(&quot;jdbc:h2:mem:postgresdb;MODE=PostgreSQL;DB_CLOSE_DELAY=-1;TRACE_LEVEL_FILE=4&quot;, &quot;POSTGRES&quot;, &quot;&quot;);
+2024-01-21T15:29:37.448-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[19] 
+/*SQL #:1*/CALL READONLY();
+2024-01-21T15:29:37.458-03:00  INFO 8210 --- [onnection adder] h2database                               : database connecting session #20 to mem:postgresdb
+2024-01-21T15:29:37.459-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[20] 
+/*SQL */SET DB_CLOSE_DELAY -1;
+2024-01-21T15:29:37.459-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[20] 
+/*SQL */SET MODE PostgreSQL;
+2024-01-21T15:29:37.459-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[20] 
+/*SQL */SET TRACE_LEVEL_FILE 4;
+2024-01-21T15:29:37.459-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[20] 
+/**/Connection conn17 = DriverManager.getConnection(&quot;jdbc:h2:mem:postgresdb;MODE=PostgreSQL;DB_CLOSE_DELAY=-1;TRACE_LEVEL_FILE=4&quot;, &quot;POSTGRES&quot;, &quot;&quot;);
+2024-01-21T15:29:37.459-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[20] 
+/*SQL #:1*/CALL READONLY();
+2024-01-21T15:29:37.470-03:00  INFO 8210 --- [onnection adder] h2database                               : database connecting session #21 to mem:postgresdb
+2024-01-21T15:29:37.470-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[21] 
+/*SQL */SET DB_CLOSE_DELAY -1;
+2024-01-21T15:29:37.471-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[21] 
+/*SQL */SET MODE PostgreSQL;
+2024-01-21T15:29:37.471-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[21] 
+/*SQL */SET TRACE_LEVEL_FILE 4;
+2024-01-21T15:29:37.471-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[21] 
+/**/Connection conn18 = DriverManager.getConnection(&quot;jdbc:h2:mem:postgresdb;MODE=PostgreSQL;DB_CLOSE_DELAY=-1;TRACE_LEVEL_FILE=4&quot;, &quot;POSTGRES&quot;, &quot;&quot;);
+2024-01-21T15:29:37.471-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[21] 
+/*SQL #:1*/CALL READONLY();
+2024-01-21T15:29:37.482-03:00  INFO 8210 --- [onnection adder] h2database                               : database connecting session #22 to mem:postgresdb
+2024-01-21T15:29:37.482-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[22] 
+/*SQL */SET DB_CLOSE_DELAY -1;
+2024-01-21T15:29:37.482-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[22] 
+/*SQL */SET MODE PostgreSQL;
+2024-01-21T15:29:37.482-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[22] 
+/*SQL */SET TRACE_LEVEL_FILE 4;
+2024-01-21T15:29:37.483-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[22] 
+/**/Connection conn19 = DriverManager.getConnection(&quot;jdbc:h2:mem:postgresdb;MODE=PostgreSQL;DB_CLOSE_DELAY=-1;TRACE_LEVEL_FILE=4&quot;, &quot;POSTGRES&quot;, &quot;&quot;);
+2024-01-21T15:29:37.483-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[22] 
+/*SQL #:1*/CALL READONLY();
+2024-01-21T15:29:37.569-03:00  WARN 8210 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21T15:29:37.669-03:00  INFO 8210 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:postgresdb'
+2024-01-21T15:29:37.695-03:00  INFO 8210 --- [    Test worker] c.m.o.a.i.o.service.OrderServiceTest     : Started OrderServiceTest in 0.768 seconds (process running for 14.331)
+Hibernate: 
+        SELECT tb_order_product.id, 
+               tb_order_product.id_product, 
+               tb_order_product.id_order, 
+               tb_product.name AS product_name, 
+               tb_category.name AS category_name, 
+               tb_product.price
+        FROM tb_order_product
+        INNER JOIN tb_order ON tb_order.id = tb_order_product.id_order
+        LEFT JOIN tb_product ON tb_product.id = tb_order_product.id_product
+        LEFT JOIN tb_category ON tb_category.id = tb_product.id_category
+        WHERE tb_order_product.id_order = ?
+    
+2024-01-21T15:29:37.740-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL l:542 #:1*/SELECT tb_order_product.id, \n               tb_order_product.id_product, \n               tb_order_product.id_order, \n               tb_product.name AS product_name, \n               tb_category.name AS category_name, \n               tb_product.price\n        FROM tb_order_product\n        INNER JOIN tb_order ON tb_order.id = tb_order_product.id_order\n        LEFT JOIN tb_product ON tb_product.id = tb_order_product.id_product\n        LEFT JOIN tb_category ON tb_category.id = tb_product.id_category\n        WHERE tb_order_product.id_order = ? {1: CAST(1 AS BIGINT)};
+2024-01-21T15:29:37.742-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL l:74 #:1*/SELECT SETTING_VALUE FROM INFORMATION_SCHEMA.SETTINGS WHERE SETTING_NAME=? {1: 'QUERY_TIMEOUT'};
+2024-01-21T15:29:37.752-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL #:1*/delete from tb_order_product;
+2024-01-21T15:29:37.752-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL #:1*/delete from tb_order;
+2024-01-21T15:29:37.753-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL #:1*/insert into tb_order ( id, external_id, id_client, is_finished, status, total_price, waiting_time) values ( 1, 'cdfe4e61-ec36-4a7c-933e-d49d75af963e'::UUID, 1, false, 'Pendente', 19.99, now()) ON CONFLICT DO NOTHING;
+2024-01-21T15:29:37.753-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL #:1*/insert into tb_order_product ( id_order, id_product) values ( 1, 1) ON CONFLICT DO NOTHING;
+2024-01-21T15:29:37.754-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */COMMIT;
+2024-01-21T15:29:37.754-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */COMMIT;
+Hibernate: 
+        DELETE FROM tb_order_product WHERE id_order = ? AND id_product IN(?)
+    
+2024-01-21T15:29:37.758-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL l:68 #:1*/DELETE FROM tb_order_product WHERE id_order = ? AND id_product IN(?) {1: CAST(1 AS BIGINT), 2: CAST(1 AS BIGINT)};
+2024-01-21T15:29:37.759-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */COMMIT;
+2024-01-21T15:29:37.759-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */COMMIT;
+Hibernate: select count(*) from tb_order_product ope1_0 where ope1_0.id=?
+2024-01-21T15:29:38.130-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL l:62 #:1*/select count(*) from tb_order_product ope1_0 where ope1_0.id=? {1: CAST(1 AS BIGINT)};
+2024-01-21T15:29:38.131-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */COMMIT;
+2024-01-21T15:29:38.131-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */COMMIT;
+2024-01-21T15:29:38.138-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */delete from tb_order_product;
+2024-01-21T15:29:38.139-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL #:1*/delete from tb_order;
+2024-01-21T15:29:38.139-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL #:1*/insert into tb_order ( id, external_id, id_client, is_finished, status, total_price, waiting_time) values ( 1, 'cdfe4e61-ec36-4a7c-933e-d49d75af963e'::UUID, 1, false, 'Pendente', 19.99, now()) ON CONFLICT DO NOTHING;
+2024-01-21T15:29:38.139-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL #:1*/insert into tb_order_product ( id_order, id_product) values ( 1, 1) ON CONFLICT DO NOTHING;
+2024-01-21T15:29:38.140-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */COMMIT;
+2024-01-21T15:29:38.140-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */COMMIT;
+Hibernate: 
+        SELECT tb_order.id, tb_order.external_id, id_client, SUM(price) AS total_price, status, is_finished, waiting_time
+         FROM tb_order 
+         INNER JOIN tb_client ON tb_client.id = tb_order.id_client
+         INNER JOIN tb_order_product ON tb_order_product.id_order = tb_order.id
+         INNER JOIN tb_product ON tb_product.id = tb_order_product.id_product
+         WHERE tb_order.external_id = CAST(? AS UUID)
+         GROUP BY tb_order.id, id_client, status, is_finished
+    
+2024-01-21T15:29:38.147-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL l:478 #:1*/SELECT tb_order.id, tb_order.external_id, id_client, SUM(price) AS total_price, status, is_finished, waiting_time\n         FROM tb_order \n         INNER JOIN tb_client ON tb_client.id = tb_order.id_client\n         INNER JOIN tb_order_product ON tb_order_product.id_order = tb_order.id\n         INNER JOIN tb_product ON tb_product.id = tb_order_product.id_product\n         WHERE tb_order.external_id = CAST(? AS UUID)\n         GROUP BY tb_order.id, id_client, status, is_finished {1: 'cdfe4e61-ec36-4a7c-933e-d49d75af963e'};
+Hibernate: 
+        SELECT tb_order_product.id, 
+               tb_order_product.id_product, 
+               tb_order_product.id_order, 
+               tb_product.name AS product_name, 
+               tb_category.name AS category_name, 
+               tb_product.price
+        FROM tb_order_product
+        INNER JOIN tb_order ON tb_order.id = tb_order_product.id_order
+        LEFT JOIN tb_product ON tb_product.id = tb_order_product.id_product
+        LEFT JOIN tb_category ON tb_category.id = tb_product.id_category
+        WHERE tb_order_product.id_order = ?
+    
+2024-01-21T15:29:38.152-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL l:542 #:1*/SELECT tb_order_product.id, \n               tb_order_product.id_product, \n               tb_order_product.id_order, \n               tb_product.name AS product_name, \n               tb_category.name AS category_name, \n               tb_product.price\n        FROM tb_order_product\n        INNER JOIN tb_order ON tb_order.id = tb_order_product.id_order\n        LEFT JOIN tb_product ON tb_product.id = tb_order_product.id_product\n        LEFT JOIN tb_category ON tb_category.id = tb_product.id_category\n        WHERE tb_order_product.id_order = ? {1: CAST(1 AS BIGINT)};
+2024-01-21T15:29:38.158-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL #:1*/delete from public.tb_order_product;
+2024-01-21T15:29:38.159-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL #:1*/delete from public.tb_order;
+2024-01-21T15:29:38.160-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL #:1*/insert into public.tb_order ( id, external_id, id_client, is_finished, status, total_price, waiting_time) values ( 9999, 'ddfe4e61-ec36-4a7c-933e-d49d75af963e'::UUID, 1, false, 'Pendente', 19.99, now()) ON CONFLICT DO NOTHING;
+2024-01-21T15:29:38.160-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL #:1*/insert into public.tb_order_product ( id_order, id_product) values ( 9999, 1) ON CONFLICT DO NOTHING;
+2024-01-21T15:29:38.161-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */COMMIT;
+2024-01-21T15:29:38.161-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */COMMIT;
+Hibernate: select ope1_0.id,ope1_0.id_order,ope1_0.id_product from tb_order_product ope1_0 where ope1_0.id=?
+2024-01-21T15:29:38.165-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL l:97*/select ope1_0.id,ope1_0.id_order,ope1_0.id_product from tb_order_product ope1_0 where ope1_0.id=? {1: CAST(1 AS BIGINT)};
+Hibernate: insert into tb_order_product (id_order,id_product) values (?,?)
+2024-01-21T15:29:38.173-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL l:63 #:1 t:1*/insert into tb_order_product (id_order,id_product) values (?,?) {1: CAST(9999 AS BIGINT), 2: CAST(1 AS BIGINT)};
+2024-01-21T15:29:38.176-03:00 ERROR 8210 --- [    Test worker] h2database                               : jdbc[13] exception
+
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.message.DbException.get(DbException.java:223) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.message.DbException.get(DbException.java:199) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.message.DbException.get(DbException.java:188) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.jdbc.JdbcStatement.checkClosed(JdbcStatement.java:1287) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.jdbc.JdbcStatement.getMaxRows(JdbcStatement.java:476) ~[h2-2.2.224.jar:2.2.224]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.getMaxRows(HikariProxyPreparedStatement.java) ~[HikariCP-5.0.1.jar:na]
+	at org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl.close(ResourceRegistryStandardImpl.java:193) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl.release(ResourceRegistryStandardImpl.java:108) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.mutation.internal.PreparedStatementDetailsStandard.releaseStatement(PreparedStatementDetailsStandard.java:69) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.mutation.internal.MutationExecutorPostInsertSingleTable.release(MutationExecutorPostInsertSingleTable.java:115) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.persister.entity.mutation.InsertCoordinator.doStaticInserts(InsertCoordinator.java:192) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.persister.entity.mutation.InsertCoordinator.coordinateInsert(InsertCoordinator.java:113) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:2868) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:81) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:670) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:291) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:272) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:322) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:386) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:300) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:219) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:134) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.saveTransientEntity(DefaultMergeEventListener.java:315) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.entityIsTransient(DefaultMergeEventListener.java:234) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.entityIsDetached(DefaultMergeEventListener.java:347) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.merge(DefaultMergeEventListener.java:150) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.doMerge(DefaultMergeEventListener.java:143) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.onMerge(DefaultMergeEventListener.java:127) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.onMerge(DefaultMergeEventListener.java:81) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.internal.SessionImpl.fireMerge(SessionImpl.java:867) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.internal.SessionImpl.merge(SessionImpl.java:853) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:319) ~[spring-orm-6.1.2.jar:6.1.2]
+	at jdk.proxy3/jdk.proxy3.$Proxy175.merge(Unknown Source) ~[na:na]
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:621) ~[spring-data-jpa-3.2.1.jar:3.2.1]
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.saveAll(SimpleJpaRepository.java:644) ~[spring-data-jpa-3.2.1.jar:3.2.1]
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.saveAll(SimpleJpaRepository.java:95) ~[spring-data-jpa-3.2.1.jar:3.2.1]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:352) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:277) ~[spring-data-commons-3.2.1.jar:3.2.1]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170) ~[spring-data-commons-3.2.1.jar:3.2.1]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158) ~[spring-data-commons-3.2.1.jar:3.2.1]
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:516) ~[spring-data-commons-3.2.1.jar:3.2.1]
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285) ~[spring-data-commons-3.2.1.jar:3.2.1]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:628) ~[spring-data-commons-3.2.1.jar:3.2.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:168) ~[spring-data-commons-3.2.1.jar:3.2.1]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:143) ~[spring-data-commons-3.2.1.jar:3.2.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:70) ~[spring-data-commons-3.2.1.jar:3.2.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-6.1.2.jar:6.1.2]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:385) ~[spring-tx-6.1.2.jar:6.1.2]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:164) ~[spring-data-jpa-3.2.1.jar:3.2.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.data.repository.core.support.MethodInvocationValidator.invoke(MethodInvocationValidator.java:95) ~[spring-data-commons-3.2.1.jar:3.2.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:249) ~[spring-aop-6.1.2.jar:6.1.2]
+	at jdk.proxy3/jdk.proxy3.$Proxy182.saveAll(Unknown Source) ~[na:na]
+	at com.mvp.order.domain.service.order.OrderServiceImpl.saveAllOrderProduct(OrderServiceImpl.kt:129) ~[main/:na]
+	at com.mvp.order.application.integration.order.service.OrderServiceTest.saveAllOrderProduct saves and returns list of order products(OrderServiceTest.kt:138) ~[test/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728) ~[junit-platform-commons-1.10.1.jar:1.10.1]
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60) ~[junit-jupiter-engine-5.10.1.jar:5.10.1]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131) ~[junit-jupiter-engine-5.10.1.jar:5.10.1]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156) ~[junit-jupiter-engine-5.10.1.jar:5.10.1]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147) ~[junit-jupiter-engine-5.10.1.jar:5.10.1]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86) ~[junit-jupiter-engine-5.10.1.jar:5.10.1]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103) ~[junit-jupiter-engine-5.10.1.jar:5.10.1]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93) ~[junit-jupiter-engine-5.10.1.jar:5.10.1]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106) ~[junit-jupiter-engine-5.10.1.jar:5.10.1]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64) ~[junit-jupiter-engine-5.10.1.jar:5.10.1]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45) ~[junit-jupiter-engine-5.10.1.jar:5.10.1]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37) ~[junit-jupiter-engine-5.10.1.jar:5.10.1]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92) ~[junit-jupiter-engine-5.10.1.jar:5.10.1]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86) ~[junit-jupiter-engine-5.10.1.jar:5.10.1]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218) ~[junit-jupiter-engine-5.10.1.jar:5.10.1]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214) ~[junit-jupiter-engine-5.10.1.jar:5.10.1]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139) ~[junit-jupiter-engine-5.10.1.jar:5.10.1]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.10.1.jar:5.10.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107) ~[na:na]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88) ~[na:na]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54) ~[na:na]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67) ~[na:na]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52) ~[na:na]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114) ~[na:na]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86) ~[na:na]
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86) ~[na:na]
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:99) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:79) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:75) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36) ~[na:na]
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24) ~[na:na]
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33) ~[na:na]
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94) ~[na:na]
+	at jdk.proxy2/jdk.proxy2.$Proxy5.stop(Unknown Source) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60) ~[na:na]
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56) ~[na:na]
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113) ~[na:na]
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65) ~[na:na]
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69) ~[gradle-worker.jar:na]
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) ~[gradle-worker.jar:na]
+
+2024-01-21T15:29:38.190-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */COMMIT;
+2024-01-21T15:29:38.190-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */COMMIT;
+2024-01-21T15:29:38.195-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL #:2*/delete from tb_order_product;
+2024-01-21T15:29:38.196-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL #:1*/delete from tb_order;
+2024-01-21T15:29:38.196-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL #:1*/insert into tb_order ( id, external_id, id_client, is_finished, status, total_price, waiting_time) values ( 1, 'cdfe4e61-ec36-4a7c-933e-d49d75af963e'::UUID, 1, false, 'Pendente', 19.99, now()) ON CONFLICT DO NOTHING;
+2024-01-21T15:29:38.197-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL #:1*/insert into tb_order_product ( id_order, id_product) values ( 1, 1) ON CONFLICT DO NOTHING;
+2024-01-21T15:29:38.198-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */COMMIT;
+2024-01-21T15:29:38.198-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */COMMIT;
+Hibernate: 
+        DELETE FROM tb_order_product WHERE id_order = ?
+    
+2024-01-21T15:29:38.203-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL l:47 #:1*/DELETE FROM tb_order_product WHERE id_order = ? {1: CAST(1 AS BIGINT)};
+2024-01-21T15:29:38.203-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */COMMIT;
+2024-01-21T15:29:38.204-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */COMMIT;
+Hibernate: select oe1_0.id,oe1_0.external_id,oe1_0.id_client,oe1_0.is_finished,oe1_0.status,oe1_0.total_price,oe1_0.waiting_time from tb_order oe1_0 where oe1_0.id=?
+2024-01-21T15:29:38.206-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL l:154 #:1*/select oe1_0.id,oe1_0.external_id,oe1_0.id_client,oe1_0.is_finished,oe1_0.status,oe1_0.total_price,oe1_0.waiting_time from tb_order oe1_0 where oe1_0.id=? {1: CAST(1 AS BIGINT)};
+Hibernate: delete from tb_order where id=?
+2024-01-21T15:29:38.208-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL l:31 #:1*/delete from tb_order where id=? {1: CAST(1 AS BIGINT)};
+2024-01-21T15:29:38.208-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */COMMIT;
+2024-01-21T15:29:38.208-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */COMMIT;
+Hibernate: select count(*) from tb_order oe1_0 where oe1_0.id=?
+2024-01-21T15:29:38.212-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL l:52 #:1*/select count(*) from tb_order oe1_0 where oe1_0.id=? {1: CAST(1 AS BIGINT)};
+2024-01-21T15:29:38.213-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */COMMIT;
+2024-01-21T15:29:38.213-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */COMMIT;
+2024-01-21T15:29:38.217-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */delete from tb_order_product;
+2024-01-21T15:29:38.217-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */delete from tb_order;
+2024-01-21T15:29:38.217-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL #:1*/insert into tb_order ( id, external_id, id_client, is_finished, status, total_price, waiting_time) values ( 1, 'cdfe4e61-ec36-4a7c-933e-d49d75af963e'::UUID, 1, false, 'Pendente', 19.99, now()) ON CONFLICT DO NOTHING;
+2024-01-21T15:29:38.217-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL #:1*/insert into tb_order_product ( id_order, id_product) values ( 1, 1) ON CONFLICT DO NOTHING;
+2024-01-21T15:29:38.218-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */COMMIT;
+2024-01-21T15:29:38.218-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */COMMIT;
+Hibernate: 
+        SELECT tb_order.id, tb_order.external_id, id_client, SUM(price) AS total_price, status, is_finished, waiting_time
+         FROM tb_order 
+         INNER JOIN tb_client ON tb_client.id = tb_order.id_client
+         LEFT JOIN tb_order_product ON tb_order_product.id_order = tb_order.id
+         LEFT JOIN tb_product ON tb_product.id = tb_order_product.id_product
+         WHERE tb_client.cpf = ?
+         GROUP BY tb_order.id, id_client, status, is_finished
+    
+2024-01-21T15:29:38.221-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL l:455 #:1*/SELECT tb_order.id, tb_order.external_id, id_client, SUM(price) AS total_price, status, is_finished, waiting_time\n         FROM tb_order \n         INNER JOIN tb_client ON tb_client.id = tb_order.id_client\n         LEFT JOIN tb_order_product ON tb_order_product.id_order = tb_order.id\n         LEFT JOIN tb_product ON tb_product.id = tb_order_product.id_product\n         WHERE tb_client.cpf = ?\n         GROUP BY tb_order.id, id_client, status, is_finished {1: '99999999999'};
+2024-01-21T15:29:38.223-03:00  INFO 8210 --- [    Test worker] c.m.o.d.service.order.OrderServiceImpl   : Pendente Pago
+Hibernate:  SELECT tb_client.id, password, name, email, cpf, tb_address.id AS id_address 
+        FROM tb_client 
+        INNER JOIN tb_address ON tb_client.id_address = tb_address.id 
+        WHERE tb_client.cpf = ? 
+2024-01-21T15:29:38.225-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL l:204 #:1*/SELECT tb_client.id, password, name, email, cpf, tb_address.id AS id_address \n        FROM tb_client \n        INNER JOIN tb_address ON tb_client.id_address = tb_address.id \n        WHERE tb_client.cpf = ? {1: '99999999999'};
+Hibernate: SELECT id, name, price, quantity, id_category FROM tb_product WHERE id IN(?)
+2024-01-21T15:29:38.228-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL l:76 #:1*/SELECT id, name, price, quantity, id_category FROM tb_product WHERE id IN(?) {1: CAST(1 AS BIGINT)};
+Hibernate: select ce1_0.id,ce1_0.description,ce1_0.name from tb_category ce1_0 where ce1_0.id=?
+2024-01-21T15:29:38.232-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL l:84 #:1*/select ce1_0.id,ce1_0.description,ce1_0.name from tb_category ce1_0 where ce1_0.id=? {1: CAST(1 AS BIGINT)};
+2024-01-21T15:29:38.233-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */COMMIT;
+2024-01-21T15:29:38.233-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */COMMIT;
+Hibernate: 
+        SELECT tb_order.id, tb_order.external_id, id_client, SUM(price) AS total_price, status, is_finished, waiting_time
+         FROM tb_order 
+         INNER JOIN tb_client ON tb_client.id = tb_order.id_client
+         LEFT JOIN tb_order_product ON tb_order_product.id_order = tb_order.id
+         LEFT JOIN tb_product ON tb_product.id = tb_order_product.id_product
+         WHERE tb_client.cpf = ?
+         GROUP BY tb_order.id, id_client, status, is_finished
+    
+2024-01-21T15:29:38.234-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL l:455 #:1*/SELECT tb_order.id, tb_order.external_id, id_client, SUM(price) AS total_price, status, is_finished, waiting_time\n         FROM tb_order \n         INNER JOIN tb_client ON tb_client.id = tb_order.id_client\n         LEFT JOIN tb_order_product ON tb_order_product.id_order = tb_order.id\n         LEFT JOIN tb_product ON tb_product.id = tb_order_product.id_product\n         WHERE tb_client.cpf = ?\n         GROUP BY tb_order.id, id_client, status, is_finished {1: '99999999999'};
+Hibernate: select oe1_0.id,oe1_0.external_id,oe1_0.id_client,oe1_0.is_finished,oe1_0.status,oe1_0.total_price,oe1_0.waiting_time from tb_order oe1_0 where oe1_0.id=?
+2024-01-21T15:29:38.237-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL l:154 #:1*/select oe1_0.id,oe1_0.external_id,oe1_0.id_client,oe1_0.is_finished,oe1_0.status,oe1_0.total_price,oe1_0.waiting_time from tb_order oe1_0 where oe1_0.id=? {1: CAST(1 AS BIGINT)};
+2024-01-21T15:29:38.238-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */COMMIT;
+2024-01-21T15:29:38.238-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */COMMIT;
+Hibernate: select ope1_0.id,ope1_0.id_order,ope1_0.id_product from tb_order_product ope1_0 where ope1_0.id=?
+2024-01-21T15:29:38.239-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL l:97*/select ope1_0.id,ope1_0.id_order,ope1_0.id_product from tb_order_product ope1_0 where ope1_0.id=? {1: CAST(1 AS BIGINT)};
+Hibernate: insert into tb_order_product (id_order,id_product) values (?,?)
+2024-01-21T15:29:38.240-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL l:63 #:1*/insert into tb_order_product (id_order,id_product) values (?,?) {1: CAST(1 AS BIGINT), 2: CAST(1 AS BIGINT)};
+2024-01-21T15:29:38.240-03:00 ERROR 8210 --- [    Test worker] h2database                               : jdbc[13] exception
+
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.message.DbException.get(DbException.java:223) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.message.DbException.get(DbException.java:199) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.message.DbException.get(DbException.java:188) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.jdbc.JdbcStatement.checkClosed(JdbcStatement.java:1287) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.jdbc.JdbcStatement.getMaxRows(JdbcStatement.java:476) ~[h2-2.2.224.jar:2.2.224]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.getMaxRows(HikariProxyPreparedStatement.java) ~[HikariCP-5.0.1.jar:na]
+	at org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl.close(ResourceRegistryStandardImpl.java:193) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl.release(ResourceRegistryStandardImpl.java:108) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.mutation.internal.PreparedStatementDetailsStandard.releaseStatement(PreparedStatementDetailsStandard.java:69) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.mutation.internal.MutationExecutorPostInsertSingleTable.release(MutationExecutorPostInsertSingleTable.java:115) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.persister.entity.mutation.InsertCoordinator.doStaticInserts(InsertCoordinator.java:192) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.persister.entity.mutation.InsertCoordinator.coordinateInsert(InsertCoordinator.java:113) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:2868) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:81) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:670) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:291) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:272) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:322) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:386) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:300) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:219) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:134) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.saveTransientEntity(DefaultMergeEventListener.java:315) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.entityIsTransient(DefaultMergeEventListener.java:234) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.entityIsDetached(DefaultMergeEventListener.java:347) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.merge(DefaultMergeEventListener.java:150) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.doMerge(DefaultMergeEventListener.java:143) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.onMerge(DefaultMergeEventListener.java:127) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.onMerge(DefaultMergeEventListener.java:81) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.internal.SessionImpl.fireMerge(SessionImpl.java:867) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.internal.SessionImpl.merge(SessionImpl.java:853) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:319) ~[spring-orm-6.1.2.jar:6.1.2]
+	at jdk.proxy3/jdk.proxy3.$Proxy175.merge(Unknown Source) ~[na:na]
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:621) ~[spring-data-jpa-3.2.1.jar:3.2.1]
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.saveAll(SimpleJpaRepository.java:644) ~[spring-data-jpa-3.2.1.jar:3.2.1]
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.saveAll(SimpleJpaRepository.java:95) ~[spring-data-jpa-3.2.1.jar:3.2.1]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:352) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:277) ~[spring-data-commons-3.2.1.jar:3.2.1]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170) ~[spring-data-commons-3.2.1.jar:3.2.1]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158) ~[spring-data-commons-3.2.1.jar:3.2.1]
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:516) ~[spring-data-commons-3.2.1.jar:3.2.1]
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285) ~[spring-data-commons-3.2.1.jar:3.2.1]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:628) ~[spring-data-commons-3.2.1.jar:3.2.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:168) ~[spring-data-commons-3.2.1.jar:3.2.1]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:143) ~[spring-data-commons-3.2.1.jar:3.2.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:70) ~[spring-data-commons-3.2.1.jar:3.2.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-6.1.2.jar:6.1.2]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:385) ~[spring-tx-6.1.2.jar:6.1.2]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:164) ~[spring-data-jpa-3.2.1.jar:3.2.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.data.repository.core.support.MethodInvocationValidator.invoke(MethodInvocationValidator.java:95) ~[spring-data-commons-3.2.1.jar:3.2.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:249) ~[spring-aop-6.1.2.jar:6.1.2]
+	at jdk.proxy3/jdk.proxy3.$Proxy182.saveAll(Unknown Source) ~[na:na]
+	at com.mvp.order.domain.service.order.OrderServiceImpl.createOrder(OrderServiceImpl.kt:107) ~[main/:na]
+	at com.mvp.order.domain.service.order.OrderServiceImpl.updateOrderProduct(OrderServiceImpl.kt:121) ~[main/:na]
+	at com.mvp.order.application.integration.order.service.OrderServiceTest.updateOrderProduct updates existing order(OrderServiceTest.kt:128) ~[test/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728) ~[junit-platform-commons-1.10.1.jar:1.10.1]
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60) ~[junit-jupiter-engine-5.10.1.jar:5.10.1]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131) ~[junit-jupiter-engine-5.10.1.jar:5.10.1]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156) ~[junit-jupiter-engine-5.10.1.jar:5.10.1]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147) ~[junit-jupiter-engine-5.10.1.jar:5.10.1]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86) ~[junit-jupiter-engine-5.10.1.jar:5.10.1]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103) ~[junit-jupiter-engine-5.10.1.jar:5.10.1]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93) ~[junit-jupiter-engine-5.10.1.jar:5.10.1]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106) ~[junit-jupiter-engine-5.10.1.jar:5.10.1]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64) ~[junit-jupiter-engine-5.10.1.jar:5.10.1]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45) ~[junit-jupiter-engine-5.10.1.jar:5.10.1]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37) ~[junit-jupiter-engine-5.10.1.jar:5.10.1]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92) ~[junit-jupiter-engine-5.10.1.jar:5.10.1]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86) ~[junit-jupiter-engine-5.10.1.jar:5.10.1]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218) ~[junit-jupiter-engine-5.10.1.jar:5.10.1]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214) ~[junit-jupiter-engine-5.10.1.jar:5.10.1]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139) ~[junit-jupiter-engine-5.10.1.jar:5.10.1]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.10.1.jar:5.10.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107) ~[na:na]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88) ~[na:na]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54) ~[na:na]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67) ~[na:na]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52) ~[na:na]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114) ~[na:na]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86) ~[na:na]
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86) ~[na:na]
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:99) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:79) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:75) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36) ~[na:na]
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24) ~[na:na]
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33) ~[na:na]
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94) ~[na:na]
+	at jdk.proxy2/jdk.proxy2.$Proxy5.stop(Unknown Source) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60) ~[na:na]
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56) ~[na:na]
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113) ~[na:na]
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65) ~[na:na]
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69) ~[gradle-worker.jar:na]
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) ~[gradle-worker.jar:na]
+
+2024-01-21T15:29:38.244-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */COMMIT;
+2024-01-21T15:29:38.244-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */COMMIT;
+Message sent. Message ID: d03bb38f-9c84-5523-a3f3-eda8f857d8a9
+Hibernate:  SELECT tb_client.id, password, name, email, cpf, tb_address.id AS id_address 
+        FROM tb_client 
+        INNER JOIN tb_address ON tb_client.id_address = tb_address.id 
+        WHERE tb_client.cpf = ? 
+2024-01-21T15:29:39.216-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL l:204 #:1*/SELECT tb_client.id, password, name, email, cpf, tb_address.id AS id_address \n        FROM tb_client \n        INNER JOIN tb_address ON tb_client.id_address = tb_address.id \n        WHERE tb_client.cpf = ? {1: '99999999999'};
+Hibernate: SELECT id, name, price, quantity, id_category FROM tb_product WHERE id IN(?)
+2024-01-21T15:29:39.219-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL l:76 #:1*/SELECT id, name, price, quantity, id_category FROM tb_product WHERE id IN(?) {1: CAST(1 AS BIGINT)};
+Hibernate: select ce1_0.id,ce1_0.description,ce1_0.name from tb_category ce1_0 where ce1_0.id=?
+2024-01-21T15:29:39.221-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL l:84 #:1*/select ce1_0.id,ce1_0.description,ce1_0.name from tb_category ce1_0 where ce1_0.id=? {1: CAST(1 AS BIGINT)};
+2024-01-21T15:29:39.221-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */COMMIT;
+2024-01-21T15:29:39.221-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */COMMIT;
+Hibernate: 
+        SELECT tb_order.id, tb_order.external_id, id_client, SUM(price) AS total_price, status, is_finished, waiting_time
+         FROM tb_order 
+         INNER JOIN tb_client ON tb_client.id = tb_order.id_client
+         LEFT JOIN tb_order_product ON tb_order_product.id_order = tb_order.id
+         LEFT JOIN tb_product ON tb_product.id = tb_order_product.id_product
+         WHERE tb_client.cpf = ?
+         GROUP BY tb_order.id, id_client, status, is_finished
+    
+2024-01-21T15:29:39.223-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL l:455 #:1*/SELECT tb_order.id, tb_order.external_id, id_client, SUM(price) AS total_price, status, is_finished, waiting_time\n         FROM tb_order \n         INNER JOIN tb_client ON tb_client.id = tb_order.id_client\n         LEFT JOIN tb_order_product ON tb_order_product.id_order = tb_order.id\n         LEFT JOIN tb_product ON tb_product.id = tb_order_product.id_product\n         WHERE tb_client.cpf = ?\n         GROUP BY tb_order.id, id_client, status, is_finished {1: '99999999999'};
+Hibernate: select oe1_0.id,oe1_0.external_id,oe1_0.id_client,oe1_0.is_finished,oe1_0.status,oe1_0.total_price,oe1_0.waiting_time from tb_order oe1_0 where oe1_0.id=?
+2024-01-21T15:29:39.226-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL l:154 #:1*/select oe1_0.id,oe1_0.external_id,oe1_0.id_client,oe1_0.is_finished,oe1_0.status,oe1_0.total_price,oe1_0.waiting_time from tb_order oe1_0 where oe1_0.id=? {1: CAST(1 AS BIGINT)};
+2024-01-21T15:29:39.234-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */COMMIT;
+2024-01-21T15:29:39.234-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */COMMIT;
+Hibernate: select ope1_0.id,ope1_0.id_order,ope1_0.id_product from tb_order_product ope1_0 where ope1_0.id=?
+2024-01-21T15:29:39.236-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL l:97*/select ope1_0.id,ope1_0.id_order,ope1_0.id_product from tb_order_product ope1_0 where ope1_0.id=? {1: CAST(1 AS BIGINT)};
+Hibernate: insert into tb_order_product (id_order,id_product) values (?,?)
+2024-01-21T15:29:39.237-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL l:63 #:1*/insert into tb_order_product (id_order,id_product) values (?,?) {1: CAST(1 AS BIGINT), 2: CAST(1 AS BIGINT)};
+2024-01-21T15:29:39.237-03:00 ERROR 8210 --- [    Test worker] h2database                               : jdbc[13] exception
+
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.message.DbException.get(DbException.java:223) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.message.DbException.get(DbException.java:199) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.message.DbException.get(DbException.java:188) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.jdbc.JdbcStatement.checkClosed(JdbcStatement.java:1287) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.jdbc.JdbcStatement.getMaxRows(JdbcStatement.java:476) ~[h2-2.2.224.jar:2.2.224]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.getMaxRows(HikariProxyPreparedStatement.java) ~[HikariCP-5.0.1.jar:na]
+	at org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl.close(ResourceRegistryStandardImpl.java:193) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl.release(ResourceRegistryStandardImpl.java:108) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.mutation.internal.PreparedStatementDetailsStandard.releaseStatement(PreparedStatementDetailsStandard.java:69) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.jdbc.mutation.internal.MutationExecutorPostInsertSingleTable.release(MutationExecutorPostInsertSingleTable.java:115) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.persister.entity.mutation.InsertCoordinator.doStaticInserts(InsertCoordinator.java:192) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.persister.entity.mutation.InsertCoordinator.coordinateInsert(InsertCoordinator.java:113) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:2868) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:81) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:670) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:291) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:272) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:322) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:386) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:300) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:219) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:134) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.saveTransientEntity(DefaultMergeEventListener.java:315) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.entityIsTransient(DefaultMergeEventListener.java:234) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.entityIsDetached(DefaultMergeEventListener.java:347) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.merge(DefaultMergeEventListener.java:150) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.doMerge(DefaultMergeEventListener.java:143) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.onMerge(DefaultMergeEventListener.java:127) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.onMerge(DefaultMergeEventListener.java:81) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.internal.SessionImpl.fireMerge(SessionImpl.java:867) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.internal.SessionImpl.merge(SessionImpl.java:853) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:319) ~[spring-orm-6.1.2.jar:6.1.2]
+	at jdk.proxy3/jdk.proxy3.$Proxy175.merge(Unknown Source) ~[na:na]
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:621) ~[spring-data-jpa-3.2.1.jar:3.2.1]
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.saveAll(SimpleJpaRepository.java:644) ~[spring-data-jpa-3.2.1.jar:3.2.1]
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.saveAll(SimpleJpaRepository.java:95) ~[spring-data-jpa-3.2.1.jar:3.2.1]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:352) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:277) ~[spring-data-commons-3.2.1.jar:3.2.1]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170) ~[spring-data-commons-3.2.1.jar:3.2.1]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158) ~[spring-data-commons-3.2.1.jar:3.2.1]
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:516) ~[spring-data-commons-3.2.1.jar:3.2.1]
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285) ~[spring-data-commons-3.2.1.jar:3.2.1]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:628) ~[spring-data-commons-3.2.1.jar:3.2.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:168) ~[spring-data-commons-3.2.1.jar:3.2.1]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:143) ~[spring-data-commons-3.2.1.jar:3.2.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:70) ~[spring-data-commons-3.2.1.jar:3.2.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-6.1.2.jar:6.1.2]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:385) ~[spring-tx-6.1.2.jar:6.1.2]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:164) ~[spring-data-jpa-3.2.1.jar:3.2.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.data.repository.core.support.MethodInvocationValidator.invoke(MethodInvocationValidator.java:95) ~[spring-data-commons-3.2.1.jar:3.2.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.2.jar:6.1.2]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:249) ~[spring-aop-6.1.2.jar:6.1.2]
+	at jdk.proxy3/jdk.proxy3.$Proxy182.saveAll(Unknown Source) ~[na:na]
+	at com.mvp.order.domain.service.order.OrderServiceImpl.createOrder(OrderServiceImpl.kt:107) ~[main/:na]
+	at com.mvp.order.application.integration.order.service.OrderServiceTest.createOrder creates and returns a valid order(OrderServiceTest.kt:99) ~[test/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728) ~[junit-platform-commons-1.10.1.jar:1.10.1]
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60) ~[junit-jupiter-engine-5.10.1.jar:5.10.1]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131) ~[junit-jupiter-engine-5.10.1.jar:5.10.1]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156) ~[junit-jupiter-engine-5.10.1.jar:5.10.1]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147) ~[junit-jupiter-engine-5.10.1.jar:5.10.1]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86) ~[junit-jupiter-engine-5.10.1.jar:5.10.1]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103) ~[junit-jupiter-engine-5.10.1.jar:5.10.1]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93) ~[junit-jupiter-engine-5.10.1.jar:5.10.1]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106) ~[junit-jupiter-engine-5.10.1.jar:5.10.1]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64) ~[junit-jupiter-engine-5.10.1.jar:5.10.1]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45) ~[junit-jupiter-engine-5.10.1.jar:5.10.1]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37) ~[junit-jupiter-engine-5.10.1.jar:5.10.1]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92) ~[junit-jupiter-engine-5.10.1.jar:5.10.1]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86) ~[junit-jupiter-engine-5.10.1.jar:5.10.1]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218) ~[junit-jupiter-engine-5.10.1.jar:5.10.1]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214) ~[junit-jupiter-engine-5.10.1.jar:5.10.1]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139) ~[junit-jupiter-engine-5.10.1.jar:5.10.1]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.10.1.jar:5.10.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.10.1.jar:1.10.1]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107) ~[na:na]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88) ~[na:na]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54) ~[na:na]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67) ~[na:na]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52) ~[na:na]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114) ~[na:na]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86) ~[na:na]
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86) ~[na:na]
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:99) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:79) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:75) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36) ~[na:na]
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24) ~[na:na]
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33) ~[na:na]
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94) ~[na:na]
+	at jdk.proxy2/jdk.proxy2.$Proxy5.stop(Unknown Source) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60) ~[na:na]
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56) ~[na:na]
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113) ~[na:na]
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65) ~[na:na]
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69) ~[gradle-worker.jar:na]
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) ~[gradle-worker.jar:na]
+
+2024-01-21T15:29:39.262-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */COMMIT;
+2024-01-21T15:29:39.263-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */COMMIT;
+Message sent. Message ID: 55c1d573-17e9-5ec5-a29e-8b54733a334f
+2024-01-21T15:29:39.525-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL #:3*/delete from tb_order_product;
+2024-01-21T15:29:39.525-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL #:1*/delete from tb_order;
+2024-01-21T15:29:39.526-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL #:1*/insert into tb_order ( id, external_id, id_client, is_finished, status, total_price, waiting_time) values ( 1, 'cdfe4e61-ec36-4a7c-933e-d49d75af963e'::UUID, 1, false, 'Pendente', 19.99, now()) ON CONFLICT DO NOTHING;
+2024-01-21T15:29:39.526-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL #:1*/insert into tb_order_product ( id_order, id_product) values ( 1, 1) ON CONFLICT DO NOTHING;
+Hibernate: 
+        SELECT tb_order.id, tb_order.external_id, id_client, SUM(price) AS total_price, status, is_finished, waiting_time
+         FROM tb_order 
+         INNER JOIN tb_client ON tb_client.id = tb_order.id_client
+         INNER JOIN tb_order_product ON tb_order_product.id_order = tb_order.id
+         INNER JOIN tb_product ON tb_product.id = tb_order_product.id_product
+         WHERE tb_order.id = ?
+         GROUP BY tb_order.id, id_client, status, is_finished
+    
+2024-01-21T15:29:39.532-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL l:455 #:1*/SELECT tb_order.id, tb_order.external_id, id_client, SUM(price) AS total_price, status, is_finished, waiting_time\n         FROM tb_order \n         INNER JOIN tb_client ON tb_client.id = tb_order.id_client\n         INNER JOIN tb_order_product ON tb_order_product.id_order = tb_order.id\n         INNER JOIN tb_product ON tb_product.id = tb_order_product.id_product\n         WHERE tb_order.id = ?\n         GROUP BY tb_order.id, id_client, status, is_finished {1: CAST(1 AS BIGINT)};
+Hibernate: 
+        SELECT tb_order_product.id, 
+               tb_order_product.id_product, 
+               tb_order_product.id_order, 
+               tb_product.name AS product_name, 
+               tb_category.name AS category_name, 
+               tb_product.price
+        FROM tb_order_product
+        INNER JOIN tb_order ON tb_order.id = tb_order_product.id_order
+        LEFT JOIN tb_product ON tb_product.id = tb_order_product.id_product
+        LEFT JOIN tb_category ON tb_category.id = tb_product.id_category
+        WHERE tb_order_product.id_order = ?
+    
+2024-01-21T15:29:39.536-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL l:542 #:1*/SELECT tb_order_product.id, \n               tb_order_product.id_product, \n               tb_order_product.id_order, \n               tb_product.name AS product_name, \n               tb_category.name AS category_name, \n               tb_product.price\n        FROM tb_order_product\n        INNER JOIN tb_order ON tb_order.id = tb_order_product.id_order\n        LEFT JOIN tb_product ON tb_product.id = tb_order_product.id_product\n        LEFT JOIN tb_category ON tb_category.id = tb_product.id_category\n        WHERE tb_order_product.id_order = ? {1: CAST(1 AS BIGINT)};
+2024-01-21T15:29:39.539-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */ROLLBACK;
+2024-01-21T15:29:39.539-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */COMMIT;
+2024-01-21T15:29:39.544-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL #:3*/delete from public.tb_order_product;
+2024-01-21T15:29:39.544-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL #:1*/delete from public.tb_order;
+2024-01-21T15:29:39.545-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL #:1*/insert into public.tb_order ( id, external_id, id_client, is_finished, status, total_price, waiting_time) values ( 9999, 'ddfe4e61-ec36-4a7c-933e-d49d75af963e'::UUID, 1, false, 'Pendente', 19.99, now()) ON CONFLICT DO NOTHING;
+2024-01-21T15:29:39.545-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL #:1*/insert into public.tb_order_product ( id_order, id_product) values ( 9999, 1) ON CONFLICT DO NOTHING;
+2024-01-21T15:29:39.545-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */COMMIT;
+2024-01-21T15:29:39.545-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */COMMIT;
+Hibernate: 
+        SELECT tb_order.id, tb_order.external_id, id_client, SUM(price) AS total_price, status, is_finished, waiting_time
+         FROM tb_order 
+         INNER JOIN tb_client ON tb_client.id = tb_order.id_client
+         INNER JOIN tb_order_product ON tb_order_product.id_order = tb_order.id
+         INNER JOIN tb_product ON tb_product.id = tb_order_product.id_product
+         WHERE tb_order.id = ?
+         GROUP BY tb_order.id, id_client, status, is_finished
+    
+2024-01-21T15:29:39.549-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL l:455 #:1*/SELECT tb_order.id, tb_order.external_id, id_client, SUM(price) AS total_price, status, is_finished, waiting_time\n         FROM tb_order \n         INNER JOIN tb_client ON tb_client.id = tb_order.id_client\n         INNER JOIN tb_order_product ON tb_order_product.id_order = tb_order.id\n         INNER JOIN tb_product ON tb_product.id = tb_order_product.id_product\n         WHERE tb_order.id = ?\n         GROUP BY tb_order.id, id_client, status, is_finished {1: CAST(9999 AS BIGINT)};
+Hibernate: 
+        SELECT tb_order_product.id, 
+               tb_order_product.id_product, 
+               tb_order_product.id_order, 
+               tb_product.name AS product_name, 
+               tb_category.name AS category_name, 
+               tb_product.price
+        FROM tb_order_product
+        INNER JOIN tb_order ON tb_order.id = tb_order_product.id_order
+        LEFT JOIN tb_product ON tb_product.id = tb_order_product.id_product
+        LEFT JOIN tb_category ON tb_category.id = tb_product.id_category
+        WHERE tb_order_product.id_order = ?
+    
+2024-01-21T15:29:39.552-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL l:542 #:1*/SELECT tb_order_product.id, \n               tb_order_product.id_product, \n               tb_order_product.id_order, \n               tb_product.name AS product_name, \n               tb_category.name AS category_name, \n               tb_product.price\n        FROM tb_order_product\n        INNER JOIN tb_order ON tb_order.id = tb_order_product.id_order\n        LEFT JOIN tb_product ON tb_product.id = tb_order_product.id_product\n        LEFT JOIN tb_category ON tb_category.id = tb_product.id_category\n        WHERE tb_order_product.id_order = ? {1: CAST(9999 AS BIGINT)};
+Hibernate:  SELECT tb_client.id, password, name, email, cpf, tb_address.id AS id_address 
+        FROM tb_client 
+        INNER JOIN tb_address ON tb_client.id_address = tb_address.id 
+        WHERE tb_client.cpf = ? 
+2024-01-21T15:29:39.559-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL l:204*/SELECT tb_client.id, password, name, email, cpf, tb_address.id AS id_address \n        FROM tb_client \n        INNER JOIN tb_address ON tb_client.id_address = tb_address.id \n        WHERE tb_client.cpf = ? {1: '1'};
+Hibernate: 
+        SELECT tb_order.id, tb_order.external_id, id_client, SUM(price) AS total_price, status, is_finished, waiting_time
+         FROM tb_order 
+         INNER JOIN tb_client ON tb_client.id = tb_order.id_client
+         INNER JOIN tb_order_product ON tb_order_product.id_order = tb_order.id
+         INNER JOIN tb_product ON tb_product.id = tb_order_product.id_product
+         WHERE tb_order.id = ?
+         GROUP BY tb_order.id, id_client, status, is_finished
+    
+2024-01-21T15:29:39.565-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL l:455*/SELECT tb_order.id, tb_order.external_id, id_client, SUM(price) AS total_price, status, is_finished, waiting_time\n         FROM tb_order \n         INNER JOIN tb_client ON tb_client.id = tb_order.id_client\n         INNER JOIN tb_order_product ON tb_order_product.id_order = tb_order.id\n         INNER JOIN tb_product ON tb_product.id = tb_order_product.id_product\n         WHERE tb_order.id = ?\n         GROUP BY tb_order.id, id_client, status, is_finished {1: CAST(999 AS BIGINT)};
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.6.1</a> at Jan 21, 2024, 3:29:43 PM</p>
+</div>
+</div>
+</body>
+</html>

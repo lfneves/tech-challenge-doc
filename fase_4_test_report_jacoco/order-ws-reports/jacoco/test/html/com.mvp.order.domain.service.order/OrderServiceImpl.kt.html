@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>OrderServiceImpl.kt</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">order</a> &gt; <a href="index.source.html" class="el_package">com.mvp.order.domain.service.order</a> &gt; <span class="el_source">OrderServiceImpl.kt</span></div><h1>OrderServiceImpl.kt</h1><pre class="source lang-java linenums">package com.mvp.order.domain.service.order
+
+import com.fasterxml.jackson.databind.ObjectMapper
+import com.fasterxml.jackson.databind.SerializationFeature
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule
+import com.mvp.order.domain.model.exception.Exceptions
+import com.mvp.order.domain.model.order.*
+import com.mvp.order.domain.model.order.enums.OrderStatusEnum
+import com.mvp.order.domain.model.product.ProductRemoveOrderDTO
+import com.mvp.order.infrastruture.repository.order.OrderProductRepository
+import com.mvp.order.infrastruture.repository.order.OrderRepository
+import com.mvp.order.domain.service.message.SnsService
+import com.mvp.order.domain.service.product.ProductServiceImpl
+import com.mvp.order.domain.service.user.UserServiceImpl
+import com.mvp.order.infrastruture.entity.order.OrderEntity
+import com.mvp.order.infrastruture.entity.order.OrderProductEntity
+import com.mvp.order.infrastruture.repository.order.OrderProductResponseRepository
+import com.mvp.order.utils.constants.ErrorMsgConstants
+import org.slf4j.Logger
+import org.slf4j.LoggerFactory
+import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.stereotype.Service
+import java.math.BigDecimal
+import java.util.*
+
+<span class="fc" id="L26">@Service</span>
+<span class="fc" id="L27">class OrderServiceImpl @Autowired constructor(</span>
+<span class="fc" id="L28">    private val snsService: SnsService,</span>
+<span class="fc" id="L29">    private val orderRepository: OrderRepository,</span>
+<span class="fc" id="L30">    private val orderProductRepository: OrderProductRepository,</span>
+<span class="fc" id="L31">    private val orderProductResponseRepository: OrderProductResponseRepository,</span>
+<span class="fc" id="L32">    private val productService: ProductServiceImpl,</span>
+<span class="fc" id="L33">    private val userService: UserServiceImpl</span>
+): OrderService {
+<span class="pc" id="L35">    var logger: Logger = LoggerFactory.getLogger(OrderServiceImpl::class.java)</span>
+
+<span class="fc" id="L37">    private val mapper = ObjectMapper().registerModule(JavaTimeModule()).enable(SerializationFeature.INDENT_OUTPUT)</span>
+
+    override fun getOrderById(id: Long): OrderByIdResponseDTO {
+<span class="fc" id="L40">        val orderEntity = orderRepository.findByIdOrder(id)</span>
+<span class="pc bpc" id="L41" title="1 of 2 branches missed.">        return if(orderEntity.isPresent) {</span>
+<span class="fc" id="L42">            val orderResponseDTO = orderEntity.get().toResponseDTO()</span>
+<span class="fc" id="L43">            val orderProducts = findAllByIdOrderInfo(orderResponseDTO.id!!)</span>
+<span class="fc" id="L44">            orderResponseDTO.products.addAll(orderProducts)</span>
+<span class="fc" id="L45">            orderResponseDTO</span>
+        } else {
+<span class="nc" id="L47">            throw Exceptions.RequestedElementNotFoundException(ErrorMsgConstants.ERROR_ORDER_NOT_FOUND)</span>
+        }
+    }
+
+    override fun findAllByIdOrderInfo(id: Long): List&lt;OrderProductResponseDTO&gt; {
+<span class="fc" id="L52">        return orderProductResponseRepository.findAllByIdOrderInfo(id).map { entity -&gt;</span>
+<span class="fc" id="L53">            try {</span>
+<span class="fc" id="L54">                OrderProductResponseDTO(</span>
+<span class="fc" id="L55">                    id = entity.id,</span>
+<span class="fc" id="L56">                    idProduct = entity.idProduct,</span>
+<span class="fc" id="L57">                    idOrder = entity.idOrder,</span>
+<span class="fc" id="L58">                    productName = entity.productName,</span>
+<span class="fc" id="L59">                    categoryName = entity.categoryName,</span>
+<span class="fc" id="L60">                    price = entity.price</span>
+                )
+<span class="nc" id="L62">            } catch (e: Exception) {</span>
+<span class="pc" id="L63">                throw Exceptions.RequestedElementNotFoundException(ErrorMsgConstants.ERROR_ORDER_NOT_FOUND)</span>
+            }
+        }
+    }
+
+    override fun getOrderByExternalId(externalId: String): OrderByIdResponseDTO {
+<span class="fc" id="L69">        val orderEntity = orderRepository.findByExternalId(externalId)</span>
+<span class="pc bpc" id="L70" title="1 of 2 branches missed.">        return if(orderEntity.isPresent) {</span>
+<span class="fc" id="L71">            val orderResponseDTO = orderEntity.get().toResponseDTO()</span>
+<span class="fc" id="L72">            val orderProducts = findAllByIdOrderInfo(orderResponseDTO.id!!)</span>
+<span class="fc" id="L73">            orderResponseDTO.products.addAll(orderProducts)</span>
+<span class="fc" id="L74">            orderResponseDTO</span>
+        } else {
+<span class="nc" id="L76">            throw Exceptions.RequestedElementNotFoundException(ErrorMsgConstants.ERROR_ORDER_NOT_FOUND)</span>
+        }
+    }
+
+    override fun createOrder(orderRequestDTO: OrderRequestDTO): OrderResponseDTO {
+<span class="fc" id="L81">        var total: BigDecimal</span>
+<span class="fc" id="L82">        val listIDproduct = orderRequestDTO.orderProduct.mapNotNull { it.idProduct }.toMutableList()</span>
+
+<span class="fc" id="L84">        val userDTO = userService.getByUsername(orderRequestDTO.username)</span>
+
+<span class="fc" id="L86">        val products = productService.getAllById(listIDproduct)</span>
+<span class="pc bpc" id="L87" title="1 of 2 branches missed.">        if (products.isEmpty()) {</span>
+<span class="nc" id="L88">            throw Exceptions.NotFoundException(ErrorMsgConstants.ERROR_PRODUCT_NOT_FOUND)</span>
+        } else {
+<span class="fc bfc" id="L90" title="All 2 branches covered.">            total = products.sumOf { it.price }</span>
+        }
+
+<span class="fc" id="L93">        val existingOrder = orderRepository.findByUsernameIfExists(orderRequestDTO.username)</span>
+<span class="fc" id="L94">            .orElse(OrderEntity())</span>
+<span class="fc" id="L95">        val orderEntity = existingOrder.apply {</span>
+<span class="pc bpc" id="L96" title="1 of 2 branches missed.">            if (userDTO != null) {</span>
+<span class="fc" id="L97">                this.idClient = userDTO.id</span>
+            }
+<span class="fc" id="L99">            this.externalId = existingOrder.externalId</span>
+<span class="fc" id="L100">            this.totalPrice = BigDecimal.ZERO</span>
+<span class="fc" id="L101">            this.totalPrice = this.totalPrice.add(total)</span>
+<span class="fc" id="L102">            this.status = OrderStatusEnum.PENDING.value</span>
+<span class="fc" id="L103">        }</span>
+
+<span class="fc" id="L105">        val savedOrder = orderRepository.save(orderEntity).toDTO()</span>
+<span class="fc" id="L106">        orderRequestDTO.orderProduct.forEach { it.idOrder = savedOrder.id }</span>
+<span class="fc" id="L107">        savedOrder.productList = orderProductRepository.saveAll(orderRequestDTO.toEntityList()).toMutableList()</span>
+
+<span class="fc" id="L109">        snsService.sendMessage(mapper.writeValueAsString(OrderResponseDTO(savedOrder)))</span>
+<span class="fc" id="L110">        return OrderResponseDTO(savedOrder)</span>
+    }
+
+    override fun updateOrderProduct(orderRequestDTO: OrderRequestDTO): OrderResponseDTO {
+<span class="fc" id="L114">        val orderEntityOptional = orderRepository.findByUsernameIfExists(orderRequestDTO.username)</span>
+<span class="pc bpc" id="L115" title="1 of 2 branches missed.">        return if(orderEntityOptional.isPresent) {</span>
+<span class="fc" id="L116">            val orderEntity = orderEntityOptional.get()</span>
+<span class="fc" id="L117">            logger.info(&quot;${orderEntity.status} ${OrderStatusEnum.PAID.value}&quot;)</span>
+<span class="pc bpc" id="L118" title="1 of 2 branches missed.">            if (orderEntity.status == OrderStatusEnum.PAID.value) {</span>
+<span class="nc" id="L119">                throw Exceptions.NotFoundException(ErrorMsgConstants.ERROR_ORDER_PAID_CONSTANT)</span>
+            }
+<span class="fc" id="L121">            createOrder(orderRequestDTO)</span>
+        } else {
+<span class="nc" id="L123">            throw Exceptions.NotFoundException(ErrorMsgConstants.ERROR_ORDER_NOT_FOUND)</span>
+        }
+    }
+
+    override fun saveAllOrderProduct(data: List&lt;OrderProductEntity&gt;): List&lt;OrderProductEntity&gt;? {
+<span class="fc" id="L128">        return data.let {</span>
+<span class="fc" id="L129">            orderProductRepository.saveAll(it).toList()</span>
+        }
+    }
+
+    override fun getAllOrderProductsByIdOrder(id: Long): List&lt;OrderProductResponseDTO&gt; {
+<span class="fc" id="L134">        val orderEntity = orderRepository.findByIdOrder(id)</span>
+<span class="fc bfc" id="L135" title="All 2 branches covered.">        return if(orderEntity.isPresent) {</span>
+<span class="fc" id="L136">            findAllByIdOrderInfo(orderEntity.get().id!!)</span>
+        } else {
+<span class="fc" id="L138">            throw Exceptions.NotFoundException(ErrorMsgConstants.ERROR_ORDER_PRODUCT_NOT_FOUND)</span>
+        }
+    }
+
+    override fun deleteOrderById(id: Long) {
+<span class="fc" id="L143">        try {</span>
+<span class="fc" id="L144">            orderProductRepository.deleteByIdOrder(id)</span>
+<span class="fc" id="L145">            orderRepository.deleteById(id)</span>
+<span class="nc" id="L146">        } catch (e: Throwable) {</span>
+<span class="nc" id="L147">            logger.error(ErrorMsgConstants.ERROR_ORDER_PRODUCT_NOT_FOUND, e.printStackTrace())</span>
+<span class="nc" id="L148">            throw Exceptions.NotFoundException(ErrorMsgConstants.ERROR_ORDER_PRODUCT_NOT_FOUND)</span>
+        }
+<span class="fc" id="L150">    }</span>
+
+    override fun deleteOrderProductById(products: ProductRemoveOrderDTO) {
+<span class="fc" id="L153">        try {</span>
+<span class="fc" id="L154">            val listProductId = products.orderProductId.toList()</span>
+<span class="fc" id="L155">            orderProductRepository.deleteAllProductsByIdOrder(products.idOrder, listProductId)</span>
+<span class="nc" id="L156">        } catch (e: Throwable) {</span>
+<span class="nc" id="L157">            logger.error(ErrorMsgConstants.ERROR_ORDER_PRODUCT_NOT_FOUND, e.printStackTrace())</span>
+<span class="nc" id="L158">            throw Exceptions.NotFoundException(ErrorMsgConstants.ERROR_ORDER_PRODUCT_NOT_FOUND)</span>
+        }
+<span class="fc" id="L160">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - PaymentControllerTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>PaymentControllerTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.mvp.payment.application.integration.html">com.mvp.payment.application.integration</a> &gt; PaymentControllerTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">3</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">4.390s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+<li>
+<a href="#tab2">Standard error</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">checkoutOrder should update status and return OrderByIdResponseDTO()</td>
+<td class="success">2.312s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">finishedOrderWithPayment returns OrderFinishDTO for valid request()</td>
+<td class="success">0.964s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">should checkout order and return QrDataDTO()</td>
+<td class="success">1.114s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>03:28:48.705 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.mvp.payment.application.integration.PaymentControllerTest]: PaymentControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+03:28:48.862 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.mvp.payment.PaymentApplication for test class com.mvp.payment.application.integration.PaymentControllerTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.1)
+
+2024-01-24T03:28:51.636-03:00  INFO 28231 --- [    Test worker] c.m.p.a.i.PaymentControllerTest          : Starting PaymentControllerTest using Java 21.0.1 with PID 28231 (started by lfneves in /home/lfneves/0_projects/tech-challenge-payment)
+2024-01-24T03:28:51.638-03:00  INFO 28231 --- [    Test worker] c.m.p.a.i.PaymentControllerTest          : The following 1 profile is active: &quot;test&quot;
+2024-01-24T03:28:52.674-03:00  INFO 28231 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2024-01-24T03:28:52.838-03:00  INFO 28231 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 158 ms. Found 2 MongoDB repository interfaces.
+2024-01-24T03:28:53.414-03:00  WARN 28231 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'mongoConfig' of type [com.mvp.payment.domain.configuration.MongoConfig$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [fixTransactionAndAuth] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-01-24T03:28:53.427-03:00  WARN 28231 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'de.flapdoodle.mongodb.embedded-de.flapdoodle.embed.mongo.spring.autoconfigure.EmbeddedMongoProperties' of type [de.flapdoodle.embed.mongo.spring.autoconfigure.EmbeddedMongoProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [fixTransactionAndAuth]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-01-24T03:28:53.447-03:00  WARN 28231 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'net' of type [de.flapdoodle.embed.mongo.config.ImmutableNet] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [fixTransactionAndAuth]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-01-24T03:28:53.451-03:00  WARN 28231 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'spring.data.mongodb-org.springframework.boot.autoconfigure.mongo.MongoProperties' of type [org.springframework.boot.autoconfigure.mongo.MongoProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [fixTransactionAndAuth]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-01-24T03:28:53.734-03:00  INFO 28231 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8098 (http)
+2024-01-24T03:28:53.761-03:00  INFO 28231 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-24T03:28:53.761-03:00  INFO 28231 --- [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-01-24T03:28:53.830-03:00  INFO 28231 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-24T03:28:53.831-03:00  INFO 28231 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1856 ms
+2024-01-24T03:28:53.963-03:00  INFO 28231 --- [    Test worker] d.f.e.m.s.a.SyncClientServerFactory      : sync server factory
+2024-01-24T03:28:54.131-03:00  INFO 28231 --- [       Thread-6] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {&quot;t&quot;:{&quot;$date&quot;:&quot;2024-01-24T03:28:54.131-03:00&quot;},&quot;s&quot;:&quot;I&quot;,  &quot;c&quot;:&quot;CONTROL&quot;,  &quot;id&quot;:23285,   &quot;ctx&quot;:&quot;-&quot;,&quot;msg&quot;:&quot;Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'&quot;}
+2024-01-24T03:28:54.134-03:00  INFO 28231 --- [       Thread-6] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {&quot;t&quot;:{&quot;$date&quot;:&quot;2024-01-24T03:28:54.131-03:00&quot;},&quot;s&quot;:&quot;I&quot;,  &quot;c&quot;:&quot;NETWORK&quot;,  &quot;id&quot;:4915701, &quot;ctx&quot;:&quot;-&quot;,&quot;msg&quot;:&quot;Initialized wire specification&quot;,&quot;attr&quot;:{&quot;spec&quot;:{&quot;incomingExternalClient&quot;:{&quot;minWireVersion&quot;:0,&quot;maxWireVersion&quot;:17},&quot;incomingInternalClient&quot;:{&quot;minWireVersion&quot;:0,&quot;maxWireVersion&quot;:17},&quot;outgoing&quot;:{&quot;minWireVersion&quot;:6,&quot;maxWireVersion&quot;:17},&quot;isInternalClient&quot;:true}}}
+2024-01-24T03:28:54.134-03:00  INFO 28231 --- [       Thread-6] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {&quot;t&quot;:{&quot;$date&quot;:&quot;2024-01-24T03:28:54.132-03:00&quot;},&quot;s&quot;:&quot;I&quot;,  &quot;c&quot;:&quot;NETWORK&quot;,  &quot;id&quot;:4648601, &quot;ctx&quot;:&quot;main&quot;,&quot;msg&quot;:&quot;Implicit TCP FastOpen unavailable. If TCP FastOpen is required, set tcpFastOpenServer, tcpFastOpenClient, and tcpFastOpenQueueSize.&quot;}
+2024-01-24T03:28:54.134-03:00  INFO 28231 --- [       Thread-6] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {&quot;t&quot;:{&quot;$date&quot;:&quot;2024-01-24T03:28:54.133-03:00&quot;},&quot;s&quot;:&quot;I&quot;,  &quot;c&quot;:&quot;REPL&quot;,     &quot;id&quot;:5123008, &quot;ctx&quot;:&quot;main&quot;,&quot;msg&quot;:&quot;Successfully registered PrimaryOnlyService&quot;,&quot;attr&quot;:{&quot;service&quot;:&quot;TenantMigrationDonorService&quot;,&quot;namespace&quot;:&quot;config.tenantMigrationDonors&quot;}}
+2024-01-24T03:28:54.135-03:00  INFO 28231 --- [       Thread-6] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {&quot;t&quot;:{&quot;$date&quot;:&quot;2024-01-24T03:28:54.133-03:00&quot;},&quot;s&quot;:&quot;I&quot;,  &quot;c&quot;:&quot;REPL&quot;,     &quot;id&quot;:5123008, &quot;ctx&quot;:&quot;main&quot;,&quot;msg&quot;:&quot;Successfully registered PrimaryOnlyService&quot;,&quot;attr&quot;:{&quot;service&quot;:&quot;TenantMigrationRecipientService&quot;,&quot;namespace&quot;:&quot;config.tenantMigrationRecipients&quot;}}
+2024-01-24T03:28:54.135-03:00  INFO 28231 --- [       Thread-6] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {&quot;t&quot;:{&quot;$date&quot;:&quot;2024-01-24T03:28:54.133-03:00&quot;},&quot;s&quot;:&quot;I&quot;,  &quot;c&quot;:&quot;REPL&quot;,     &quot;id&quot;:5123008, &quot;ctx&quot;:&quot;main&quot;,&quot;msg&quot;:&quot;Successfully registered PrimaryOnlyService&quot;,&quot;attr&quot;:{&quot;service&quot;:&quot;ShardSplitDonorService&quot;,&quot;namespace&quot;:&quot;config.tenantSplitDonors&quot;}}
+2024-01-24T03:28:54.135-03:00  INFO 28231 --- [       Thread-6] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {&quot;t&quot;:{&quot;$date&quot;:&quot;2024-01-24T03:28:54.133-03:00&quot;},&quot;s&quot;:&quot;I&quot;,  &quot;c&quot;:&quot;CONTROL&quot;,  &quot;id&quot;:5945603, &quot;ctx&quot;:&quot;main&quot;,&quot;msg&quot;:&quot;Multi threading initialized&quot;}
+2024-01-24T03:28:54.135-03:00  INFO 28231 --- [       Thread-6] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {&quot;t&quot;:{&quot;$date&quot;:&quot;2024-01-24T03:28:54.133-03:00&quot;},&quot;s&quot;:&quot;I&quot;,  &quot;c&quot;:&quot;CONTROL&quot;,  &quot;id&quot;:4615611, &quot;ctx&quot;:&quot;initandlisten&quot;,&quot;msg&quot;:&quot;MongoDB starting&quot;,&quot;attr&quot;:{&quot;pid&quot;:28301,&quot;port&quot;:45971,&quot;dbPath&quot;:&quot;/tmp/temp--375f8175-389a-419e-8ff4-f91ac23b8763/mongod-database14026780525221629143&quot;,&quot;architecture&quot;:&quot;64-bit&quot;,&quot;host&quot;:&quot;lfneves-Vostro-3400&quot;}}
+2024-01-24T03:28:54.136-03:00  INFO 28231 --- [       Thread-6] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {&quot;t&quot;:{&quot;$date&quot;:&quot;2024-01-24T03:28:54.133-03:00&quot;},&quot;s&quot;:&quot;I&quot;,  &quot;c&quot;:&quot;CONTROL&quot;,  &quot;id&quot;:23403,   &quot;ctx&quot;:&quot;initandlisten&quot;,&quot;msg&quot;:&quot;Build Info&quot;,&quot;attr&quot;:{&quot;buildInfo&quot;:{&quot;version&quot;:&quot;6.0.5&quot;,&quot;gitVersion&quot;:&quot;c9a99c120371d4d4c52cbb15dac34a36ce8d3b1d&quot;,&quot;openSSLVersion&quot;:&quot;OpenSSL 3.0.2 15 Mar 2022&quot;,&quot;modules&quot;:[],&quot;allocator&quot;:&quot;tcmalloc&quot;,&quot;environment&quot;:{&quot;distmod&quot;:&quot;ubuntu2204&quot;,&quot;distarch&quot;:&quot;x86_64&quot;,&quot;target_arch&quot;:&quot;x86_64&quot;}}}}
+2024-01-24T03:28:54.136-03:00  INFO 28231 --- [       Thread-6] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {&quot;t&quot;:{&quot;$date&quot;:&quot;2024-01-24T03:28:54.133-03:00&quot;},&quot;s&quot;:&quot;I&quot;,  &quot;c&quot;:&quot;CONTROL&quot;,  &quot;id&quot;:51765,   &quot;ctx&quot;:&quot;initandlisten&quot;,&quot;msg&quot;:&quot;Operating System&quot;,&quot;attr&quot;:{&quot;os&quot;:{&quot;name&quot;:&quot;Ubuntu&quot;,&quot;version&quot;:&quot;22.04&quot;}}}
+2024-01-24T03:28:54.136-03:00  INFO 28231 --- [       Thread-6] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {&quot;t&quot;:{&quot;$date&quot;:&quot;2024-01-24T03:28:54.133-03:00&quot;},&quot;s&quot;:&quot;I&quot;,  &quot;c&quot;:&quot;CONTROL&quot;,  &quot;id&quot;:21951,   &quot;ctx&quot;:&quot;initandlisten&quot;,&quot;msg&quot;:&quot;Options set by command line&quot;,&quot;attr&quot;:{&quot;options&quot;:{&quot;net&quot;:{&quot;bindIp&quot;:&quot;127.0.0.1&quot;,&quot;port&quot;:45971},&quot;security&quot;:{&quot;authorization&quot;:&quot;disabled&quot;},&quot;storage&quot;:{&quot;dbPath&quot;:&quot;/tmp/temp--375f8175-389a-419e-8ff4-f91ac23b8763/mongod-database14026780525221629143&quot;,&quot;journal&quot;:{&quot;enabled&quot;:false},&quot;syncPeriodSecs&quot;:0}}}}
+2024-01-24T03:28:54.136-03:00  INFO 28231 --- [       Thread-6] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {&quot;t&quot;:{&quot;$date&quot;:&quot;2024-01-24T03:28:54.134-03:00&quot;},&quot;s&quot;:&quot;I&quot;,  &quot;c&quot;:&quot;STORAGE&quot;,  &quot;id&quot;:22297,   &quot;ctx&quot;:&quot;initandlisten&quot;,&quot;msg&quot;:&quot;Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem&quot;,&quot;tags&quot;:[&quot;startupWarnings&quot;]}
+2024-01-24T03:28:54.137-03:00  INFO 28231 --- [       Thread-6] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {&quot;t&quot;:{&quot;$date&quot;:&quot;2024-01-24T03:28:54.134-03:00&quot;},&quot;s&quot;:&quot;I&quot;,  &quot;c&quot;:&quot;STORAGE&quot;,  &quot;id&quot;:22315,   &quot;ctx&quot;:&quot;initandlisten&quot;,&quot;msg&quot;:&quot;Opening WiredTiger&quot;,&quot;attr&quot;:{&quot;config&quot;:&quot;create,cache_size=7346M,session_max=33000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,remove=true,path=journal,compressor=snappy),builtin_extension_config=(zstd=(compression_level=6)),file_manager=(close_idle_time=600,close_scan_interval=10,close_handle_minimum=2000),statistics_log=(wait=0),json_output=(error,message),verbose=[recovery_progress:1,checkpoint_progress:1,compact_progress:1,backup:0,checkpoint:0,compact:0,evict:0,history_store:0,recovery:0,rts:0,salvage:0,tiered:0,timestamp:0,transaction:0,verify:0,log:0],,log=(enabled=false),&quot;}}
+2024-01-24T03:28:54.277-03:00  INFO 28231 --- [       Thread-6] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {&quot;t&quot;:{&quot;$date&quot;:&quot;2024-01-24T03:28:54.277-03:00&quot;},&quot;s&quot;:&quot;I&quot;,  &quot;c&quot;:&quot;STORAGE&quot;,  &quot;id&quot;:4795906, &quot;ctx&quot;:&quot;initandlisten&quot;,&quot;msg&quot;:&quot;WiredTiger opened&quot;,&quot;attr&quot;:{&quot;durationMillis&quot;:143}}
+2024-01-24T03:28:54.278-03:00  INFO 28231 --- [       Thread-6] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {&quot;t&quot;:{&quot;$date&quot;:&quot;2024-01-24T03:28:54.277-03:00&quot;},&quot;s&quot;:&quot;I&quot;,  &quot;c&quot;:&quot;RECOVERY&quot;, &quot;id&quot;:23987,   &quot;ctx&quot;:&quot;initandlisten&quot;,&quot;msg&quot;:&quot;WiredTiger recoveryTimestamp&quot;,&quot;attr&quot;:{&quot;recoveryTimestamp&quot;:{&quot;$timestamp&quot;:{&quot;t&quot;:0,&quot;i&quot;:0}}}}
+2024-01-24T03:28:54.303-03:00  INFO 28231 --- [       Thread-6] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {&quot;t&quot;:{&quot;$date&quot;:&quot;2024-01-24T03:28:54.303-03:00&quot;},&quot;s&quot;:&quot;W&quot;,  &quot;c&quot;:&quot;CONTROL&quot;,  &quot;id&quot;:5123300, &quot;ctx&quot;:&quot;initandlisten&quot;,&quot;msg&quot;:&quot;vm.max_map_count is too low&quot;,&quot;attr&quot;:{&quot;currentValue&quot;:65530,&quot;recommendedMinimum&quot;:1677720,&quot;maxConns&quot;:838860},&quot;tags&quot;:[&quot;startupWarnings&quot;]}
+2024-01-24T03:28:54.304-03:00  INFO 28231 --- [       Thread-6] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {&quot;t&quot;:{&quot;$date&quot;:&quot;2024-01-24T03:28:54.303-03:00&quot;},&quot;s&quot;:&quot;I&quot;,  &quot;c&quot;:&quot;STORAGE&quot;,  &quot;id&quot;:20320,   &quot;ctx&quot;:&quot;initandlisten&quot;,&quot;msg&quot;:&quot;createCollection&quot;,&quot;attr&quot;:{&quot;namespace&quot;:&quot;admin.system.version&quot;,&quot;uuidDisposition&quot;:&quot;provided&quot;,&quot;uuid&quot;:{&quot;uuid&quot;:{&quot;$uuid&quot;:&quot;a980a5ed-5de3-4674-af9a-f84901a561da&quot;}},&quot;options&quot;:{&quot;uuid&quot;:{&quot;$uuid&quot;:&quot;a980a5ed-5de3-4674-af9a-f84901a561da&quot;}}}}
+2024-01-24T03:28:54.321-03:00  INFO 28231 --- [       Thread-6] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {&quot;t&quot;:{&quot;$date&quot;:&quot;2024-01-24T03:28:54.321-03:00&quot;},&quot;s&quot;:&quot;I&quot;,  &quot;c&quot;:&quot;INDEX&quot;,    &quot;id&quot;:20345,   &quot;ctx&quot;:&quot;initandlisten&quot;,&quot;msg&quot;:&quot;Index build: done building&quot;,&quot;attr&quot;:{&quot;buildUUID&quot;:null,&quot;collectionUUID&quot;:{&quot;uuid&quot;:{&quot;$uuid&quot;:&quot;a980a5ed-5de3-4674-af9a-f84901a561da&quot;}},&quot;namespace&quot;:&quot;admin.system.version&quot;,&quot;index&quot;:&quot;_id_&quot;,&quot;ident&quot;:&quot;index-1--6891413674112222607&quot;,&quot;collectionIdent&quot;:&quot;collection-0--6891413674112222607&quot;,&quot;commitTimestamp&quot;:null}}
+2024-01-24T03:28:54.322-03:00  INFO 28231 --- [       Thread-6] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {&quot;t&quot;:{&quot;$date&quot;:&quot;2024-01-24T03:28:54.321-03:00&quot;},&quot;s&quot;:&quot;I&quot;,  &quot;c&quot;:&quot;REPL&quot;,     &quot;id&quot;:20459,   &quot;ctx&quot;:&quot;initandlisten&quot;,&quot;msg&quot;:&quot;Setting featureCompatibilityVersion&quot;,&quot;attr&quot;:{&quot;newVersion&quot;:&quot;6.0&quot;}}
+2024-01-24T03:28:54.322-03:00  INFO 28231 --- [       Thread-6] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {&quot;t&quot;:{&quot;$date&quot;:&quot;2024-01-24T03:28:54.321-03:00&quot;},&quot;s&quot;:&quot;I&quot;,  &quot;c&quot;:&quot;REPL&quot;,     &quot;id&quot;:5853300, &quot;ctx&quot;:&quot;initandlisten&quot;,&quot;msg&quot;:&quot;current featureCompatibilityVersion value&quot;,&quot;attr&quot;:{&quot;featureCompatibilityVersion&quot;:&quot;6.0&quot;,&quot;context&quot;:&quot;setFCV&quot;}}
+2024-01-24T03:28:54.322-03:00  INFO 28231 --- [       Thread-6] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {&quot;t&quot;:{&quot;$date&quot;:&quot;2024-01-24T03:28:54.321-03:00&quot;},&quot;s&quot;:&quot;I&quot;,  &quot;c&quot;:&quot;NETWORK&quot;,  &quot;id&quot;:4915702, &quot;ctx&quot;:&quot;initandlisten&quot;,&quot;msg&quot;:&quot;Updated wire specification&quot;,&quot;attr&quot;:{&quot;oldSpec&quot;:{&quot;incomingExternalClient&quot;:{&quot;minWireVersion&quot;:0,&quot;maxWireVersion&quot;:17},&quot;incomingInternalClient&quot;:{&quot;minWireVersion&quot;:0,&quot;maxWireVersion&quot;:17},&quot;outgoing&quot;:{&quot;minWireVersion&quot;:6,&quot;maxWireVersion&quot;:17},&quot;isInternalClient&quot;:true},&quot;newSpec&quot;:{&quot;incomingExternalClient&quot;:{&quot;minWireVersion&quot;:0,&quot;maxWireVersion&quot;:17},&quot;incomingInternalClient&quot;:{&quot;minWireVersion&quot;:17,&quot;maxWireVersion&quot;:17},&quot;outgoing&quot;:{&quot;minWireVersion&quot;:17,&quot;maxWireVersion&quot;:17},&quot;isInternalClient&quot;:true}}}
+2024-01-24T03:28:54.323-03:00  INFO 28231 --- [       Thread-6] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {&quot;t&quot;:{&quot;$date&quot;:&quot;2024-01-24T03:28:54.321-03:00&quot;},&quot;s&quot;:&quot;I&quot;,  &quot;c&quot;:&quot;NETWORK&quot;,  &quot;id&quot;:4915702, &quot;ctx&quot;:&quot;initandlisten&quot;,&quot;msg&quot;:&quot;Updated wire specification&quot;,&quot;attr&quot;:{&quot;oldSpec&quot;:{&quot;incomingExternalClient&quot;:{&quot;minWireVersion&quot;:0,&quot;maxWireVersion&quot;:17},&quot;incomingInternalClient&quot;:{&quot;minWireVersion&quot;:17,&quot;maxWireVersion&quot;:17},&quot;outgoing&quot;:{&quot;minWireVersion&quot;:17,&quot;maxWireVersion&quot;:17},&quot;isInternalClient&quot;:true},&quot;newSpec&quot;:{&quot;incomingExternalClient&quot;:{&quot;minWireVersion&quot;:0,&quot;maxWireVersion&quot;:17},&quot;incomingInternalClient&quot;:{&quot;minWireVersion&quot;:17,&quot;maxWireVersion&quot;:17},&quot;outgoing&quot;:{&quot;minWireVersion&quot;:17,&quot;maxWireVersion&quot;:17},&quot;isInternalClient&quot;:true}}}
+2024-01-24T03:28:54.323-03:00  INFO 28231 --- [       Thread-6] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {&quot;t&quot;:{&quot;$date&quot;:&quot;2024-01-24T03:28:54.321-03:00&quot;},&quot;s&quot;:&quot;I&quot;,  &quot;c&quot;:&quot;REPL&quot;,     &quot;id&quot;:5853300, &quot;ctx&quot;:&quot;initandlisten&quot;,&quot;msg&quot;:&quot;current featureCompatibilityVersion value&quot;,&quot;attr&quot;:{&quot;featureCompatibilityVersion&quot;:&quot;6.0&quot;,&quot;context&quot;:&quot;startup&quot;}}
+2024-01-24T03:28:54.323-03:00  INFO 28231 --- [       Thread-6] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {&quot;t&quot;:{&quot;$date&quot;:&quot;2024-01-24T03:28:54.321-03:00&quot;},&quot;s&quot;:&quot;I&quot;,  &quot;c&quot;:&quot;STORAGE&quot;,  &quot;id&quot;:5071100, &quot;ctx&quot;:&quot;initandlisten&quot;,&quot;msg&quot;:&quot;Clearing temp directory&quot;}
+2024-01-24T03:28:54.323-03:00  INFO 28231 --- [       Thread-6] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {&quot;t&quot;:{&quot;$date&quot;:&quot;2024-01-24T03:28:54.321-03:00&quot;},&quot;s&quot;:&quot;I&quot;,  &quot;c&quot;:&quot;CONTROL&quot;,  &quot;id&quot;:20536,   &quot;ctx&quot;:&quot;initandlisten&quot;,&quot;msg&quot;:&quot;Flow Control is enabled on this deployment&quot;}
+2024-01-24T03:28:54.324-03:00  INFO 28231 --- [       Thread-6] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {&quot;t&quot;:{&quot;$date&quot;:&quot;2024-01-24T03:28:54.322-03:00&quot;},&quot;s&quot;:&quot;I&quot;,  &quot;c&quot;:&quot;FTDC&quot;,     &quot;id&quot;:20625,   &quot;ctx&quot;:&quot;initandlisten&quot;,&quot;msg&quot;:&quot;Initializing full-time diagnostic data capture&quot;,&quot;attr&quot;:{&quot;dataDirectory&quot;:&quot;/tmp/temp--375f8175-389a-419e-8ff4-f91ac23b8763/mongod-database14026780525221629143/diagnostic.data&quot;}}
+2024-01-24T03:28:54.324-03:00  INFO 28231 --- [       Thread-6] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {&quot;t&quot;:{&quot;$date&quot;:&quot;2024-01-24T03:28:54.323-03:00&quot;},&quot;s&quot;:&quot;I&quot;,  &quot;c&quot;:&quot;STORAGE&quot;,  &quot;id&quot;:20320,   &quot;ctx&quot;:&quot;initandlisten&quot;,&quot;msg&quot;:&quot;createCollection&quot;,&quot;attr&quot;:{&quot;namespace&quot;:&quot;local.startup_log&quot;,&quot;uuidDisposition&quot;:&quot;generated&quot;,&quot;uuid&quot;:{&quot;uuid&quot;:{&quot;$uuid&quot;:&quot;c6165b20-15f6-4f6a-a3a1-cec42b242015&quot;}},&quot;options&quot;:{&quot;capped&quot;:true,&quot;size&quot;:10485760}}}
+2024-01-24T03:28:54.343-03:00  INFO 28231 --- [       Thread-6] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {&quot;t&quot;:{&quot;$date&quot;:&quot;2024-01-24T03:28:54.343-03:00&quot;},&quot;s&quot;:&quot;I&quot;,  &quot;c&quot;:&quot;INDEX&quot;,    &quot;id&quot;:20345,   &quot;ctx&quot;:&quot;initandlisten&quot;,&quot;msg&quot;:&quot;Index build: done building&quot;,&quot;attr&quot;:{&quot;buildUUID&quot;:null,&quot;collectionUUID&quot;:{&quot;uuid&quot;:{&quot;$uuid&quot;:&quot;c6165b20-15f6-4f6a-a3a1-cec42b242015&quot;}},&quot;namespace&quot;:&quot;local.startup_log&quot;,&quot;index&quot;:&quot;_id_&quot;,&quot;ident&quot;:&quot;index-3--6891413674112222607&quot;,&quot;collectionIdent&quot;:&quot;collection-2--6891413674112222607&quot;,&quot;commitTimestamp&quot;:null}}
+2024-01-24T03:28:54.344-03:00  INFO 28231 --- [       Thread-6] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {&quot;t&quot;:{&quot;$date&quot;:&quot;2024-01-24T03:28:54.343-03:00&quot;},&quot;s&quot;:&quot;I&quot;,  &quot;c&quot;:&quot;REPL&quot;,     &quot;id&quot;:6015317, &quot;ctx&quot;:&quot;initandlisten&quot;,&quot;msg&quot;:&quot;Setting new configuration state&quot;,&quot;attr&quot;:{&quot;newState&quot;:&quot;ConfigReplicationDisabled&quot;,&quot;oldState&quot;:&quot;ConfigPreStart&quot;}}
+2024-01-24T03:28:54.344-03:00  INFO 28231 --- [       Thread-6] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {&quot;t&quot;:{&quot;$date&quot;:&quot;2024-01-24T03:28:54.343-03:00&quot;},&quot;s&quot;:&quot;I&quot;,  &quot;c&quot;:&quot;STORAGE&quot;,  &quot;id&quot;:22262,   &quot;ctx&quot;:&quot;initandlisten&quot;,&quot;msg&quot;:&quot;Timestamp monitor starting&quot;}
+2024-01-24T03:28:54.345-03:00  INFO 28231 --- [       Thread-6] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {&quot;t&quot;:{&quot;$date&quot;:&quot;2024-01-24T03:28:54.345-03:00&quot;},&quot;s&quot;:&quot;I&quot;,  &quot;c&quot;:&quot;CONTROL&quot;,  &quot;id&quot;:20712,   &quot;ctx&quot;:&quot;LogicalSessionCacheReap&quot;,&quot;msg&quot;:&quot;Sessions collection is not set up; waiting until next sessions reap interval&quot;,&quot;attr&quot;:{&quot;error&quot;:&quot;NamespaceNotFound: config.system.sessions does not exist&quot;}}
+2024-01-24T03:28:54.345-03:00  INFO 28231 --- [       Thread-6] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {&quot;t&quot;:{&quot;$date&quot;:&quot;2024-01-24T03:28:54.345-03:00&quot;},&quot;s&quot;:&quot;I&quot;,  &quot;c&quot;:&quot;STORAGE&quot;,  &quot;id&quot;:20320,   &quot;ctx&quot;:&quot;LogicalSessionCacheRefresh&quot;,&quot;msg&quot;:&quot;createCollection&quot;,&quot;attr&quot;:{&quot;namespace&quot;:&quot;config.system.sessions&quot;,&quot;uuidDisposition&quot;:&quot;generated&quot;,&quot;uuid&quot;:{&quot;uuid&quot;:{&quot;$uuid&quot;:&quot;cd2e2528-ea99-4523-93e6-8349c39f5ee3&quot;}},&quot;options&quot;:{}}}
+2024-01-24T03:28:54.346-03:00  INFO 28231 --- [       Thread-6] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {&quot;t&quot;:{&quot;$date&quot;:&quot;2024-01-24T03:28:54.345-03:00&quot;},&quot;s&quot;:&quot;I&quot;,  &quot;c&quot;:&quot;NETWORK&quot;,  &quot;id&quot;:23015,   &quot;ctx&quot;:&quot;listener&quot;,&quot;msg&quot;:&quot;Listening on&quot;,&quot;attr&quot;:{&quot;address&quot;:&quot;/tmp/mongodb-45971.sock&quot;}}
+2024-01-24T03:28:54.346-03:00  INFO 28231 --- [       Thread-6] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {&quot;t&quot;:{&quot;$date&quot;:&quot;2024-01-24T03:28:54.345-03:00&quot;},&quot;s&quot;:&quot;I&quot;,  &quot;c&quot;:&quot;NETWORK&quot;,  &quot;id&quot;:23015,   &quot;ctx&quot;:&quot;listener&quot;,&quot;msg&quot;:&quot;Listening on&quot;,&quot;attr&quot;:{&quot;address&quot;:&quot;127.0.0.1&quot;}}
+2024-01-24T03:28:54.346-03:00  INFO 28231 --- [       Thread-6] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {&quot;t&quot;:{&quot;$date&quot;:&quot;2024-01-24T03:28:54.345-03:00&quot;},&quot;s&quot;:&quot;I&quot;,  &quot;c&quot;:&quot;NETWORK&quot;,  &quot;id&quot;:23016,   &quot;ctx&quot;:&quot;listener&quot;,&quot;msg&quot;:&quot;Waiting for connections&quot;,&quot;attr&quot;:{&quot;port&quot;:45971,&quot;ssl&quot;:&quot;off&quot;}}
+2024-01-24T03:28:54.368-03:00  INFO 28231 --- [       Thread-6] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {&quot;t&quot;:{&quot;$date&quot;:&quot;2024-01-24T03:28:54.368-03:00&quot;},&quot;s&quot;:&quot;I&quot;,  &quot;c&quot;:&quot;INDEX&quot;,    &quot;id&quot;:20345,   &quot;ctx&quot;:&quot;LogicalSessionCacheRefresh&quot;,&quot;msg&quot;:&quot;Index build: done building&quot;,&quot;attr&quot;:{&quot;buildUUID&quot;:null,&quot;collectionUUID&quot;:{&quot;uuid&quot;:{&quot;$uuid&quot;:&quot;cd2e2528-ea99-4523-93e6-8349c39f5ee3&quot;}},&quot;namespace&quot;:&quot;config.system.sessions&quot;,&quot;index&quot;:&quot;_id_&quot;,&quot;ident&quot;:&quot;index-5--6891413674112222607&quot;,&quot;collectionIdent&quot;:&quot;collection-4--6891413674112222607&quot;,&quot;commitTimestamp&quot;:null}}
+2024-01-24T03:28:54.368-03:00  INFO 28231 --- [       Thread-6] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {&quot;t&quot;:{&quot;$date&quot;:&quot;2024-01-24T03:28:54.368-03:00&quot;},&quot;s&quot;:&quot;I&quot;,  &quot;c&quot;:&quot;INDEX&quot;,    &quot;id&quot;:20345,   &quot;ctx&quot;:&quot;LogicalSessionCacheRefresh&quot;,&quot;msg&quot;:&quot;Index build: done building&quot;,&quot;attr&quot;:{&quot;buildUUID&quot;:null,&quot;collectionUUID&quot;:{&quot;uuid&quot;:{&quot;$uuid&quot;:&quot;cd2e2528-ea99-4523-93e6-8349c39f5ee3&quot;}},&quot;namespace&quot;:&quot;config.system.sessions&quot;,&quot;index&quot;:&quot;lsidTTLIndex&quot;,&quot;ident&quot;:&quot;index-6--6891413674112222607&quot;,&quot;collectionIdent&quot;:&quot;collection-4--6891413674112222607&quot;,&quot;commitTimestamp&quot;:null}}
+2024-01-24T03:28:54.462-03:00  INFO 28231 --- [       Thread-6] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {&quot;t&quot;:{&quot;$date&quot;:&quot;2024-01-24T03:28:54.462-03:00&quot;},&quot;s&quot;:&quot;I&quot;,  &quot;c&quot;:&quot;NETWORK&quot;,  &quot;id&quot;:22943,   &quot;ctx&quot;:&quot;listener&quot;,&quot;msg&quot;:&quot;Connection accepted&quot;,&quot;attr&quot;:{&quot;remote&quot;:&quot;127.0.0.1:38402&quot;,&quot;uuid&quot;:&quot;697d9af3-39f3-4566-8c05-49cab8cd4820&quot;,&quot;connectionId&quot;:1,&quot;connectionCount&quot;:1}}
+2024-01-24T03:28:54.463-03:00  INFO 28231 --- [       Thread-6] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {&quot;t&quot;:{&quot;$date&quot;:&quot;2024-01-24T03:28:54.462-03:00&quot;},&quot;s&quot;:&quot;I&quot;,  &quot;c&quot;:&quot;NETWORK&quot;,  &quot;id&quot;:22943,   &quot;ctx&quot;:&quot;listener&quot;,&quot;msg&quot;:&quot;Connection accepted&quot;,&quot;attr&quot;:{&quot;remote&quot;:&quot;127.0.0.1:38404&quot;,&quot;uuid&quot;:&quot;a531173c-fd2c-4cd3-adf1-b8d282a62565&quot;,&quot;connectionId&quot;:2,&quot;connectionCount&quot;:2}}
+2024-01-24T03:28:54.468-03:00  INFO 28231 --- [    Test worker] org.mongodb.driver.client                : MongoClient with metadata {&quot;driver&quot;: {&quot;name&quot;: &quot;mongo-java-driver|sync|spring-boot&quot;, &quot;version&quot;: &quot;4.11.1&quot;}, &quot;os&quot;: {&quot;type&quot;: &quot;Linux&quot;, &quot;name&quot;: &quot;Linux&quot;, &quot;architecture&quot;: &quot;amd64&quot;, &quot;version&quot;: &quot;5.15.0-91-generic&quot;}, &quot;platform&quot;: &quot;Java/Eclipse Adoptium/21.0.1+12-LTS&quot;} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@5938eb23, com.mongodb.Jep395RecordCodecProvider@4b0b1f22, com.mongodb.KotlinCodecProvider@4c9cf921]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:45971], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null}
+2024-01-24T03:28:54.473-03:00  INFO 28231 --- [       Thread-6] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {&quot;t&quot;:{&quot;$date&quot;:&quot;2024-01-24T03:28:54.473-03:00&quot;},&quot;s&quot;:&quot;I&quot;,  &quot;c&quot;:&quot;NETWORK&quot;,  &quot;id&quot;:51800,   &quot;ctx&quot;:&quot;conn2&quot;,&quot;msg&quot;:&quot;client metadata&quot;,&quot;attr&quot;:{&quot;remote&quot;:&quot;127.0.0.1:38404&quot;,&quot;client&quot;:&quot;conn2&quot;,&quot;doc&quot;:{&quot;driver&quot;:{&quot;name&quot;:&quot;mongo-java-driver|sync|spring-boot&quot;,&quot;version&quot;:&quot;4.11.1&quot;},&quot;os&quot;:{&quot;type&quot;:&quot;Linux&quot;,&quot;name&quot;:&quot;Linux&quot;,&quot;architecture&quot;:&quot;amd64&quot;,&quot;version&quot;:&quot;5.15.0-91-generic&quot;},&quot;platform&quot;:&quot;Java/Eclipse Adoptium/21.0.1+12-LTS&quot;}}}
+2024-01-24T03:28:54.473-03:00  INFO 28231 --- [       Thread-6] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {&quot;t&quot;:{&quot;$date&quot;:&quot;2024-01-24T03:28:54.473-03:00&quot;},&quot;s&quot;:&quot;I&quot;,  &quot;c&quot;:&quot;NETWORK&quot;,  &quot;id&quot;:51800,   &quot;ctx&quot;:&quot;conn1&quot;,&quot;msg&quot;:&quot;client metadata&quot;,&quot;attr&quot;:{&quot;remote&quot;:&quot;127.0.0.1:38402&quot;,&quot;client&quot;:&quot;conn1&quot;,&quot;doc&quot;:{&quot;driver&quot;:{&quot;name&quot;:&quot;mongo-java-driver|sync|spring-boot&quot;,&quot;version&quot;:&quot;4.11.1&quot;},&quot;os&quot;:{&quot;type&quot;:&quot;Linux&quot;,&quot;name&quot;:&quot;Linux&quot;,&quot;architecture&quot;:&quot;amd64&quot;,&quot;version&quot;:&quot;5.15.0-91-generic&quot;},&quot;platform&quot;:&quot;Java/Eclipse Adoptium/21.0.1+12-LTS&quot;}}}
+2024-01-24T03:28:54.489-03:00  INFO 28231 --- [localhost:45971] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:45971, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=24797273}
+2024-01-24T03:28:57.074-03:00  INFO 28231 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring TestDispatcherServlet ''
+2024-01-24T03:28:57.074-03:00  INFO 28231 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-01-24T03:28:57.075-03:00  INFO 28231 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2024-01-24T03:28:57.219-03:00  INFO 28231 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8098 (http) with context path ''
+2024-01-24T03:28:58.890-03:00  INFO 28231 --- [ecycle-thread-1] a.c.s.l.AbstractMessageListenerContainer : Container io.awspring.cloud.sqs.sqsListenerEndpointContainer#0 started
+2024-01-24T03:28:58.901-03:00  INFO 28231 --- [    Test worker] c.m.p.a.i.PaymentControllerTest          : Started PaymentControllerTest in 7.836 seconds (process running for 11.386)
+2024-01-24T03:28:59.299-03:00  INFO 28231 --- [       Thread-6] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {&quot;t&quot;:{&quot;$date&quot;:&quot;2024-01-24T03:28:59.299-03:00&quot;},&quot;s&quot;:&quot;I&quot;,  &quot;c&quot;:&quot;NETWORK&quot;,  &quot;id&quot;:22943,   &quot;ctx&quot;:&quot;listener&quot;,&quot;msg&quot;:&quot;Connection accepted&quot;,&quot;attr&quot;:{&quot;remote&quot;:&quot;127.0.0.1:37850&quot;,&quot;uuid&quot;:&quot;2bc3f862-5adc-46a4-aaf4-83927b073878&quot;,&quot;connectionId&quot;:3,&quot;connectionCount&quot;:3}}
+2024-01-24T03:28:59.299-03:00  INFO 28231 --- [       Thread-6] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {&quot;t&quot;:{&quot;$date&quot;:&quot;2024-01-24T03:28:59.299-03:00&quot;},&quot;s&quot;:&quot;I&quot;,  &quot;c&quot;:&quot;NETWORK&quot;,  &quot;id&quot;:51800,   &quot;ctx&quot;:&quot;conn3&quot;,&quot;msg&quot;:&quot;client metadata&quot;,&quot;attr&quot;:{&quot;remote&quot;:&quot;127.0.0.1:37850&quot;,&quot;client&quot;:&quot;conn3&quot;,&quot;doc&quot;:{&quot;driver&quot;:{&quot;name&quot;:&quot;mongo-java-driver|sync|spring-boot&quot;,&quot;version&quot;:&quot;4.11.1&quot;},&quot;os&quot;:{&quot;type&quot;:&quot;Linux&quot;,&quot;name&quot;:&quot;Linux&quot;,&quot;architecture&quot;:&quot;amd64&quot;,&quot;version&quot;:&quot;5.15.0-91-generic&quot;},&quot;platform&quot;:&quot;Java/Eclipse Adoptium/21.0.1+12-LTS&quot;}}}
+2024-01-24T03:28:59.314-03:00  INFO 28231 --- [       Thread-6] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {&quot;t&quot;:{&quot;$date&quot;:&quot;2024-01-24T03:28:59.314-03:00&quot;},&quot;s&quot;:&quot;I&quot;,  &quot;c&quot;:&quot;STORAGE&quot;,  &quot;id&quot;:20320,   &quot;ctx&quot;:&quot;conn3&quot;,&quot;msg&quot;:&quot;createCollection&quot;,&quot;attr&quot;:{&quot;namespace&quot;:&quot;paymentdb.orderEntity&quot;,&quot;uuidDisposition&quot;:&quot;generated&quot;,&quot;uuid&quot;:{&quot;uuid&quot;:{&quot;$uuid&quot;:&quot;8c1efe1c-e507-4eff-bdf5-6a6b6e55c4b7&quot;}},&quot;options&quot;:{}}}
+2024-01-24T03:28:59.335-03:00  INFO 28231 --- [       Thread-6] d.f.e.m.s.autoconfigure.EmbeddedMongo    : {&quot;t&quot;:{&quot;$date&quot;:&quot;2024-01-24T03:28:59.335-03:00&quot;},&quot;s&quot;:&quot;I&quot;,  &quot;c&quot;:&quot;INDEX&quot;,    &quot;id&quot;:20345,   &quot;ctx&quot;:&quot;conn3&quot;,&quot;msg&quot;:&quot;Index build: done building&quot;,&quot;attr&quot;:{&quot;buildUUID&quot;:null,&quot;collectionUUID&quot;:{&quot;uuid&quot;:{&quot;$uuid&quot;:&quot;8c1efe1c-e507-4eff-bdf5-6a6b6e55c4b7&quot;}},&quot;namespace&quot;:&quot;paymentdb.orderEntity&quot;,&quot;index&quot;:&quot;_id_&quot;,&quot;ident&quot;:&quot;index-8--6891413674112222607&quot;,&quot;collectionIdent&quot;:&quot;collection-7--6891413674112222607&quot;,&quot;commitTimestamp&quot;:null}}
+2024-01-24T03:29:00.371-03:00  INFO 28231 --- [nio-8098-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-24T03:29:00.371-03:00  INFO 28231 --- [nio-8098-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-01-24T03:29:00.372-03:00  INFO 28231 --- [nio-8098-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-01-24T03:29:00.524-03:00  INFO 28231 --- [nio-8098-exec-1] c.m.p.d.s.payment.PaymentServiceImpl     : PaymentServiceImpl - fakeCheckoutOrder
+2024-01-24T03:29:01.297-03:00  INFO 28231 --- [nio-8098-exec-2] c.m.p.d.s.payment.PaymentServiceImpl     : PaymentServiceImpl - fakeCheckoutOrder
+2024-01-24T03:29:02.332-03:00  INFO 28231 --- [-3 @coroutine#3] c.m.p.d.s.payment.MPOrderServiceImpl     : orderCheckoutGenerateQrs {&quot;cash_out&quot;:{&quot;amount&quot;:0},&quot;description&quot;:&quot;PENDING&quot;,&quot;external_reference&quot;:&quot;4879d212-bdf1-413c-9fd1-5b65b50257bc&quot;,&quot;items&quot;:[],&quot;notification_url&quot;:&quot;https://webhook.site/2f67acbe-9e94-4c7d-8556-7591233a0938&quot;,&quot;sponsor&quot;:{&quot;id&quot;:57174696},&quot;title&quot;:&quot;0&quot;,&quot;total_amount&quot;:0}
+</pre>
+</span>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>WARNING: A Java agent has been loaded dynamically (/home/lfneves/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.14.10/90ed94ac044ea8953b224304c762316e91fd6b31/byte-buddy-agent-1.14.10.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.6.1</a> at Jan 24, 2024, 3:29:18 AM</p>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PaymentServiceImpl.kt</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">payment-ws</a> &gt; <a href="index.source.html" class="el_package">com.mvp.payment.domain.service.payment</a> &gt; <span class="el_source">PaymentServiceImpl.kt</span></div><h1>PaymentServiceImpl.kt</h1><pre class="source lang-java linenums">package com.mvp.payment.domain.service.payment
+
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule
+import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
+import com.mvp.payment.domain.model.exception.Exceptions
+import com.mvp.payment.domain.model.payment.OrderByIdResponseDTO
+import com.mvp.payment.domain.model.payment.OrderCheckoutDTO
+import com.mvp.payment.domain.model.payment.OrderFinishDTO
+import com.mvp.payment.domain.model.payment.enums.PaymentStatusEnum
+import com.mvp.payment.domain.model.status.StatusDTO
+import com.mvp.payment.domain.service.message.SnsAndSqsService
+import com.mvp.payment.infrastruture.repository.OrderRepository
+import com.mvp.payment.infrastruture.repository.ProductRepository
+import com.mvp.payment.utils.ErrorMsgConstants
+import org.slf4j.Logger
+import org.slf4j.LoggerFactory
+import org.springframework.stereotype.Service
+import java.time.ZoneId
+import java.time.ZonedDateTime
+import java.util.*
+
+<span class="fc" id="L22">@Service</span>
+<span class="fc" id="L23">class PaymentServiceImpl(</span>
+<span class="fc" id="L24">    private val orderRepository: OrderRepository,</span>
+<span class="fc" id="L25">    private val snsAndSqsService: SnsAndSqsService,</span>
+<span class="fc" id="L26">    private val productRepository: ProductRepository,</span>
+): PaymentService {
+<span class="fc" id="L28">    private val logger: Logger = LoggerFactory.getLogger(PaymentServiceImpl::class.java)</span>
+
+<span class="fc" id="L30">    private val mapper = jacksonObjectMapper().registerModule(JavaTimeModule())</span>
+
+    override fun getOrderById(id: Long): OrderByIdResponseDTO {
+<span class="fc" id="L33">        logger.info(&quot;PaymentServiceImpl - getOrderById&quot;)</span>
+<span class="fc" id="L34">        val orderEntity = orderRepository.findById(id)</span>
+<span class="pc bpc" id="L35" title="1 of 2 branches missed.">        if(orderEntity.isPresent) {</span>
+<span class="nc" id="L36">            return OrderByIdResponseDTO.fromOrderEntityToOrderByIdResponseDTO(orderEntity.get())</span>
+        }
+<span class="fc" id="L38">        return OrderByIdResponseDTO()</span>
+    }
+
+
+    override fun getOrderByExternalId(externalId: UUID): OrderByIdResponseDTO? {
+<span class="fc" id="L43">        logger.info(&quot;PaymentServiceImpl - getOrderByExternalId&quot;)</span>
+<span class="fc" id="L44">        val orderEntity = orderRepository.findByExternalId(externalId.toString())</span>
+<span class="fc bfc" id="L45" title="All 2 branches covered.">        return if(orderEntity.isPresent) {</span>
+<span class="fc" id="L46">            return OrderByIdResponseDTO.fromOrderEntityToOrderByIdResponseDTO(orderEntity.get())</span>
+        } else {
+<span class="fc" id="L48">            throw Exceptions.NotFoundException(ErrorMsgConstants.ERROR_ORDER_NOT_FOUND)</span>
+        }
+    }
+
+    override fun fakeCheckoutOrder(orderCheckoutDTO: OrderCheckoutDTO): OrderByIdResponseDTO {
+<span class="fc" id="L53">        logger.info(&quot;PaymentServiceImpl - fakeCheckoutOrder&quot;)</span>
+<span class="fc" id="L54">        try {</span>
+<span class="fc" id="L55">            val order = orderRepository.findByExternalId(orderCheckoutDTO.externalId)</span>
+<span class="fc bfc" id="L56" title="All 2 branches covered.">            if (!order.isPresent) {</span>
+<span class="fc" id="L57">                throw Exception(ErrorMsgConstants.ERROR_ORDER_NOT_FOUND)</span>
+            } else {
+<span class="fc" id="L59">                val randomMinutes = (20..75).random().toLong()</span>
+<span class="fc" id="L60">                val updatedOrder = order.get().copy(</span>
+<span class="fc" id="L61">                    status = PaymentStatusEnum.PAYMENT_REQUIRED.value,</span>
+<span class="fc" id="L62">                    waitingTime = ZonedDateTime.now(ZoneId.of(&quot;America/Sao_Paulo&quot;)).plusMinutes(randomMinutes).toLocalDateTime()</span>
+                )
+<span class="fc" id="L64">                val orderResponse = OrderByIdResponseDTO.fromOrderEntityToOrderByIdResponseDTO(orderRepository.save(updatedOrder))</span>
+<span class="fc" id="L65">                orderResponse.products = productRepository.findByExternalId(orderResponse.externalId).toMutableList()</span>
+<span class="fc" id="L66">                return orderResponse</span>
+            }
+<span class="fc" id="L68">        } catch (e: Exception) {</span>
+<span class="fc" id="L69">            logger.info(&quot;ERROR PaymentServiceImpl - fakeCheckoutOrder {}&quot;, e.printStackTrace())</span>
+<span class="fc" id="L70">            throw Exceptions.RequestedElementNotFoundException(ErrorMsgConstants.ERROR_ORDER_NOT_FOUND)</span>
+        }
+    }
+
+    override fun finishedOrderWithPayment(orderCheckoutDTO: OrderCheckoutDTO): OrderFinishDTO {
+<span class="fc" id="L75">        logger.info(&quot;PaymentServiceImpl - fakeCheckoutOrder&quot;)</span>
+<span class="fc" id="L76">        try {</span>
+<span class="fc" id="L77">            val order = orderRepository.findByExternalId(orderCheckoutDTO.externalId)</span>
+<span class="fc bfc" id="L78" title="All 2 branches covered.">            if (!order.isPresent) {</span>
+<span class="fc" id="L79">                throw Exception(ErrorMsgConstants.ERROR_ORDER_NOT_FOUND)</span>
+            } else {
+<span class="fc" id="L81">                val updatedOrder = order.get().copy(</span>
+<span class="fc" id="L82">                    status = PaymentStatusEnum.FINISHED.value,</span>
+<span class="fc" id="L83">                    waitingTime = ZonedDateTime.now(ZoneId.of(&quot;America/Sao_Paulo&quot;)).toLocalDateTime(),</span>
+<span class="fc" id="L84">                    isFinished = true</span>
+                )
+<span class="fc" id="L86">                val orderResponse =  OrderByIdResponseDTO.fromOrderEntityToOrderByIdResponseDTO(orderRepository.save(updatedOrder))</span>
+<span class="fc" id="L87">                val statusDTO: StatusDTO = orderResponse.toStatusDTO()</span>
+<span class="fc" id="L88">                snsAndSqsService.sendQueueStatusMessage(mapper.writeValueAsString(statusDTO))</span>
+<span class="fc" id="L89">                return OrderFinishDTO(</span>
+<span class="fc" id="L90">                    isFinished = true,</span>
+<span class="fc" id="L91">                    externalId = statusDTO.externalId</span>
+                )
+            }
+<span class="fc" id="L94">        } catch (e: Exception) {</span>
+<span class="fc" id="L95">            logger.info(&quot;ERROR PaymentServiceImpl - finishedOrderWithPayment {}&quot;, e.printStackTrace())</span>
+<span class="fc" id="L96">            throw Exception(ErrorMsgConstants.ERROR_ORDER_CHECKOUT)</span>
+        }
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

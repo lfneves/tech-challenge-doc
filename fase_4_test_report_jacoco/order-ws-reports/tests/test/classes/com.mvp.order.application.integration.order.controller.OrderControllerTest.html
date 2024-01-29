@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - OrderControllerTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>OrderControllerTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.mvp.order.application.integration.order.controller.html">com.mvp.order.application.integration.order.controller</a> &gt; OrderControllerTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">6</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">3.933s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+<li>
+<a href="#tab2">Standard error</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">Get All Order Products By Order ID()</td>
+<td class="success">1.262s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Test Add New Product To Order()</td>
+<td class="success">0.350s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getOrderById returns order when found1()</td>
+<td class="success">0.277s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">test create order()</td>
+<td class="success">1.903s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">test delete order by id()</td>
+<td class="success">0.113s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">test remove product from order by id()</td>
+<td class="success">0.028s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>15:29:24.594 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.mvp.order.application.integration.order.controller.OrderControllerTest]: OrderControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+15:29:24.754 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.mvp.order.OrderApplication for test class com.mvp.order.application.integration.order.controller.OrderControllerTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.1)
+
+2024-01-21T15:29:26.818-03:00  INFO 8210 --- [    Test worker] c.m.o.a.i.o.c.OrderControllerTest        : Starting OrderControllerTest using Java 21.0.1 with PID 8210 (started by lfneves in /home/lfneves/0_projects/tech-challenge-order)
+2024-01-21T15:29:26.819-03:00  INFO 8210 --- [    Test worker] c.m.o.a.i.o.c.OrderControllerTest        : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2024-01-21T15:29:27.780-03:00  INFO 8210 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-21T15:29:27.830-03:00  INFO 8210 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41 ms. Found 7 JPA repository interfaces.
+2024-01-21T15:29:28.778-03:00  INFO 8210 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-01-21T15:29:28.793-03:00  INFO 8210 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-21T15:29:28.794-03:00  INFO 8210 --- [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-01-21T15:29:28.867-03:00  INFO 8210 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-21T15:29:28.868-03:00  INFO 8210 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1730 ms
+2024-01-21T15:29:28.900-03:00  INFO 8210 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-01-21T15:29:28.979-03:00  INFO 8210 --- [    Test worker] h2database                               : database opening mem:postgresdb (build 224)
+2024-01-21T15:29:29.066-03:00  INFO 8210 --- [    Test worker] h2database                               : database opened mem:postgresdb
+2024-01-21T15:29:29.067-03:00  INFO 8210 --- [    Test worker] h2database                               : database connecting session #3 to mem:postgresdb
+2024-01-21T15:29:29.180-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[3] 
+/*SQL */SET DB_CLOSE_DELAY -1;
+2024-01-21T15:29:29.180-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[3] 
+/*SQL */SET TRACE_LEVEL_FILE 4;
+2024-01-21T15:29:29.180-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[3] 
+/**/Connection conn0 = DriverManager.getConnection(&quot;jdbc:h2:mem:postgresdb;MODE=PostgreSQL;DB_CLOSE_DELAY=-1;TRACE_LEVEL_FILE=4&quot;, &quot;POSTGRES&quot;, &quot;&quot;);
+2024-01-21T15:29:29.185-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[3] 
+/*SQL #:1 t:1*/CALL READONLY();
+2024-01-21T15:29:29.187-03:00  INFO 8210 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:postgresdb user=POSTGRES
+2024-01-21T15:29:29.189-03:00  INFO 8210 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-01-21T15:29:29.202-03:00  INFO 8210 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:postgresdb'
+2024-01-21T15:29:29.290-03:00  INFO 8210 --- [onnection adder] h2database                               : database connecting session #4 to mem:postgresdb
+2024-01-21T15:29:29.290-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[4] 
+/*SQL */SET DB_CLOSE_DELAY -1;
+2024-01-21T15:29:29.291-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[4] 
+/*SQL */SET MODE PostgreSQL;
+2024-01-21T15:29:29.291-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[4] 
+/*SQL */SET TRACE_LEVEL_FILE 4;
+2024-01-21T15:29:29.291-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[4] 
+/**/Connection conn1 = DriverManager.getConnection(&quot;jdbc:h2:mem:postgresdb;MODE=PostgreSQL;DB_CLOSE_DELAY=-1;TRACE_LEVEL_FILE=4&quot;, &quot;POSTGRES&quot;, &quot;&quot;);
+2024-01-21T15:29:29.291-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[4] 
+/*SQL #:1*/CALL READONLY();
+2024-01-21T15:29:29.293-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[3] 
+/*SQL t:4*/CREATE TABLE IF NOT EXISTS tb_address ( id SERIAL PRIMARY KEY, street VARCHAR(50) NULL, city VARCHAR(50) NULL, state VARCHAR(50) NULL, postal_code VARCHAR(50) NULL, dh_insert TIMESTAMP DEFAULT NOW() );
+2024-01-21T15:29:29.298-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[3] 
+/*SQL t:3*/CREATE TABLE IF NOT EXISTS tb_client ( id SERIAL PRIMARY KEY, password VARCHAR(500) NOT NULL, email VARCHAR(50) NULL, cpf VARCHAR(50) NULL UNIQUE, name VARCHAR(50) NOT NULL, id_address INTEGER REFERENCES tb_address(id), dh_insert TIMESTAMP DEFAULT NOW() );
+2024-01-21T15:29:29.299-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[3] 
+/*SQL */CREATE TABLE IF NOT EXISTS tb_category ( id SERIAL PRIMARY KEY, name VARCHAR(250) NOT NULL UNIQUE, description VARCHAR(250) NULL, dh_insert TIMESTAMP DEFAULT NOW() );
+2024-01-21T15:29:29.301-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[3] 
+/*SQL */CREATE TABLE IF NOT EXISTS tb_product ( id SERIAL PRIMARY KEY, name VARCHAR NOT NULL, price NUMERIC NOT NULL, quantity INTEGER NULL, id_category INTEGER REFERENCES tb_category(id), dh_insert TIMESTAMP DEFAULT NOW() );
+2024-01-21T15:29:29.302-03:00  INFO 8210 --- [onnection adder] h2database                               : database connecting session #5 to mem:postgresdb
+2024-01-21T15:29:29.303-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[5] 
+/*SQL */SET DB_CLOSE_DELAY -1;
+2024-01-21T15:29:29.303-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[5] 
+/*SQL */SET MODE PostgreSQL;
+2024-01-21T15:29:29.303-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[3] 
+/*SQL t:1*/CREATE TABLE IF NOT EXISTS tb_order ( id SERIAL PRIMARY KEY, external_id VARCHAR NOT NULL, id_client INTEGER REFERENCES tb_client(id) NOT NULL, total_price NUMERIC NOT NULL, status VARCHAR(50) NULL, waiting_time TIMESTAMP NULL, is_finished BOOLEAN DEFAULT FALSE, dh_insert TIMESTAMP DEFAULT NOW() );
+2024-01-21T15:29:29.303-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[5] 
+/*SQL */SET TRACE_LEVEL_FILE 4;
+2024-01-21T15:29:29.303-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[5] 
+/**/Connection conn2 = DriverManager.getConnection(&quot;jdbc:h2:mem:postgresdb;MODE=PostgreSQL;DB_CLOSE_DELAY=-1;TRACE_LEVEL_FILE=4&quot;, &quot;POSTGRES&quot;, &quot;&quot;);
+2024-01-21T15:29:29.304-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[5] 
+/*SQL #:1*/CALL READONLY();
+2024-01-21T15:29:29.305-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[3] 
+/*SQL t:1*/CREATE TABLE IF NOT EXISTS tb_order_product ( id SERIAL PRIMARY KEY, id_product INTEGER REFERENCES tb_product(id), id_order INTEGER REFERENCES tb_order(id) );
+2024-01-21T15:29:29.310-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[3] 
+/*SQL #:1 t:2*/INSERT INTO tb_category (name, description, dh_insert) VALUES ('Bebidas', 'Consum\u00edvel l\u00edquido que possa ser comprado para consumo, como \u00c1gua, Refrigerante, Cerveja entre outros.', now()) ON CONFLICT DO NOTHING;
+2024-01-21T15:29:29.311-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[3] 
+/*SQL #:1*/INSERT INTO tb_category (name, description, dh_insert) VALUES ('Sobremesa', 'Algum doce, pode incluir bolos, tortas, sorvetes, pudins, entre outros.', now()) ON CONFLICT DO NOTHING;
+2024-01-21T15:29:29.311-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[3] 
+/*SQL #:1*/INSERT INTO tb_category (name, description, dh_insert) VALUES ('Lanche', 'Refei\u00e7\u00e3o pronta para consumo que possa ser comprada como Hambuguer, Pizza, Sanduiche entre outros.', now()) ON CONFLICT DO NOTHING;
+2024-01-21T15:29:29.312-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[3] 
+/*SQL #:1*/INSERT INTO tb_category (name, description, dh_insert) VALUES ('Acompanhamento', 'Todo e qualquer alimento de pequena m\u00e9dia propor\u00e7\u00e3o que possa ser consumido com outras refei\u00e7\u00f5es.', now()) ON CONFLICT DO NOTHING;
+2024-01-21T15:29:29.312-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[3] 
+/*SQL #:1*/INSERT INTO tb_address (id, city, dh_insert, postal_code, state, street) VALUES ( 1, 'Springfield', now(), '12345', 'IL', '123 Main St') ON CONFLICT DO NOTHING;
+2024-01-21T15:29:29.313-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[3] 
+/*SQL #:1*/INSERT INTO tb_client (cpf, dh_insert, email, id_address, name, password) VALUES ('99999999999', now(), 'client@example.com', 1, 'admin', 'c7ad44cbad762a5da0a452f9e854fdc1e0e7a52a38015f23f3eab1d80b931dd472634dfac71cd34ebc35d16ab7fb8a90c81f975113d6c7538dc69dd8de9077ec') ON CONFLICT DO NOTHING;
+2024-01-21T15:29:29.314-03:00  INFO 8210 --- [onnection adder] h2database                               : database connecting session #6 to mem:postgresdb
+2024-01-21T15:29:29.315-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[3] 
+/*SQL #:4*/INSERT INTO tb_product (id, name, price, quantity, id_category) VALUES (1, 'Suco', 19.99, 10, 1), (2, 'Sorvete', 29.99, 5, 2), (3, 'Hamburguer', 39.99, 15, 3), (4, 'Batata Frita', 9.99, 15, 4) ON CONFLICT DO NOTHING;
+2024-01-21T15:29:29.315-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[6] 
+/*SQL */SET DB_CLOSE_DELAY -1;
+2024-01-21T15:29:29.315-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[6] 
+/*SQL */SET MODE PostgreSQL;
+2024-01-21T15:29:29.316-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[6] 
+/*SQL */SET TRACE_LEVEL_FILE 4;
+2024-01-21T15:29:29.316-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[6] 
+/**/Connection conn3 = DriverManager.getConnection(&quot;jdbc:h2:mem:postgresdb;MODE=PostgreSQL;DB_CLOSE_DELAY=-1;TRACE_LEVEL_FILE=4&quot;, &quot;POSTGRES&quot;, &quot;&quot;);
+2024-01-21T15:29:29.316-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[6] 
+/*SQL #:1*/CALL READONLY();
+2024-01-21T15:29:29.316-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[3] 
+/*SQL #:1*/insert into tb_order ( id, external_id, id_client, is_finished, status, total_price, waiting_time) values ( 1, 'cdfe4e61-ec36-4a7c-933e-d49d75af963e'::UUID, 1, false, 'Pendente', 19.99, now()) ON CONFLICT DO NOTHING;
+2024-01-21T15:29:29.317-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[3] 
+/*SQL #:1*/insert into tb_order_product ( id, id_order, id_product) values ( 1, 1, 1) ON CONFLICT DO NOTHING;
+2024-01-21T15:29:29.327-03:00  INFO 8210 --- [onnection adder] h2database                               : database connecting session #7 to mem:postgresdb
+2024-01-21T15:29:29.327-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[7] 
+/*SQL */SET DB_CLOSE_DELAY -1;
+2024-01-21T15:29:29.327-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[7] 
+/*SQL */SET MODE PostgreSQL;
+2024-01-21T15:29:29.328-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[7] 
+/*SQL */SET TRACE_LEVEL_FILE 4;
+2024-01-21T15:29:29.328-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[7] 
+/**/Connection conn4 = DriverManager.getConnection(&quot;jdbc:h2:mem:postgresdb;MODE=PostgreSQL;DB_CLOSE_DELAY=-1;TRACE_LEVEL_FILE=4&quot;, &quot;POSTGRES&quot;, &quot;&quot;);
+2024-01-21T15:29:29.328-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[7] 
+/*SQL #:1*/CALL READONLY();
+2024-01-21T15:29:29.339-03:00  INFO 8210 --- [onnection adder] h2database                               : database connecting session #8 to mem:postgresdb
+2024-01-21T15:29:29.339-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[8] 
+/*SQL */SET DB_CLOSE_DELAY -1;
+2024-01-21T15:29:29.340-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[8] 
+/*SQL */SET MODE PostgreSQL;
+2024-01-21T15:29:29.340-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[8] 
+/*SQL */SET TRACE_LEVEL_FILE 4;
+2024-01-21T15:29:29.340-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[8] 
+/**/Connection conn5 = DriverManager.getConnection(&quot;jdbc:h2:mem:postgresdb;MODE=PostgreSQL;DB_CLOSE_DELAY=-1;TRACE_LEVEL_FILE=4&quot;, &quot;POSTGRES&quot;, &quot;&quot;);
+2024-01-21T15:29:29.341-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[8] 
+/*SQL #:1*/CALL READONLY();
+2024-01-21T15:29:29.351-03:00  INFO 8210 --- [onnection adder] h2database                               : database connecting session #9 to mem:postgresdb
+2024-01-21T15:29:29.352-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[9] 
+/*SQL */SET DB_CLOSE_DELAY -1;
+2024-01-21T15:29:29.352-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[9] 
+/*SQL */SET MODE PostgreSQL;
+2024-01-21T15:29:29.352-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[9] 
+/*SQL */SET TRACE_LEVEL_FILE 4;
+2024-01-21T15:29:29.352-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[9] 
+/**/Connection conn6 = DriverManager.getConnection(&quot;jdbc:h2:mem:postgresdb;MODE=PostgreSQL;DB_CLOSE_DELAY=-1;TRACE_LEVEL_FILE=4&quot;, &quot;POSTGRES&quot;, &quot;&quot;);
+2024-01-21T15:29:29.353-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[9] 
+/*SQL #:1*/CALL READONLY();
+2024-01-21T15:29:29.363-03:00  INFO 8210 --- [onnection adder] h2database                               : database connecting session #10 to mem:postgresdb
+2024-01-21T15:29:29.364-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[10] 
+/*SQL */SET DB_CLOSE_DELAY -1;
+2024-01-21T15:29:29.364-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[10] 
+/*SQL */SET MODE PostgreSQL;
+2024-01-21T15:29:29.364-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[10] 
+/*SQL */SET TRACE_LEVEL_FILE 4;
+2024-01-21T15:29:29.364-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[10] 
+/**/Connection conn7 = DriverManager.getConnection(&quot;jdbc:h2:mem:postgresdb;MODE=PostgreSQL;DB_CLOSE_DELAY=-1;TRACE_LEVEL_FILE=4&quot;, &quot;POSTGRES&quot;, &quot;&quot;);
+2024-01-21T15:29:29.365-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[10] 
+/*SQL #:1*/CALL READONLY();
+2024-01-21T15:29:29.375-03:00  INFO 8210 --- [onnection adder] h2database                               : database connecting session #11 to mem:postgresdb
+2024-01-21T15:29:29.376-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[11] 
+/*SQL */SET DB_CLOSE_DELAY -1;
+2024-01-21T15:29:29.376-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[11] 
+/*SQL */SET MODE PostgreSQL;
+2024-01-21T15:29:29.376-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[11] 
+/*SQL */SET TRACE_LEVEL_FILE 4;
+2024-01-21T15:29:29.376-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[11] 
+/**/Connection conn8 = DriverManager.getConnection(&quot;jdbc:h2:mem:postgresdb;MODE=PostgreSQL;DB_CLOSE_DELAY=-1;TRACE_LEVEL_FILE=4&quot;, &quot;POSTGRES&quot;, &quot;&quot;);
+2024-01-21T15:29:29.377-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[11] 
+/*SQL #:1*/CALL READONLY();
+2024-01-21T15:29:29.387-03:00  INFO 8210 --- [onnection adder] h2database                               : database connecting session #12 to mem:postgresdb
+2024-01-21T15:29:29.388-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[12] 
+/*SQL */SET DB_CLOSE_DELAY -1;
+2024-01-21T15:29:29.388-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[12] 
+/*SQL */SET MODE PostgreSQL;
+2024-01-21T15:29:29.388-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[12] 
+/*SQL */SET TRACE_LEVEL_FILE 4;
+2024-01-21T15:29:29.388-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[12] 
+/**/Connection conn9 = DriverManager.getConnection(&quot;jdbc:h2:mem:postgresdb;MODE=PostgreSQL;DB_CLOSE_DELAY=-1;TRACE_LEVEL_FILE=4&quot;, &quot;POSTGRES&quot;, &quot;&quot;);
+2024-01-21T15:29:29.388-03:00  INFO 8210 --- [onnection adder] h2database                               : jdbc[12] 
+/*SQL #:1*/CALL READONLY();
+2024-01-21T15:29:29.410-03:00  INFO 8210 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-21T15:29:29.480-03:00  INFO 8210 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-01-21T15:29:29.526-03:00  INFO 8210 --- [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-01-21T15:29:29.640-03:00  INFO 8210 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-21T15:29:29.688-03:00  WARN 8210 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000511: The 2.2.0 version for [org.hibernate.dialect.PostgreSQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 12.0.0. Check the community dialects project for available legacy versions.
+2024-01-21T15:29:29.694-03:00  WARN 8210 --- [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-01-21T15:29:29.703-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[3] 
+/*SQL #:1*/CALL DATABASE();
+2024-01-21T15:29:30.464-03:00  INFO 8210 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-01-21T15:29:30.499-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[3] 
+/*SQL */select * from information_schema.sequences;
+Hibernate: create table order_product_response_entity (id bigint not null, category_name varchar(255), id_order bigint, id_product bigint, price numeric(38,2), product_name varchar(255), primary key (id))
+2024-01-21T15:29:30.516-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[3] 
+/*SQL */create table order_product_response_entity (id bigint not null, category_name varchar(255), id_order bigint, id_product bigint, price numeric(38,2), product_name varchar(255), primary key (id));
+2024-01-21T15:29:30.518-03:00  INFO 8210 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-21T15:29:31.533-03:00  INFO 8210 --- [    Test worker] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-01-21T15:29:31.858-03:00  WARN 8210 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-21T15:29:32.413-03:00  INFO 8210 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-01-21T15:29:32.423-03:00  INFO 8210 --- [    Test worker] c.m.o.a.i.o.c.OrderControllerTest        : Started OrderControllerTest in 6.134 seconds (process running for 9.059)
+2024-01-21T15:29:33.435-03:00  INFO 8210 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-21T15:29:33.436-03:00  INFO 8210 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-01-21T15:29:33.437-03:00  INFO 8210 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+Hibernate: 
+        SELECT tb_order.id, tb_order.external_id, id_client, SUM(price) AS total_price, status, is_finished, waiting_time
+         FROM tb_order 
+         INNER JOIN tb_client ON tb_client.id = tb_order.id_client
+         INNER JOIN tb_order_product ON tb_order_product.id_order = tb_order.id
+         INNER JOIN tb_product ON tb_product.id = tb_order_product.id_product
+         WHERE tb_order.id = ?
+         GROUP BY tb_order.id, id_client, status, is_finished
+    
+2024-01-21T15:29:33.555-03:00  INFO 8210 --- [nio-8080-exec-1] h2database                               : jdbc[3] 
+/*SQL l:455 #:1 t:2*/SELECT tb_order.id, tb_order.external_id, id_client, SUM(price) AS total_price, status, is_finished, waiting_time\n         FROM tb_order \n         INNER JOIN tb_client ON tb_client.id = tb_order.id_client\n         INNER JOIN tb_order_product ON tb_order_product.id_order = tb_order.id\n         INNER JOIN tb_product ON tb_product.id = tb_order_product.id_product\n         WHERE tb_order.id = ?\n         GROUP BY tb_order.id, id_client, status, is_finished {1: CAST(1 AS BIGINT)};
+2024-01-21T15:29:33.590-03:00  INFO 8210 --- [nio-8080-exec-1] h2database                               : jdbc[3] 
+/*SQL l:74 #:1 t:1*/SELECT SETTING_VALUE FROM INFORMATION_SCHEMA.SETTINGS WHERE SETTING_NAME=? {1: 'QUERY_TIMEOUT'};
+Hibernate: 
+        SELECT tb_order_product.id, 
+               tb_order_product.id_product, 
+               tb_order_product.id_order, 
+               tb_product.name AS product_name, 
+               tb_category.name AS category_name, 
+               tb_product.price
+        FROM tb_order_product
+        INNER JOIN tb_order ON tb_order.id = tb_order_product.id_order
+        LEFT JOIN tb_product ON tb_product.id = tb_order_product.id_product
+        LEFT JOIN tb_category ON tb_category.id = tb_product.id_category
+        WHERE tb_order_product.id_order = ?
+    
+2024-01-21T15:29:33.596-03:00  INFO 8210 --- [nio-8080-exec-1] h2database                               : jdbc[3] 
+/*SQL l:542 #:1*/SELECT tb_order_product.id, \n               tb_order_product.id_product, \n               tb_order_product.id_order, \n               tb_product.name AS product_name, \n               tb_category.name AS category_name, \n               tb_product.price\n        FROM tb_order_product\n        INNER JOIN tb_order ON tb_order.id = tb_order_product.id_order\n        LEFT JOIN tb_product ON tb_product.id = tb_order_product.id_product\n        LEFT JOIN tb_category ON tb_category.id = tb_product.id_category\n        WHERE tb_order_product.id_order = ? {1: CAST(1 AS BIGINT)};
+Hibernate: 
+        DELETE FROM tb_order_product WHERE id_order = ?
+    
+2024-01-21T15:29:33.741-03:00  INFO 8210 --- [nio-8080-exec-2] h2database                               : jdbc[3] 
+/*SQL l:47 #:1*/DELETE FROM tb_order_product WHERE id_order = ? {1: CAST(1 AS BIGINT)};
+2024-01-21T15:29:33.742-03:00  INFO 8210 --- [nio-8080-exec-2] h2database                               : jdbc[3] 
+/*SQL */COMMIT;
+2024-01-21T15:29:33.742-03:00  INFO 8210 --- [nio-8080-exec-2] h2database                               : jdbc[3] 
+/*SQL */COMMIT;
+Hibernate: select oe1_0.id,oe1_0.external_id,oe1_0.id_client,oe1_0.is_finished,oe1_0.status,oe1_0.total_price,oe1_0.waiting_time from tb_order oe1_0 where oe1_0.id=?
+2024-01-21T15:29:33.754-03:00  INFO 8210 --- [nio-8080-exec-2] h2database                               : jdbc[3] 
+/*SQL l:154 #:1*/select oe1_0.id,oe1_0.external_id,oe1_0.id_client,oe1_0.is_finished,oe1_0.status,oe1_0.total_price,oe1_0.waiting_time from tb_order oe1_0 where oe1_0.id=? {1: CAST(1 AS BIGINT)};
+Hibernate: delete from tb_order where id=?
+2024-01-21T15:29:33.775-03:00  INFO 8210 --- [nio-8080-exec-2] h2database                               : jdbc[3] 
+/*SQL l:31 #:1*/delete from tb_order where id=? {1: CAST(1 AS BIGINT)};
+2024-01-21T15:29:33.784-03:00  INFO 8210 --- [nio-8080-exec-2] h2database                               : jdbc[3] 
+/*SQL */COMMIT;
+2024-01-21T15:29:33.784-03:00  INFO 8210 --- [nio-8080-exec-2] h2database                               : jdbc[3] 
+/*SQL */COMMIT;
+2024-01-21T15:29:33.816-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[3] 
+/*SQL */delete from tb_order_product;
+2024-01-21T15:29:33.817-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[3] 
+/*SQL */delete from tb_order;
+2024-01-21T15:29:33.817-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[3] 
+/*SQL #:1*/insert into tb_order ( id, external_id, id_client, is_finished, status, total_price, waiting_time) values ( 1, 'cdfe4e61-ec36-4a7c-933e-d49d75af963e'::UUID, 1, false, 'Pendente', 19.99, now()) ON CONFLICT DO NOTHING;
+2024-01-21T15:29:33.818-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[3] 
+/*SQL #:1*/insert into tb_order_product ( id_order, id_product) values ( 1, 1) ON CONFLICT DO NOTHING;
+2024-01-21T15:29:33.818-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[3] 
+/*SQL */COMMIT;
+2024-01-21T15:29:33.818-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[3] 
+/*SQL */COMMIT;
+Hibernate: 
+        SELECT tb_order.id, tb_order.external_id, id_client, SUM(price) AS total_price, status, is_finished, waiting_time
+         FROM tb_order 
+         INNER JOIN tb_client ON tb_client.id = tb_order.id_client
+         INNER JOIN tb_order_product ON tb_order_product.id_order = tb_order.id
+         INNER JOIN tb_product ON tb_product.id = tb_order_product.id_product
+         WHERE tb_order.id = ?
+         GROUP BY tb_order.id, id_client, status, is_finished
+    
+2024-01-21T15:29:34.042-03:00  INFO 8210 --- [nio-8080-exec-3] h2database                               : jdbc[3] 
+/*SQL l:455 #:1*/SELECT tb_order.id, tb_order.external_id, id_client, SUM(price) AS total_price, status, is_finished, waiting_time\n         FROM tb_order \n         INNER JOIN tb_client ON tb_client.id = tb_order.id_client\n         INNER JOIN tb_order_product ON tb_order_product.id_order = tb_order.id\n         INNER JOIN tb_product ON tb_product.id = tb_order_product.id_product\n         WHERE tb_order.id = ?\n         GROUP BY tb_order.id, id_client, status, is_finished {1: CAST(1 AS BIGINT)};
+Hibernate: 
+        SELECT tb_order_product.id, 
+               tb_order_product.id_product, 
+               tb_order_product.id_order, 
+               tb_product.name AS product_name, 
+               tb_category.name AS category_name, 
+               tb_product.price
+        FROM tb_order_product
+        INNER JOIN tb_order ON tb_order.id = tb_order_product.id_order
+        LEFT JOIN tb_product ON tb_product.id = tb_order_product.id_product
+        LEFT JOIN tb_category ON tb_category.id = tb_product.id_category
+        WHERE tb_order_product.id_order = ?
+    
+2024-01-21T15:29:34.048-03:00  INFO 8210 --- [nio-8080-exec-3] h2database                               : jdbc[3] 
+/*SQL l:542 #:1*/SELECT tb_order_product.id, \n               tb_order_product.id_product, \n               tb_order_product.id_order, \n               tb_product.name AS product_name, \n               tb_category.name AS category_name, \n               tb_product.price\n        FROM tb_order_product\n        INNER JOIN tb_order ON tb_order.id = tb_order_product.id_order\n        LEFT JOIN tb_product ON tb_product.id = tb_order_product.id_product\n        LEFT JOIN tb_category ON tb_category.id = tb_product.id_category\n        WHERE tb_order_product.id_order = ? {1: CAST(1 AS BIGINT)};
+Hibernate:  SELECT tb_client.id, password, name, email, cpf, tb_address.id AS id_address 
+        FROM tb_client 
+        INNER JOIN tb_address ON tb_client.id_address = tb_address.id 
+        WHERE tb_client.cpf = ? 
+2024-01-21T15:29:34.231-03:00  INFO 8210 --- [nio-8080-exec-4] h2database                               : jdbc[3] 
+/*SQL l:204 #:1*/SELECT tb_client.id, password, name, email, cpf, tb_address.id AS id_address \n        FROM tb_client \n        INNER JOIN tb_address ON tb_client.id_address = tb_address.id \n        WHERE tb_client.cpf = ? {1: '99999999999'};
+Hibernate: SELECT id, name, price, quantity, id_category FROM tb_product WHERE id IN(?)
+2024-01-21T15:29:34.237-03:00  INFO 8210 --- [nio-8080-exec-4] h2database                               : jdbc[3] 
+/*SQL l:76 #:1*/SELECT id, name, price, quantity, id_category FROM tb_product WHERE id IN(?) {1: CAST(1 AS BIGINT)};
+Hibernate: select ce1_0.id,ce1_0.description,ce1_0.name from tb_category ce1_0 where ce1_0.id=?
+2024-01-21T15:29:34.242-03:00  INFO 8210 --- [nio-8080-exec-4] h2database                               : jdbc[3] 
+/*SQL l:84 #:1*/select ce1_0.id,ce1_0.description,ce1_0.name from tb_category ce1_0 where ce1_0.id=? {1: CAST(1 AS BIGINT)};
+2024-01-21T15:29:34.244-03:00  INFO 8210 --- [nio-8080-exec-4] h2database                               : jdbc[3] 
+/*SQL */COMMIT;
+2024-01-21T15:29:34.244-03:00  INFO 8210 --- [nio-8080-exec-4] h2database                               : jdbc[3] 
+/*SQL */COMMIT;
+Hibernate: 
+        SELECT tb_order.id, tb_order.external_id, id_client, SUM(price) AS total_price, status, is_finished, waiting_time
+         FROM tb_order 
+         INNER JOIN tb_client ON tb_client.id = tb_order.id_client
+         LEFT JOIN tb_order_product ON tb_order_product.id_order = tb_order.id
+         LEFT JOIN tb_product ON tb_product.id = tb_order_product.id_product
+         WHERE tb_client.cpf = ?
+         GROUP BY tb_order.id, id_client, status, is_finished
+    
+2024-01-21T15:29:34.249-03:00  INFO 8210 --- [nio-8080-exec-4] h2database                               : jdbc[3] 
+/*SQL l:455 #:1*/SELECT tb_order.id, tb_order.external_id, id_client, SUM(price) AS total_price, status, is_finished, waiting_time\n         FROM tb_order \n         INNER JOIN tb_client ON tb_client.id = tb_order.id_client\n         LEFT JOIN tb_order_product ON tb_order_product.id_order = tb_order.id\n         LEFT JOIN tb_product ON tb_product.id = tb_order_product.id_product\n         WHERE tb_client.cpf = ?\n         GROUP BY tb_order.id, id_client, status, is_finished {1: '99999999999'};
+2024-01-21T15:29:34.259-03:00  INFO 8210 --- [nio-8080-exec-4] h2database                               : jdbc[3] 
+/*SQL */COMMIT;
+2024-01-21T15:29:34.259-03:00  INFO 8210 --- [nio-8080-exec-4] h2database                               : jdbc[3] 
+/*SQL */COMMIT;
+Hibernate: select ope1_0.id,ope1_0.id_order,ope1_0.id_product from tb_order_product ope1_0 where ope1_0.id=?
+2024-01-21T15:29:34.266-03:00  INFO 8210 --- [nio-8080-exec-4] h2database                               : jdbc[3] 
+/*SQL l:97 #:1*/select ope1_0.id,ope1_0.id_order,ope1_0.id_product from tb_order_product ope1_0 where ope1_0.id=? {1: CAST(1 AS BIGINT)};
+2024-01-21T15:29:34.268-03:00  INFO 8210 --- [nio-8080-exec-4] h2database                               : jdbc[3] 
+/*SQL */COMMIT;
+2024-01-21T15:29:34.268-03:00  INFO 8210 --- [nio-8080-exec-4] h2database                               : jdbc[3] 
+/*SQL */COMMIT;
+Message sent. Message ID: 31d0f6a6-e0ab-5567-9d0a-a88184642662
+Hibernate: 
+        SELECT tb_order.id, tb_order.external_id, id_client, SUM(price) AS total_price, status, is_finished, waiting_time
+         FROM tb_order 
+         INNER JOIN tb_client ON tb_client.id = tb_order.id_client
+         LEFT JOIN tb_order_product ON tb_order_product.id_order = tb_order.id
+         LEFT JOIN tb_product ON tb_product.id = tb_order_product.id_product
+         WHERE tb_client.cpf = ?
+         GROUP BY tb_order.id, id_client, status, is_finished
+    
+2024-01-21T15:29:36.117-03:00  INFO 8210 --- [nio-8080-exec-7] h2database                               : jdbc[3] 
+/*SQL l:455 #:1*/SELECT tb_order.id, tb_order.external_id, id_client, SUM(price) AS total_price, status, is_finished, waiting_time\n         FROM tb_order \n         INNER JOIN tb_client ON tb_client.id = tb_order.id_client\n         LEFT JOIN tb_order_product ON tb_order_product.id_order = tb_order.id\n         LEFT JOIN tb_product ON tb_product.id = tb_order_product.id_product\n         WHERE tb_client.cpf = ?\n         GROUP BY tb_order.id, id_client, status, is_finished {1: '99999999999'};
+2024-01-21T15:29:36.119-03:00  INFO 8210 --- [nio-8080-exec-7] c.m.o.d.service.order.OrderServiceImpl   : Pendente Pago
+Hibernate:  SELECT tb_client.id, password, name, email, cpf, tb_address.id AS id_address 
+        FROM tb_client 
+        INNER JOIN tb_address ON tb_client.id_address = tb_address.id 
+        WHERE tb_client.cpf = ? 
+2024-01-21T15:29:36.121-03:00  INFO 8210 --- [nio-8080-exec-7] h2database                               : jdbc[3] 
+/*SQL l:204 #:1*/SELECT tb_client.id, password, name, email, cpf, tb_address.id AS id_address \n        FROM tb_client \n        INNER JOIN tb_address ON tb_client.id_address = tb_address.id \n        WHERE tb_client.cpf = ? {1: '99999999999'};
+Hibernate: SELECT id, name, price, quantity, id_category FROM tb_product WHERE id IN(?)
+2024-01-21T15:29:36.124-03:00  INFO 8210 --- [nio-8080-exec-7] h2database                               : jdbc[3] 
+/*SQL l:76 #:1*/SELECT id, name, price, quantity, id_category FROM tb_product WHERE id IN(?) {1: CAST(1 AS BIGINT)};
+Hibernate: select ce1_0.id,ce1_0.description,ce1_0.name from tb_category ce1_0 where ce1_0.id=?
+2024-01-21T15:29:36.126-03:00  INFO 8210 --- [nio-8080-exec-7] h2database                               : jdbc[3] 
+/*SQL l:84 #:1*/select ce1_0.id,ce1_0.description,ce1_0.name from tb_category ce1_0 where ce1_0.id=? {1: CAST(1 AS BIGINT)};
+2024-01-21T15:29:36.127-03:00  INFO 8210 --- [nio-8080-exec-7] h2database                               : jdbc[3] 
+/*SQL */COMMIT;
+2024-01-21T15:29:36.127-03:00  INFO 8210 --- [nio-8080-exec-7] h2database                               : jdbc[3] 
+/*SQL */COMMIT;
+Hibernate: 
+        SELECT tb_order.id, tb_order.external_id, id_client, SUM(price) AS total_price, status, is_finished, waiting_time
+         FROM tb_order 
+         INNER JOIN tb_client ON tb_client.id = tb_order.id_client
+         LEFT JOIN tb_order_product ON tb_order_product.id_order = tb_order.id
+         LEFT JOIN tb_product ON tb_product.id = tb_order_product.id_product
+         WHERE tb_client.cpf = ?
+         GROUP BY tb_order.id, id_client, status, is_finished
+    
+2024-01-21T15:29:36.128-03:00  INFO 8210 --- [nio-8080-exec-7] h2database                               : jdbc[3] 
+/*SQL l:455 #:1*/SELECT tb_order.id, tb_order.external_id, id_client, SUM(price) AS total_price, status, is_finished, waiting_time\n         FROM tb_order \n         INNER JOIN tb_client ON tb_client.id = tb_order.id_client\n         LEFT JOIN tb_order_product ON tb_order_product.id_order = tb_order.id\n         LEFT JOIN tb_product ON tb_product.id = tb_order_product.id_product\n         WHERE tb_client.cpf = ?\n         GROUP BY tb_order.id, id_client, status, is_finished {1: '99999999999'};
+2024-01-21T15:29:36.131-03:00  INFO 8210 --- [nio-8080-exec-7] h2database                               : jdbc[3] 
+/*SQL */COMMIT;
+2024-01-21T15:29:36.131-03:00  INFO 8210 --- [nio-8080-exec-7] h2database                               : jdbc[3] 
+/*SQL */COMMIT;
+Hibernate: select ope1_0.id,ope1_0.id_order,ope1_0.id_product from tb_order_product ope1_0 where ope1_0.id=?
+2024-01-21T15:29:36.132-03:00  INFO 8210 --- [nio-8080-exec-7] h2database                               : jdbc[3] 
+/*SQL l:97 #:1*/select ope1_0.id,ope1_0.id_order,ope1_0.id_product from tb_order_product ope1_0 where ope1_0.id=? {1: CAST(1 AS BIGINT)};
+2024-01-21T15:29:36.133-03:00  INFO 8210 --- [nio-8080-exec-7] h2database                               : jdbc[3] 
+/*SQL */COMMIT;
+2024-01-21T15:29:36.134-03:00  INFO 8210 --- [nio-8080-exec-7] h2database                               : jdbc[3] 
+/*SQL */COMMIT;
+Message sent. Message ID: 5dfd770f-903a-5728-a9db-2928f4eaa42d
+Hibernate: 
+        DELETE FROM tb_order_product WHERE id_order = ? AND id_product IN(?)
+    
+2024-01-21T15:29:36.373-03:00  INFO 8210 --- [nio-8080-exec-8] h2database                               : jdbc[3] 
+/*SQL l:68 #:1*/DELETE FROM tb_order_product WHERE id_order = ? AND id_product IN(?) {1: CAST(1 AS BIGINT), 2: CAST(1 AS BIGINT)};
+2024-01-21T15:29:36.374-03:00  INFO 8210 --- [nio-8080-exec-8] h2database                               : jdbc[3] 
+/*SQL */COMMIT;
+2024-01-21T15:29:36.374-03:00  INFO 8210 --- [nio-8080-exec-8] h2database                               : jdbc[3] 
+/*SQL */COMMIT;
+</pre>
+</span>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>WARNING: A Java agent has been loaded dynamically (/home/lfneves/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.14.10/90ed94ac044ea8953b224304c762316e91fd6b31/byte-buddy-agent-1.14.10.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.6.1</a> at Jan 21, 2024, 3:29:43 PM</p>
+</div>
+</div>
+</body>
+</html>

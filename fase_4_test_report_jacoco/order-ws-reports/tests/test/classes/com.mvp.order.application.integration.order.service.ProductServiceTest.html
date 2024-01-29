@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - ProductServiceTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>ProductServiceTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.mvp.order.application.integration.order.service.html">com.mvp.order.application.integration.order.service</a> &gt; ProductServiceTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">5</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.043s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">getAllById returns products for valid IDs()</td>
+<td class="success">0.011s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getProductById returns product with category for valid ID()</td>
+<td class="success">0.007s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getProductById throws NotFoundException for non-existent product()</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getProducts returns a list of products with categories()</td>
+<td class="success">0.013s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">test getProductsByCategoryByName with valid category name()</td>
+<td class="success">0.008s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>2024-01-21T15:29:39.571-03:00  INFO 8210 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.mvp.order.application.integration.order.service.ProductServiceTest]: ProductServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-01-21T15:29:39.573-03:00  INFO 8210 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.mvp.order.OrderApplication for test class com.mvp.order.application.integration.order.service.ProductServiceTest
+Hibernate: select pe1_0.id,pe1_0.id_category,pe1_0.name,pe1_0.price,pe1_0.quantity from tb_product pe1_0 where pe1_0.id=?
+2024-01-21T15:29:39.579-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL l:110 #:1*/select pe1_0.id,pe1_0.id_category,pe1_0.name,pe1_0.price,pe1_0.quantity from tb_product pe1_0 where pe1_0.id=? {1: CAST(1 AS BIGINT)};
+2024-01-21T15:29:39.580-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */COMMIT;
+2024-01-21T15:29:39.580-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */COMMIT;
+Hibernate: select ce1_0.id,ce1_0.description,ce1_0.name from tb_category ce1_0 where ce1_0.id=?
+2024-01-21T15:29:39.581-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL l:84 #:1*/select ce1_0.id,ce1_0.description,ce1_0.name from tb_category ce1_0 where ce1_0.id=? {1: CAST(1 AS BIGINT)};
+2024-01-21T15:29:39.582-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */COMMIT;
+2024-01-21T15:29:39.582-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */COMMIT;
+Hibernate: select pe1_0.id,pe1_0.id_category,pe1_0.name,pe1_0.price,pe1_0.quantity from tb_product pe1_0 where pe1_0.id=?
+2024-01-21T15:29:39.586-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL l:110*/select pe1_0.id,pe1_0.id_category,pe1_0.name,pe1_0.price,pe1_0.quantity from tb_product pe1_0 where pe1_0.id=? {1: CAST(999 AS BIGINT)};
+2024-01-21T15:29:39.586-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */COMMIT;
+2024-01-21T15:29:39.587-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */COMMIT;
+Hibernate: select pe1_0.id,pe1_0.id_category,pe1_0.name,pe1_0.price,pe1_0.quantity from tb_product pe1_0
+2024-01-21T15:29:39.592-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL #:4*/select pe1_0.id,pe1_0.id_category,pe1_0.name,pe1_0.price,pe1_0.quantity from tb_product pe1_0;
+2024-01-21T15:29:39.593-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */COMMIT;
+2024-01-21T15:29:39.594-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */COMMIT;
+Hibernate: select ce1_0.id,ce1_0.description,ce1_0.name from tb_category ce1_0 where ce1_0.id=?
+2024-01-21T15:29:39.595-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL l:84 #:1*/select ce1_0.id,ce1_0.description,ce1_0.name from tb_category ce1_0 where ce1_0.id=? {1: CAST(1 AS BIGINT)};
+2024-01-21T15:29:39.595-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */COMMIT;
+2024-01-21T15:29:39.595-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */COMMIT;
+Hibernate: select ce1_0.id,ce1_0.description,ce1_0.name from tb_category ce1_0 where ce1_0.id=?
+2024-01-21T15:29:39.596-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL l:84 #:1*/select ce1_0.id,ce1_0.description,ce1_0.name from tb_category ce1_0 where ce1_0.id=? {1: CAST(2 AS BIGINT)};
+2024-01-21T15:29:39.597-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */COMMIT;
+2024-01-21T15:29:39.597-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */COMMIT;
+Hibernate: select ce1_0.id,ce1_0.description,ce1_0.name from tb_category ce1_0 where ce1_0.id=?
+2024-01-21T15:29:39.599-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL l:84 #:1*/select ce1_0.id,ce1_0.description,ce1_0.name from tb_category ce1_0 where ce1_0.id=? {1: CAST(3 AS BIGINT)};
+2024-01-21T15:29:39.599-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */COMMIT;
+2024-01-21T15:29:39.599-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */COMMIT;
+Hibernate: select ce1_0.id,ce1_0.description,ce1_0.name from tb_category ce1_0 where ce1_0.id=?
+2024-01-21T15:29:39.600-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL l:84 #:1*/select ce1_0.id,ce1_0.description,ce1_0.name from tb_category ce1_0 where ce1_0.id=? {1: CAST(4 AS BIGINT)};
+2024-01-21T15:29:39.601-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */COMMIT;
+2024-01-21T15:29:39.601-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */COMMIT;
+2024-01-21T15:29:39.605-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL #:1*/DELETE FROM tb_order_product;
+2024-01-21T15:29:39.606-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL #:1*/DELETE FROM tb_order;
+2024-01-21T15:29:39.606-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL #:4*/DELETE FROM tb_product;
+2024-01-21T15:29:39.607-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL #:4*/INSERT INTO tb_product (id, name, price, quantity, id_category) VALUES (1, 'Suco', 19.99, 10, 1), (2, 'Sorvete', 29.99, 5, 2), (3, 'Hamburguer', 39.99, 15, 3), (4, 'Batata Frita', 9.99, 15, 4) ON CONFLICT DO NOTHING;
+2024-01-21T15:29:39.608-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */COMMIT;
+2024-01-21T15:29:39.608-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */COMMIT;
+Hibernate: SELECT id, name, price, quantity, id_category FROM tb_product WHERE id IN(?)
+2024-01-21T15:29:39.611-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL l:76 #:1*/SELECT id, name, price, quantity, id_category FROM tb_product WHERE id IN(?) {1: CAST(1 AS BIGINT)};
+Hibernate: select ce1_0.id,ce1_0.description,ce1_0.name from tb_category ce1_0 where ce1_0.id=?
+2024-01-21T15:29:39.612-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL l:84 #:1*/select ce1_0.id,ce1_0.description,ce1_0.name from tb_category ce1_0 where ce1_0.id=? {1: CAST(1 AS BIGINT)};
+2024-01-21T15:29:39.613-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */COMMIT;
+2024-01-21T15:29:39.613-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL */COMMIT;
+Hibernate: SELECT id, name, description FROM tb_category WHERE name = ?
+2024-01-21T15:29:39.618-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL l:60 #:1*/SELECT id, name, description FROM tb_category WHERE name = ? {1: 'Bebidas'};
+Hibernate: SELECT id, name, price, quantity, id_category FROM tb_product WHERE id_category = ?
+2024-01-21T15:29:39.620-03:00  INFO 8210 --- [    Test worker] h2database                               : jdbc[13] 
+/*SQL l:83 #:1*/SELECT id, name, price, quantity, id_category FROM tb_product WHERE id_category = ? {1: CAST(1 AS BIGINT)};
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.6.1</a> at Jan 21, 2024, 3:29:43 PM</p>
+</div>
+</div>
+</body>
+</html>

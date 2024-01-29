@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - ProductControllerTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>ProductControllerTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.mvp.order.application.integration.order.controller.html">com.mvp.order.application.integration.order.controller</a> &gt; ProductControllerTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">3</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.445s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">test get all products()</td>
+<td class="success">0.156s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">test get product by id()</td>
+<td class="success">0.030s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">test get products by category name()</td>
+<td class="success">0.259s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>2024-01-21T15:29:36.383-03:00  INFO 8210 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.mvp.order.application.integration.order.controller.ProductControllerTest]: ProductControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-01-21T15:29:36.387-03:00  INFO 8210 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.mvp.order.OrderApplication for test class com.mvp.order.application.integration.order.controller.ProductControllerTest
+Hibernate: SELECT id, name, description FROM tb_category WHERE name = ?
+2024-01-21T15:29:36.465-03:00  INFO 8210 --- [nio-8080-exec-9] h2database                               : jdbc[3] 
+/*SQL l:60*/SELECT id, name, description FROM tb_category WHERE name = ? {1: 'Acompanhamentos'};
+Hibernate: select pe1_0.id,pe1_0.id_category,pe1_0.name,pe1_0.price,pe1_0.quantity from tb_product pe1_0 where pe1_0.id=?
+2024-01-21T15:29:36.722-03:00  INFO 8210 --- [nio-8080-exec-3] h2database                               : jdbc[3] 
+/*SQL l:110 #:1*/select pe1_0.id,pe1_0.id_category,pe1_0.name,pe1_0.price,pe1_0.quantity from tb_product pe1_0 where pe1_0.id=? {1: CAST(1 AS BIGINT)};
+2024-01-21T15:29:36.723-03:00  INFO 8210 --- [nio-8080-exec-3] h2database                               : jdbc[3] 
+/*SQL */COMMIT;
+2024-01-21T15:29:36.723-03:00  INFO 8210 --- [nio-8080-exec-3] h2database                               : jdbc[3] 
+/*SQL */COMMIT;
+Hibernate: select ce1_0.id,ce1_0.description,ce1_0.name from tb_category ce1_0 where ce1_0.id=?
+2024-01-21T15:29:36.724-03:00  INFO 8210 --- [nio-8080-exec-3] h2database                               : jdbc[3] 
+/*SQL l:84 #:1*/select ce1_0.id,ce1_0.description,ce1_0.name from tb_category ce1_0 where ce1_0.id=? {1: CAST(1 AS BIGINT)};
+2024-01-21T15:29:36.725-03:00  INFO 8210 --- [nio-8080-exec-3] h2database                               : jdbc[3] 
+/*SQL */COMMIT;
+2024-01-21T15:29:36.725-03:00  INFO 8210 --- [nio-8080-exec-3] h2database                               : jdbc[3] 
+/*SQL */COMMIT;
+Hibernate: select pe1_0.id,pe1_0.id_category,pe1_0.name,pe1_0.price,pe1_0.quantity from tb_product pe1_0
+2024-01-21T15:29:36.857-03:00  INFO 8210 --- [nio-8080-exec-5] h2database                               : jdbc[3] 
+/*SQL #:4*/select pe1_0.id,pe1_0.id_category,pe1_0.name,pe1_0.price,pe1_0.quantity from tb_product pe1_0;
+2024-01-21T15:29:36.860-03:00  INFO 8210 --- [nio-8080-exec-5] h2database                               : jdbc[3] 
+/*SQL */COMMIT;
+2024-01-21T15:29:36.860-03:00  INFO 8210 --- [nio-8080-exec-5] h2database                               : jdbc[3] 
+/*SQL */COMMIT;
+Hibernate: select ce1_0.id,ce1_0.description,ce1_0.name from tb_category ce1_0 where ce1_0.id=?
+2024-01-21T15:29:36.861-03:00  INFO 8210 --- [nio-8080-exec-5] h2database                               : jdbc[3] 
+/*SQL l:84 #:1*/select ce1_0.id,ce1_0.description,ce1_0.name from tb_category ce1_0 where ce1_0.id=? {1: CAST(1 AS BIGINT)};
+2024-01-21T15:29:36.862-03:00  INFO 8210 --- [nio-8080-exec-5] h2database                               : jdbc[3] 
+/*SQL */COMMIT;
+2024-01-21T15:29:36.862-03:00  INFO 8210 --- [nio-8080-exec-5] h2database                               : jdbc[3] 
+/*SQL */COMMIT;
+Hibernate: select ce1_0.id,ce1_0.description,ce1_0.name from tb_category ce1_0 where ce1_0.id=?
+2024-01-21T15:29:36.864-03:00  INFO 8210 --- [nio-8080-exec-5] h2database                               : jdbc[3] 
+/*SQL l:84 #:1*/select ce1_0.id,ce1_0.description,ce1_0.name from tb_category ce1_0 where ce1_0.id=? {1: CAST(2 AS BIGINT)};
+2024-01-21T15:29:36.864-03:00  INFO 8210 --- [nio-8080-exec-5] h2database                               : jdbc[3] 
+/*SQL */COMMIT;
+2024-01-21T15:29:36.865-03:00  INFO 8210 --- [nio-8080-exec-5] h2database                               : jdbc[3] 
+/*SQL */COMMIT;
+Hibernate: select ce1_0.id,ce1_0.description,ce1_0.name from tb_category ce1_0 where ce1_0.id=?
+2024-01-21T15:29:36.866-03:00  INFO 8210 --- [nio-8080-exec-5] h2database                               : jdbc[3] 
+/*SQL l:84 #:1*/select ce1_0.id,ce1_0.description,ce1_0.name from tb_category ce1_0 where ce1_0.id=? {1: CAST(3 AS BIGINT)};
+2024-01-21T15:29:36.867-03:00  INFO 8210 --- [nio-8080-exec-5] h2database                               : jdbc[3] 
+/*SQL */COMMIT;
+2024-01-21T15:29:36.867-03:00  INFO 8210 --- [nio-8080-exec-5] h2database                               : jdbc[3] 
+/*SQL */COMMIT;
+Hibernate: select ce1_0.id,ce1_0.description,ce1_0.name from tb_category ce1_0 where ce1_0.id=?
+2024-01-21T15:29:36.868-03:00  INFO 8210 --- [nio-8080-exec-5] h2database                               : jdbc[3] 
+/*SQL l:84 #:1*/select ce1_0.id,ce1_0.description,ce1_0.name from tb_category ce1_0 where ce1_0.id=? {1: CAST(4 AS BIGINT)};
+2024-01-21T15:29:36.869-03:00  INFO 8210 --- [nio-8080-exec-5] h2database                               : jdbc[3] 
+/*SQL */COMMIT;
+2024-01-21T15:29:36.869-03:00  INFO 8210 --- [nio-8080-exec-5] h2database                               : jdbc[3] 
+/*SQL */COMMIT;
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.6.1</a> at Jan 21, 2024, 3:29:43 PM</p>
+</div>
+</div>
+</body>
+</html>

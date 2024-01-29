@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ProductServiceImpl.kt</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">order</a> &gt; <a href="index.source.html" class="el_package">com.mvp.order.domain.service.product</a> &gt; <span class="el_source">ProductServiceImpl.kt</span></div><h1>ProductServiceImpl.kt</h1><pre class="source lang-java linenums">package com.mvp.order.domain.service.product
+
+import com.mvp.order.domain.model.exception.Exceptions
+import com.mvp.order.domain.model.product.ProductDTO
+import com.mvp.order.infrastruture.repository.product.CategoryRepository
+import com.mvp.order.infrastruture.repository.product.ProductRepository
+import com.mvp.order.utils.constants.ErrorMsgConstants
+import org.springframework.dao.EmptyResultDataAccessException
+import org.springframework.stereotype.Service
+import java.math.BigDecimal
+
+<span class="fc" id="L12">@Service</span>
+<span class="fc" id="L13">class ProductServiceImpl(</span>
+<span class="fc" id="L14">    private val productRepository: ProductRepository,</span>
+<span class="fc" id="L15">    private val categoryRepository: CategoryRepository</span>
+): ProductService {
+
+    override fun getProductById(id: Long): ProductDTO {
+<span class="fc" id="L19">        val product = productRepository.findById(id)</span>
+<span class="fc" id="L20">            .orElseThrow { Exceptions.NotFoundException(ErrorMsgConstants.ERROR_PRODUCT_NOT_FOUND) }</span>
+
+<span class="pc bpc" id="L22" title="1 of 2 branches missed.">        val category = categoryRepository.findById(product?.idCategory!!)</span>
+<span class="pc" id="L23">            .orElseThrow { Exceptions.NotFoundException(ErrorMsgConstants.ERROR_CATEGORY_NOT_FOUND) }</span>
+
+<span class="fc" id="L25">        return product.toDTO(category.toDTO())</span>
+    }
+
+    override fun getProducts(): List&lt;ProductDTO&gt; {
+<span class="fc" id="L29">        val products = productRepository.findAll()</span>
+
+<span class="fc" id="L31">        return products.map { product -&gt;</span>
+<span class="pc bpc" id="L32" title="1 of 2 branches missed.">            val category = categoryRepository.findById(product?.idCategory!!)</span>
+<span class="pc" id="L33">                .orElseThrow { Exceptions.NotFoundException(ErrorMsgConstants.ERROR_CATEGORY_NOT_FOUND) }</span>
+<span class="fc" id="L34">            product.toDTO(category.toDTO())</span>
+        }
+    }
+
+    override fun getAllById(id: List&lt;Long&gt;): List&lt;ProductDTO&gt; {
+<span class="pc bpc" id="L39" title="1 of 2 branches missed.">        if (id.isEmpty()) {</span>
+<span class="nc" id="L40">            throw Exceptions.NotFoundException(ErrorMsgConstants.ERROR_PRODUCT_NOT_FOUND)</span>
+        }
+
+<span class="fc" id="L43">        val products = productRepository.findAllProductById(id)</span>
+<span class="pc bpc" id="L44" title="1 of 2 branches missed.">        if (products.isEmpty()) {</span>
+<span class="nc" id="L45">            throw Exceptions.NotFoundException(ErrorMsgConstants.ERROR_PRODUCT_NOT_FOUND)</span>
+        }
+
+<span class="fc" id="L48">        return products.mapNotNull { product -&gt;</span>
+<span class="pc bpc" id="L49" title="1 of 2 branches missed.">            val categoryId = product.idCategory ?: return@mapNotNull null</span>
+<span class="fc" id="L50">            val category = categoryRepository.findById(categoryId).orElse(null)</span>
+<span class="pc bpc" id="L51" title="1 of 2 branches missed.">            product.toDTO(category?.toDTO())</span>
+        }
+    }
+
+    override fun getByIdTotalPrice(ids: List&lt;Long?&gt;): BigDecimal {
+<span class="fc" id="L56">        return try {</span>
+<span class="fc" id="L57">            productRepository.findByIdTotalPrice(ids)</span>
+<span class="pc" id="L58">        } catch (e: EmptyResultDataAccessException) {</span>
+<span class="nc" id="L59">            BigDecimal.ZERO</span>
+        }
+    }
+
+    override fun getProductsByCategoryByName(name: String): List&lt;ProductDTO&gt; {
+<span class="fc" id="L64">        return try {</span>
+<span class="fc" id="L65">            val category = categoryRepository.findByName(name)</span>
+<span class="fc" id="L66">            val products = productRepository.findByIdCategory(category.id)</span>
+<span class="fc" id="L67">            products.map { product -&gt;</span>
+<span class="fc" id="L68">                product.toDTO(category.toDTO())</span>
+            }
+<span class="fc" id="L70">        } catch (e: EmptyResultDataAccessException) {</span>
+<span class="fc" id="L71">            listOf()</span>
+        }
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

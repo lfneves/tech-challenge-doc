@@ -7,9 +7,9 @@
 
 ### Repository:
 
-https://github.com/lfneves/tech-challenge-payment
+https://github.com/lfneves/tech-challenge-order
 
-https://github.com/lfneves/tech-challenge-status
+https://github.com/lfneves/tech-challenge-payment
 
 https://github.com/lfneves/tech-challenge-status
 

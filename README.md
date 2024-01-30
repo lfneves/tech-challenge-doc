@@ -23,13 +23,13 @@
 <br>
 <br>
 
-# Sumary
+# Summary
 
 - [Tech challenge](#tech-challenge)
   - [Repository:](#repository)
     - [Documentation](#documentation)
     - [Projects](#projects)
-- [Sumary](#sumary)
+- [Summary](#summary)
 - [1. Project Architecture](#1-project-architecture)
   - [1.1. Projects Automated Deployment/Test](#11-projects-automated-deploymenttest)
     - [1.1.1. Github Actions Workflow](#111-github-actions-workflow)

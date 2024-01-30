@@ -28,7 +28,7 @@
     - [Documentation](#documentation)
     - [Projects](#projects)
 - [Summary](#summary)
-- [1. Project Architecture](#1-project-architecture)
+  - [1. Project Architecture](#1-project-architecture)
   - [1.1. Projects Automated Deployment/Test](#11-projects-automated-deploymenttest)
     - [1.1.1. Github Actions Workflow](#111-github-actions-workflow)
   - [1.2. Projects Coverage](#12-projects-coverage)
@@ -77,7 +77,7 @@
   - [2.13. License](#213-license)
 
 
-# 1. Project Architecture
+## 1. Project Architecture
 
 - Three microservices were developed: order-ws, payment-ws, and status-ws, which communicate via AWS SNS and SQS. 
 

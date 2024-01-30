@@ -1,15 +1,15 @@
-# Tech challenge
+# 1. Tech challenge
 
 - RM: 350505
 - Grupo 53
 
-## Repository:
+## 1.1. Repository:
 
-### Documentation
+### 1.1.1. Documentation
 
 - https://github.com/lfneves/tech-challenge-doc
 
-### Projects
+### 1.1.2. Projects
 
 - https://github.com/lfneves/tech-challenge-order
 
@@ -19,65 +19,66 @@
 
 
 ---
-<br>
 
-# Summary
+## 1.2. Summary
 
-- [Tech challenge](#tech-challenge)
-  - [Repository:](#repository)
-    - [Documentation](#documentation)
-    - [Projects](#projects)
-- [Summary](#summary)
-  - [1. Project Architecture](#1-project-architecture)
-  - [1.1. Projects Automated Deployment/Test](#11-projects-automated-deploymenttest)
-    - [1.1.1. Github Actions Workflow](#111-github-actions-workflow)
-  - [1.2. Projects Coverage](#12-projects-coverage)
-  - [1.3. Jacoco report](#13-jacoco-report)
-  - [1.4. order-ws](#14-order-ws)
-  - [1.5. payment-ws](#15-payment-ws)
-  - [1.6. status-ws](#16-status-ws)
-- [2. Projects structures:](#2-projects-structures)
-  - [2.1. Terraform AWS EKS Cluster Deployment](#21-terraform-aws-eks-cluster-deployment)
-    - [2.1.1. AWS Infra Terraform EKS](#211-aws-infra-terraform-eks)
-    - [2.1.2. Prerequisites](#212-prerequisites)
-    - [2.1.3. Repository](#213-repository)
-  - [2.2. Terraform AWS RDS Database Deployment](#22-terraform-aws-rds-database-deployment)
-    - [2.2.1. AWS Infra Terraform RDS](#221-aws-infra-terraform-rds)
-  - [2.3. Justification for Choosing PostgreSQL for a Restaurant System](#23-justification-for-choosing-postgresql-for-a-restaurant-system)
-  - [2.4. Database Diagram](#24-database-diagram)
-    - [2.4.1. Application mvp](#241-application-mvp)
-      - [2.4.1.1. This is a Spring Boot WebFlux application using Kotlin.](#2411-this-is-a-spring-boot-webflux-application-using-kotlin)
-  - [2.5. 💡 Requirements](#25--requirements)
-  - [2.6. Getting Started](#26-getting-started)
-  - [2.7. Project Structure](#27-project-structure)
-    - [2.7.1. Prerequisites](#271-prerequisites)
-  - [2.8. Installation](#28-installation)
-    - [2.8.1. Docker](#281-docker)
-    - [2.8.2. Kubernetes (k8s)](#282-kubernetes-k8s)
-      - [2.8.2.1. To initiate Kubernetes applications, execute the commands found within the "k8s" folder.](#2821-to-initiate-kubernetes-applications-execute-the-commands-found-within-the-k8s-folder)
-      - [2.8.2.2. o access the application URL, use the following command:](#2822-o-access-the-application-url-use-the-following-command)
-      - [2.8.2.3. Example output:](#2823-example-output)
-      - [2.8.2.4. Metric Server](#2824-metric-server)
-    - [2.8.3. Kubernetes (k8s) - Install with Helm](#283-kubernetes-k8s---install-with-helm)
-      - [2.8.3.1. Helm uninstall](#2831-helm-uninstall)
-  - [2.9. Deploy Github-actions](#29-deploy-github-actions)
-    - [2.9.1. Integration Mercado Pago](#291-integration-mercado-pago)
-    - [2.9.2. This project uses CommandLineRunner](#292-this-project-uses-commandlinerunner)
-  - [2.10. The best way to use it as a suggestion is by using Postman](#210-the-best-way-to-use-it-as-a-suggestion-is-by-using-postman)
-      - [2.10.0.1. A collection is available preconfigured in the project root](#21001-a-collection-is-available-preconfigured-in-the-project-root)
-      - [2.10.0.2. Create new user example:](#21002-create-new-user-example)
-      - [2.10.0.3. Login - Use the username (cpf) and password, then copy the token and use it in authenticated endpoints.](#21003-login---use-the-username-cpf-and-password-then-copy-the-token-and-use-it-in-authenticated-endpoints)
-    - [2.10.1. 💡To make it easier use environment variables](#2101-to-make-it-easier-use-environment-variables)
-      - [2.10.1.1. Place the command in the test tab on /api/auth/login-token](#21011-place-the-command-in-the-test-tab-on-apiauthlogin-token)
-      - [2.10.1.2. Example:](#21012-example)
-  - [2.11. ](#211-)
-    - [2.11.1. This project also uses OpenAPI Specification (Swagger).](#2111-this-project-also-uses-openapi-specification-swagger)
-      - [2.11.1.1. To access swagger use the URL:](#21111-to-access-swagger-use-the-url)
-  - [2.12. Roadmap](#212-roadmap)
-  - [2.13. License](#213-license)
+- [1. Tech challenge](#1-tech-challenge)
+  - [1.1. Repository:](#11-repository)
+    - [1.1.1. Documentation](#111-documentation)
+    - [1.1.2. Projects](#112-projects)
+  - [1.2. Summary](#12-summary)
+- [2. Project Architecture](#2-project-architecture)
+  - [2.1. Projects Automated Deployment/Test](#21-projects-automated-deploymenttest)
+    - [2.1.1. Github Actions Workflow](#211-github-actions-workflow)
+  - [2.2. Projects Coverage](#22-projects-coverage)
+  - [2.3. Jacoco report](#23-jacoco-report)
+  - [2.4. order-ws](#24-order-ws)
+  - [2.5. payment-ws](#25-payment-ws)
+  - [2.6. status-ws](#26-status-ws)
+- [3. Projects structures:](#3-projects-structures)
+  - [3.1. Terraform AWS EKS Cluster Deployment](#31-terraform-aws-eks-cluster-deployment)
+    - [3.1.1. AWS Infra Terraform EKS](#311-aws-infra-terraform-eks)
+    - [3.1.2. Prerequisites](#312-prerequisites)
+    - [3.1.3. Repository](#313-repository)
+  - [3.2. Terraform AWS RDS Database Deployment](#32-terraform-aws-rds-database-deployment)
+    - [3.2.1. AWS Infra Terraform RDS](#321-aws-infra-terraform-rds)
+  - [3.3. Justification for Choosing PostgreSQL for a Restaurant System](#33-justification-for-choosing-postgresql-for-a-restaurant-system)
+  - [3.4. Database Diagram](#34-database-diagram)
+    - [3.4.1. Application mvp](#341-application-mvp)
+      - [3.4.1.1. This is a Spring Boot WebFlux application using Kotlin.](#3411-this-is-a-spring-boot-webflux-application-using-kotlin)
+  - [3.5. 💡 Requirements](#35--requirements)
+  - [3.6. Getting Started](#36-getting-started)
+  - [3.7. Project Structure](#37-project-structure)
+    - [3.7.1. Prerequisites](#371-prerequisites)
+  - [3.8. Installation](#38-installation)
+    - [3.8.1. Docker](#381-docker)
+    - [3.8.2. Kubernetes (k8s)](#382-kubernetes-k8s)
+      - [3.8.2.1. To initiate Kubernetes applications, execute the commands found within the "k8s" folder.](#3821-to-initiate-kubernetes-applications-execute-the-commands-found-within-the-k8s-folder)
+      - [3.8.2.2. o access the application URL, use the following command:](#3822-o-access-the-application-url-use-the-following-command)
+      - [3.8.2.3. Example output:](#3823-example-output)
+      - [3.8.2.4. Metric Server](#3824-metric-server)
+    - [3.8.3. Kubernetes (k8s) - Install with Helm](#383-kubernetes-k8s---install-with-helm)
+      - [3.8.3.1. Helm uninstall](#3831-helm-uninstall)
+  - [3.9. Deploy Github-actions](#39-deploy-github-actions)
+    - [3.9.1. Integration Mercado Pago](#391-integration-mercado-pago)
+    - [3.9.2. This project uses CommandLineRunner](#392-this-project-uses-commandlinerunner)
+  - [3.10. The best way to use it as a suggestion is by using Postman](#310-the-best-way-to-use-it-as-a-suggestion-is-by-using-postman)
+      - [3.10.0.1. A collection is available preconfigured in the project root](#31001-a-collection-is-available-preconfigured-in-the-project-root)
+      - [3.10.0.2. Create new user example:](#31002-create-new-user-example)
+      - [3.10.0.3. Login - Use the username (cpf) and password, then copy the token and use it in authenticated endpoints.](#31003-login---use-the-username-cpf-and-password-then-copy-the-token-and-use-it-in-authenticated-endpoints)
+    - [3.10.1. 💡To make it easier use environment variables](#3101-to-make-it-easier-use-environment-variables)
+      - [3.10.1.1. Place the command in the test tab on /api/auth/login-token](#31011-place-the-command-in-the-test-tab-on-apiauthlogin-token)
+      - [3.10.1.2. Example:](#31012-example)
+  - [3.11. ](#311-)
+    - [3.11.1. This project also uses OpenAPI Specification (Swagger).](#3111-this-project-also-uses-openapi-specification-swagger)
+      - [3.11.1.1. To access swagger use the URL:](#31111-to-access-swagger-use-the-url)
+  - [3.12. Roadmap](#312-roadmap)
+  - [3.13. License](#313-license)
 
 
-## 1. Project Architecture
+---
+
+# 2. Project Architecture
 
 - Three microservices were developed: order-ws, payment-ws, and status-ws, which communicate via AWS SNS and SQS. 
 
@@ -85,17 +86,19 @@
 
 - Upon receipt, these queues store the messages in MongoDB. Whenever a payment is made or there is a change in the order status, messages are sent to the queues to process the updated status.
 
+- In this phase of the project, transitioned to AWS ECS Fargate as a strategic move for economic efficiency and knowledge enhancement.
+
 <br>
 
 ![Alt text](images/software.png)
 
 
-----
+
 <br>
 
-## 1.1. Projects Automated Deployment/Test
+## 2.1. Projects Automated Deployment/Test
 
-### 1.1.1. Github Actions Workflow
+### 2.1.1. Github Actions Workflow
 
 ![Alt text](images/workflow.png)
 
@@ -113,33 +116,33 @@
 ![Alt text](images/deploy/status_github_actions.png)
 
 
-## 1.2. Projects Coverage
+## 2.2. Projects Coverage
 
 ![Alt text](images/sonar-coverage.png)
 
 
-## 1.3. Jacoco report
+## 2.3. Jacoco report
 
 - NOTE: The variance in test coverage between Jacoco and Sonar can be attributed to variations in behavior exhibited by certain filters and integration tests, leading to different or unexpected outcomes.
 
 
 - The test files are located in the respective folders
 
-## 1.4. order-ws
+## 2.4. order-ws
 
 - Report file download folder and open in browser: [Link order-ws report](fase_4_test_report_jacoco/order-ws-reports/jacoco/test/html/index.html)
 
 ![Alt text](images/order_jacoco_report.png)
 
 
-## 1.5. payment-ws
+## 2.5. payment-ws
 
 - Report file download folder and open in browser: [Link payment-ws report](fase_4_test_report_jacoco/payment-ws-reports/jacoco/test/html/index.html)
 
 ![Alt text](images/payment_jacoco_report.png)
 
 
-## 1.6. status-ws
+## 2.6. status-ws
 
 - Report file download folder and open in browser: [Link status-ws report](fase_4_test_report_jacoco/status-ws-reports/jacoco/test/html/index.html)
 
@@ -147,7 +150,7 @@
 
 ---
 
-# 2. Projects structures:
+# 3. Projects structures:
 
 - order-ws folders
 
@@ -306,7 +309,7 @@
 ```
 ---
 
-## 2.1. Terraform AWS EKS Cluster Deployment
+## 3.1. Terraform AWS EKS Cluster Deployment
 
 Repositorys:
 
@@ -315,7 +318,7 @@ Repositorys:
 - https://github.com/lfneves/infra-eks-terraform
 - https://github.com/lfneves/infra-vpc-terraform
 
-### 2.1.1. AWS Infra Terraform EKS
+### 3.1.1. AWS Infra Terraform EKS
 
 This project uses Terraform to automate the deployment of an Amazon Elastic Kubernetes Service (EKS) cluster on AWS. Amazon EKS is a managed Kubernetes service that simplifies the deployment, scaling, and operation of containerized applications using Kubernetes.
 
@@ -333,7 +336,7 @@ infra-eks-terraform
 
 ```
 
-### 2.1.2. Prerequisites
+### 3.1.2. Prerequisites
 
 Before getting started, make sure you have the following prerequisites installed on your machine:
 
@@ -343,7 +346,7 @@ Before getting started, make sure you have the following prerequisites installed
 - [kubectl-aws-iam-authenticator](https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html) for authenticating with the EKS cluster
 - Internet access
 
-### 2.1.3. Repository
+### 3.1.3. Repository
 
 1. Clone this repository:
 
@@ -365,9 +368,9 @@ Before getting started, make sure you have the following prerequisites installed
 
 ---
 
-## 2.2. Terraform AWS RDS Database Deployment
+## 3.2. Terraform AWS RDS Database Deployment
 
-### 2.2.1. AWS Infra Terraform RDS
+### 3.2.1. AWS Infra Terraform RDS
 
 https://github.com/lfneves/infra-rds-terraform
 
@@ -388,7 +391,7 @@ infra-rds-terraform
 ```
 
 
-## 2.3. Justification for Choosing PostgreSQL for a Restaurant System
+## 3.3. Justification for Choosing PostgreSQL for a Restaurant System
 
 - **Robust Performance**: PostgreSQL is known for delivering solid performance, even in high transaction volume environments. This is crucial for a restaurant system where it's essential to process orders quickly and efficiently, ensuring a seamless customer experience.
 
@@ -407,17 +410,17 @@ infra-rds-terraform
 In summary, PostgreSQL offers a solid combination of performance, reliability, flexibility, and cost-effectiveness, making it a sensible choice for a restaurant system that requires a robust and dependable database to meet critical business needs.
 
 
-## 2.4. Database Diagram
+## 3.4. Database Diagram
 
 ![Alt text](images/database-diagram.png "Database Diagram")
 
 ---
 
-### 2.4.1. Application mvp
+### 3.4.1. Application mvp
 
 https://github.com/lfneves/mvp
 
-#### 2.4.1.1. This is a [Spring Boot WebFlux](https://docs.spring.io/spring/docs/current/spring-framework-reference/web-reactive.html) application using [Kotlin](https://kotlinlang.org/).
+#### 3.4.1.1. This is a [Spring Boot WebFlux](https://docs.spring.io/spring/docs/current/spring-framework-reference/web-reactive.html) application using [Kotlin](https://kotlinlang.org/).
 
 Spring WebFlux utilizes the [Reactor](https://projectreactor.io/) library, which is an implementation of Reactive Streams specs for building non-blocking applications.
 
@@ -427,7 +430,7 @@ This project:
 - Employs the [PostgreSQL](https://www.postgresql.org/) database.
 
 
-## 2.5. 💡 Requirements
+## 3.5. 💡 Requirements
 
 - Java 17 or later - [SDKMAN - Recommendation](https://sdkman.io/install)
 - Gradle 7.6.1 or later - [Gradle build tool Installation](https://gradle.org/install/)
@@ -438,7 +441,7 @@ This project:
 - The project runs on port 8099 (http://localhost:8099).
 
 <!-- GETTING STARTED -->
-## 2.6. Getting Started
+## 3.6. Getting Started
 
 ```sh
 # Get the latest version
@@ -446,7 +449,7 @@ This project:
 git clone https://github.com/lfneves/mvp.git
 ```
 
-## 2.7. Project Structure
+## 3.7. Project Structure
 
 
 ```
@@ -467,7 +470,7 @@ main
       └── 2_inserts_category.sql
 ```
 
-### 2.7.1. Prerequisites
+### 3.7.1. Prerequisites
 Check versions:
 * Java 17+
   ```sh
@@ -484,11 +487,11 @@ Check versions:
   docker-compose --version
   ```
 
-## 2.8. Installation
+## 3.8. Installation
 This is an example of how to use the software and how to install it.
 
 
-### 2.8.1. Docker
+### 3.8.1. Docker
 
 In the main project directory:
 
@@ -514,9 +517,9 @@ In the main project directory:
 ---
 
 
-### 2.8.2. Kubernetes (k8s)
+### 3.8.2. Kubernetes (k8s)
 
-#### 2.8.2.1. To initiate Kubernetes applications, execute the commands found within the "k8s" folder.
+#### 3.8.2.1. To initiate Kubernetes applications, execute the commands found within the "k8s" folder.
 
 ```
 $ kubectl apply -f delivery/k8s/postgres/.
@@ -527,13 +530,13 @@ $ kubectl apply -f delivery/k8s/application/.
 ```
 
 
-#### 2.8.2.2. o access the application URL, use the following command:
+#### 3.8.2.2. o access the application URL, use the following command:
 
 ```
 $ minikube service delivery --url
 ```
 
-#### 2.8.2.3. Example output:
+#### 3.8.2.3. Example output:
 ```
 http://192.168.49.2:32000
 
@@ -558,7 +561,7 @@ Inside the "k8s" folder, you will discover ".yaml" files utilized to deploy data
    └── 6-db-service.yaml
 ```
 
-#### 2.8.2.4. Metric Server 
+#### 3.8.2.4. Metric Server 
 
 ```
 $ minikube addons enable metrics-server
@@ -572,7 +575,7 @@ $ kubectl get hpa
 
 ---
 
-###  2.8.3. Kubernetes (k8s) - Install with Helm 
+###  3.8.3. Kubernetes (k8s) - Install with Helm 
 
 [BETA] Because this hasn't been implemented following best practices.
 
@@ -580,7 +583,7 @@ $ kubectl get hpa
 $ helm install deliveryhelm deliveryhelm/
 ```
 
-#### 2.8.3.1. Helm uninstall
+#### 3.8.3.1. Helm uninstall
 
 ```
 $ helm uninstall deliveryhelm deliveryhelm/
@@ -588,14 +591,14 @@ $ helm uninstall deliveryhelm deliveryhelm/
 
 ---
 
-## 2.9. Deploy Github-actions
+## 3.9. Deploy Github-actions
 
 
 ![Alt text](images/mvp_ci_cd.png "Deploy Github-actions")
 
 
 ---
-###  2.9.1. Integration Mercado Pago 
+###  3.9.1. Integration Mercado Pago 
 
 For the webhook checkout process, generate a QR code.
 
@@ -614,7 +617,7 @@ Example:
 ```
 
 ---
-### 2.9.2. This project uses [CommandLineRunner](https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/CommandLineRunner.html)
+### 3.9.2. This project uses [CommandLineRunner](https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/CommandLineRunner.html)
 - CommandLineRunner is used to create a default user, products and categories on start application startup.
 - Default login :
 
@@ -627,14 +630,14 @@ Example:
 ```
 ---
 
-## 2.10. The best way to use it as a suggestion is by using [Postman](https://www.postman.com/downloads/)
-#### 2.10.0.1. A collection is available preconfigured in the project root
+## 3.10. The best way to use it as a suggestion is by using [Postman](https://www.postman.com/downloads/)
+#### 3.10.0.1. A collection is available preconfigured in the project root
 [MVP - Pos tech delivery application.postman_collection.json]()
 
 - This project uses user and session control for access
 - Endpoints without control access  _**"/api/auth/*"**_, **_"/api/v1/users/signup"_**
 
-#### 2.10.0.2. Create new user example:
+#### 3.10.0.2. Create new user example:
 http://localhost:8099/api/v1/users/signup
 
 Body:
@@ -655,7 +658,7 @@ Body:
 
 <br/>
 
-#### 2.10.0.3. Login - Use the username (cpf) and password, then copy the token and use it in authenticated endpoints.
+#### 3.10.0.3. Login - Use the username (cpf) and password, then copy the token and use it in authenticated endpoints.
 
 http://localhost:8099/api/auth/login-token
 ```json
@@ -671,22 +674,22 @@ Response:
 }
 ```
 
-### 2.10.1. 💡To make it easier use environment variables 
-#### 2.10.1.1. Place the command in the test tab on /api/auth/login-token
+### 3.10.1. 💡To make it easier use environment variables 
+#### 3.10.1.1. Place the command in the test tab on /api/auth/login-token
 ```sh
 pm.environment.set("token", pm.response.json().token);
 ```
 
-#### 2.10.1.2. Example:
+#### 3.10.1.2. Example:
 
 ![Alt text](images/postman_01.png "Postman token environment")
 <br>
-2.11. ![Alt text](images/postman_02.png "Postman token using")
+3.11. ![Alt text](images/postman_02.png "Postman token using")
 ---
 
-### 2.11.1. This project also uses OpenAPI Specification [(Swagger)](https://swagger.io/docs/specification/about/).
+### 3.11.1. This project also uses OpenAPI Specification [(Swagger)](https://swagger.io/docs/specification/about/).
 
-#### 2.11.1.1. To access swagger use the URL:
+#### 3.11.1.1. To access swagger use the URL:
 http://localhost:8099/swagger-ui.html
 or
 http://localhost:8099/webjars/swagger-ui/index.html
@@ -698,7 +701,7 @@ http://localhost:8099/webjars/swagger-ui/index.html
 ---
 
 <!-- ROADMAP -->
-## 2.12. Roadmap
+## 3.12. Roadmap
 
 - [x] Improve README.md
 - [X] Update order add paid status and adjusting service 
@@ -711,7 +714,7 @@ http://localhost:8099/webjars/swagger-ui/index.html
 
 ---
 <!-- LICENSE -->
-## 2.13. License
+## 3.13. License
 
 Distributed under the MIT License. See LICENSE.txt for more information.
 

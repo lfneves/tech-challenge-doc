@@ -1,16 +1,16 @@
-Tech challenge
+# Tech challenge
 
 
 - RM: 350505
 - Grupo 53
 
-Repository:
+## Repository:
 
-Documentation
+### Documentation
 
 - https://github.com/lfneves/tech-challenge-doc
 
-Projects
+### Projects
 
 - https://github.com/lfneves/tech-challenge-order
 
@@ -23,6 +23,13 @@ Projects
 <br>
 <br>
 
+# Sumary
+
+- [Tech challenge](#tech-challenge)
+  - [Repository:](#repository)
+    - [Documentation](#documentation)
+    - [Projects](#projects)
+- [Sumary](#sumary)
 - [1. Project Architecture](#1-project-architecture)
   - [1.1. Projects Automated Deployment/Test](#11-projects-automated-deploymenttest)
     - [1.1.1. Github Actions Workflow](#111-github-actions-workflow)

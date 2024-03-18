@@ -18,23 +18,55 @@
 - https://github.com/lfneves/tech-challenge-status
 
 
+## 1.2. Video
+
+### 1.2.1. Topics
+
+ - Explanation of the chosen SAGA pattern and its justification;
+ - Architecture design;
+ - Cloud structure architecture and how the SAGA communication is set up.
+ - Links with the OWASP ZAP processing reports (before and after correction);
+
+### 1.2.2. Link:
+
+https://drive.google.com/file/d/1H8AvE49yABdQwNxchkkKhKOG8pV-Rlkl/view?usp=sharing
+
+![Alt text](images/video_repository_img.png)
+
 ---
 
-## 1.2. Summary
+## 1.3. Summary
 
 - [1. Tech challenge](#1-tech-challenge)
   - [1.1. Repository:](#11-repository)
     - [1.1.1. Documentation](#111-documentation)
     - [1.1.2. Projects](#112-projects)
-  - [1.2. Summary](#12-summary)
+  - [1.2. Video](#12-video)
+    - [1.2.1. Topics](#121-topics)
+    - [1.2.2. Link:](#122-link)
+  - [1.3. Summary](#13-summary)
 - [2. Project Architecture](#2-project-architecture)
-  - [2.1. Projects Automated Deployment/Test](#21-projects-automated-deploymenttest)
-    - [2.1.1. Github Actions Workflow](#211-github-actions-workflow)
-  - [2.2. Projects Coverage](#22-projects-coverage)
-  - [2.3. Jacoco report](#23-jacoco-report)
-  - [2.4. order-ws](#24-order-ws)
-  - [2.5. payment-ws](#25-payment-ws)
-  - [2.6. status-ws](#26-status-ws)
+  - [2.1. Projects Saga Pattern Architecture](#21-projects-saga-pattern-architecture)
+    - [2.1.1. Justification for Choosing the SAGA Pattern](#211-justification-for-choosing-the-saga-pattern)
+      - [2.1.1.1. Distributed Transactions and Data Consistency](#2111-distributed-transactions-and-data-consistency)
+      - [2.1.1.2. Decoupling and Flexibility](#2112-decoupling-and-flexibility)
+      - [2.1.1.3. Resilience and Failure Recovery](#2113-resilience-and-failure-recovery)
+      - [2.1.1.4. Visibility and Monitoring](#2114-visibility-and-monitoring)
+      - [2.1.1.5. Scalability](#2115-scalability)
+  - [2.2. Projects Cloud Architecture](#22-projects-cloud-architecture)
+  - [2.3. OWASP ZAP Report](#23-owasp-zap-report)
+    - [2.3.1. OWASP ZAP processing reports before correction:](#231-owasp-zap-processing-reports-before-correction)
+    - [2.3.2. OWASP ZAP processing reports after correction:](#232-owasp-zap-processing-reports-after-correction)
+  - [2.4. LGPD Endpoint](#24-lgpd-endpoint)
+    - [2.4.1. Route/API where the client can request the deletion of their personal data from the database used.](#241-routeapi-where-the-client-can-request-the-deletion-of-their-personal-data-from-the-database-used)
+    - [2.4.2. API have the following fields:](#242-api-have-the-following-fields)
+  - [2.5. Projects Automated Deployment/Test](#25-projects-automated-deploymenttest)
+    - [2.5.1. Github Actions Workflow](#251-github-actions-workflow)
+  - [2.6. Projects Coverage](#26-projects-coverage)
+  - [2.7. Jacoco report](#27-jacoco-report)
+  - [2.8. order-ws](#28-order-ws)
+  - [2.9. payment-ws](#29-payment-ws)
+  - [2.10. status-ws](#210-status-ws)
 - [3. Projects structures:](#3-projects-structures)
   - [3.1. Terraform AWS EKS Cluster Deployment](#31-terraform-aws-eks-cluster-deployment)
     - [3.1.1. AWS Infra Terraform EKS](#311-aws-infra-terraform-eks)
@@ -88,17 +120,79 @@
 
 - In this phase of the project, transitioned to AWS ECS Fargate as a strategic move for economic efficiency and knowledge enhancement.
 
+
+## 2.1. Projects Saga Pattern Architecture
+
+
+### 2.1.1. Justification for Choosing the SAGA Pattern
+
+The SAGA pattern with choreography was used in the snack bar project involving three separate microservices - order-ws (Order Service), payment-ws (Payment Service), and status-ws (Status Service) - offering a robust and scalable solution for managing distributed transactions and ensuring data consistency in a microservices environment. Below, I detail the reasons and justifications for adopting this pattern in this specific context.
+
+#### 2.1.1.1. Distributed Transactions and Data Consistency
+In the snack bar system, the process of placing an order is complex and involves several critical steps, such as order creation, payment processing, and order status updating. Each of these steps is the responsibility of a different microservice. The challenge is to ensure that, even when operating independently, all microservices maintain the system's overall consistency. The SAGA pattern, through a series of local transactions where each step knows how to compensate itself in case of failures, ensures this consistency without the need for a blocking distributed transaction.
+
+#### 2.1.1.2. Decoupling and Flexibility
+Using choreography, each microservice operates independently, publishing domain events when their operations are completed or when failures occur. Other services listen to these events and react accordingly, without the need for a central coordinator. This model promotes decoupling and flexibility, allowing each service to evolve, scale, and be maintained independently.
+
+#### 2.1.1.3. Resilience and Failure Recovery
+Failures are inevitable in distributed systems. The SAGA pattern, with its compensation-based approach, allows the system to recover gracefully. If a payment fails after an order has been created, the system can automatically cancel the order or attempt a new form of payment, maintaining data integrity. Choreography facilitates this recovery by allowing services to autonomously react to failure events.
+
+#### 2.1.1.4. Visibility and Monitoring
+Although choreography may introduce complexities in tracking the transaction flow, it also offers opportunities to implement effective monitoring and logging at each interaction point. This is crucial in a snack bar environment, where the speed and accuracy of the order are essential. Tracking order, payment, and status events in a unified dashboard can provide valuable operational insights and improve customer experience.
+
+#### 2.1.1.5. Scalability
+The SAGA pattern with choreography is naturally scalable. As services operate independently, responding to events asynchronously, the system can easily scale horizontally. This is especially beneficial during periods of high demand in a snack bar, such as lunches or special events, where the number of orders and payments can significantly increase.
+
+Adopting the SAGA pattern with choreography in the snack bar project involving microservices order-ws, payment-ws, and status-ws offers a strategic solution to manage complex and distributed transactions, promoting decoupling, flexibility, resilience, and scalability. Although it presents challenges in terms of traceability and may require a learning curve for effective implementation, the benefits in terms of data consistency maintenance and failure recovery justify its use in this context.
+
 <br>
 
-![Alt text](images/software.png)
+![Alt text](images/sata_pattern_img.png)
 
 
 
 <br>
 
-## 2.1. Projects Automated Deployment/Test
 
-### 2.1.1. Github Actions Workflow
+## 2.2. Projects Cloud Architecture
+
+<br>
+
+![Alt text](images/project_architecture_v2.png)
+
+
+
+<br>
+
+## 2.3. OWASP ZAP Report
+
+### 2.3.1. OWASP ZAP processing reports before correction:
+
+![Alt text](images/owasp_zap_before.png)
+
+
+### 2.3.2. OWASP ZAP processing reports after correction:
+
+![Alt text](images/owasp_zap_after.png)
+
+
+## 2.4. LGPD Endpoint
+
+### 2.4.1. Route/API where the client can request the deletion of their personal data from the database used. 
+
+### 2.4.2. API have the following fields:
+ - Name
+ - Address;
+ - Username(CPF or Email)
+
+![Alt text](images/lgpd_endpoint.png)
+
+![Alt text](images/lgpd_code.png)
+
+
+## 2.5. Projects Automated Deployment/Test
+
+### 2.5.1. Github Actions Workflow
 
 ![Alt text](images/workflow.png)
 
@@ -116,33 +210,33 @@
 ![Alt text](images/deploy/status_github_actions.png)
 
 
-## 2.2. Projects Coverage
+## 2.6. Projects Coverage
 
 ![Alt text](images/sonar-coverage.png)
 
 
-## 2.3. Jacoco report
+## 2.7. Jacoco report
 
 - NOTE: The variance in test coverage between Jacoco and Sonar can be attributed to variations in behavior exhibited by certain filters and integration tests, leading to different or unexpected outcomes.
 
 
 - The test files are located in the respective folders
 
-## 2.4. order-ws
+## 2.8. order-ws
 
 - Report file download folder and open in browser: [Link order-ws report](fase_4_test_report_jacoco/order-ws-reports/jacoco/test/html/index.html)
 
 ![Alt text](images/order_jacoco_report.png)
 
 
-## 2.5. payment-ws
+## 2.9. payment-ws
 
 - Report file download folder and open in browser: [Link payment-ws report](fase_4_test_report_jacoco/payment-ws-reports/jacoco/test/html/index.html)
 
 ![Alt text](images/payment_jacoco_report.png)
 
 
-## 2.6. status-ws
+## 2.10. status-ws
 
 - Report file download folder and open in browser: [Link status-ws report](fase_4_test_report_jacoco/status-ws-reports/jacoco/test/html/index.html)
 
